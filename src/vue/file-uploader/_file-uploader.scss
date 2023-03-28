@@ -1,0 +1,64 @@
+.file-uploader {
+	&__wrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	&__control {
+		position: absolute;
+
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+
+		width: 1px;
+		height: 1px;
+
+		margin: -1px;
+		padding: 0;
+
+		border: 0;
+	}
+
+	&__button {
+		margin-right: 20px;
+	}
+
+	&__error {
+		font-size: 12px;
+
+		visibility: hidden;
+
+		margin-top: 5px;
+
+		opacity: 0;
+
+		color: color('red-main');
+	}
+
+	&__item-name {
+		font-size: 14px;
+
+		color: color('dark-light');
+	}
+
+	&__item {
+		display: inline-flex;
+		align-items: center;
+	}
+
+	&__item-delete {
+		margin-left: 5px;
+
+		cursor: pointer;
+	}
+
+	&.is-dropped {
+		border: 1px dashed color('blue-main');
+	}
+
+	&.is-error &__error {
+		visibility: visible;
+
+		opacity: 1;
+	}
+}

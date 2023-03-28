@@ -1,0 +1,152 @@
+$count-control-bg-color: color(white-main);
+$count-control-active-bg-color: color(green-main);
+$count-control-input-color: color(dark-main);
+$count-control-input-active-color: color(green-main);
+$count-control-btn-bg-color: color(dark-70);
+$count-control-btn-hover-bg-color: color(dark-main);
+$count-control-btn-active-bg-color: color(green-main);
+$count-control-btn-active-hover-bg-color: color(green-hover);
+$count-control-info-color: color(dark-55);
+
+.count-control {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+
+	width: 100%;
+
+	transition: background-color #{$transition};
+
+	background-color: $count-control-bg-color;
+
+	&:hover &__input {
+		border-color: $input-hover-border-color;
+	}
+
+	&__input {
+		width: 13rem;
+		height: 3rem;
+		padding-left: 3rem;
+		padding-right: 3rem;
+
+		transition: color #{$transition};
+
+		text-align: center;
+
+		color: $count-control-input-color;
+
+		// @include text-base-large;
+
+		.is-active & {
+			color: $count-control-input-active-color;
+		}
+	}
+
+	&__btn {
+		position: absolute;
+		z-index: 2;
+		top: 0;
+
+		width: 3rem;
+
+		height: 100%;
+
+		cursor: pointer;
+
+		&::before,
+		&::after {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+
+			width: 16px;
+			height: 2px;
+			margin: auto;
+
+			content: '';
+			transition: background-color #{$transition};
+
+			border-radius: 3rem;
+
+			background-color: color(dark-light);
+		}
+
+		&:hover {
+			&::before,
+			&::after {
+				@media (hover: hover) {
+					background-color: color(dark-light);
+				}
+			}
+		}
+
+		.is-active &::before,
+		.is-active &::after {
+			background-color: color(dark-light);
+		}
+
+		.is-active &:hover {
+			&::before,
+			&::after {
+				@media (hover: hover) {
+					background-color: color(dark-light);
+				}
+			}
+		}
+
+		&.is-disabled {
+			pointer-events: none;
+
+			opacity: .5;
+		}
+	}
+
+	&__btn--inc {
+		right: 0;
+
+		&::after {
+			transform: rotate(90deg);
+		}
+	}
+
+	&__info,
+	&__cart-info {
+		position: absolute;
+		left: 0;
+
+		visibility: hidden;
+
+		width: 100%;
+
+		transition: opacity #{$transition}, visibility #{$transition};
+		text-align: center;
+		white-space: nowrap;
+
+		opacity: 0;
+
+		// @include text-base-small;
+	}
+
+	&__info {
+		bottom: 100%;
+
+		color: $count-control-info-color;
+
+		&.is-active {
+			visibility: visible;
+
+			opacity: 1;
+		}
+	}
+
+	&--small {
+		max-width: 130px;
+	}
+
+	.is-active & {
+		background-color: $count-control-active-bg-color;
+	}
+}

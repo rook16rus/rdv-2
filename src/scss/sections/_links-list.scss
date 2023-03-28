@@ -1,0 +1,13 @@
+.links-list {
+  margin: var(--s-0) 0;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 4rem 0;
+  }
+
+  &__title {
+    @extend %fs-h2;
+  }
+}

@@ -1,0 +1,123 @@
+.modal {
+  &__wrapper {
+  }
+
+  &__window {
+    width: 48rem;
+    padding: 5rem;
+
+    border-radius: 0.5rem;
+
+    @include breakpoint(tablet) {
+      padding: 2rem;
+    }
+
+    @media screen and (max-width: 520px) {
+      width: calc(100% - 4rem);
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 1.6rem;
+    right: 2rem;
+
+    svg {
+      width: 1.8rem;
+      height: 1.8rem;
+
+      fill: $grayscale-900;
+    }
+
+    &:hover {
+      svg {
+        fill: $primary-300;
+      }
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+    width: calc(100% - 4rem);
+
+    @extend %fs-h2;
+  }
+
+  .old-form__input,
+  .old-form__textarea {
+    border-color: #DADCDF;
+
+    &:hover {
+      border-color: $primary-300;
+    }
+  }
+}
+
+.modal#success,
+.modal#error {
+  .modal__title {
+    @extend %fs-h3;
+
+    & ~ p {
+      font-size: 1.8rem;
+      line-height: 1.4;
+
+      @media screen and (max-width: 1099px) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .modal__window {
+    width: 68rem;
+
+    @media screen and (max-width: 720px) {
+      width: calc(100% - 4rem);
+    }
+  }
+}
+
+.modal--full-screen {
+  .container {
+    position: relative;
+  }
+
+  .modal__close {
+    top: 0;
+    right: var(--content-padding);
+    z-index: 2;
+
+    svg {
+      width: 2.8rem;
+      height: 2.8rem;
+
+      fill: $primary-300;
+    }
+
+    &:hover {
+      svg {
+        fill: $primary-900;
+      }
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .modal__window {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+
+    @include breakpoint(tablet) {
+      padding-top: 4rem;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

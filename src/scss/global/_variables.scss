@@ -1,0 +1,39 @@
+:root {
+  --max-container-width: 124rem;
+  --content-padding: 2rem;
+
+  --js-header-height: 18rem;
+
+  // spaces
+  --s-0: 10rem;
+  --s-1: 5rem;
+  --s-2: 3rem;
+  --s-3: 2rem;
+  --s-4: 1.5rem;
+  --s-5: 1rem;
+
+  @include breakpoint(laptop) {
+    --s-0: 5rem;
+    --s-1: 3rem;
+    --s-2: 2rem;
+    --s-3: 1.5rem;
+  }
+}
+
+$primary-900: #174F77;
+$primary-700: #1D7CAA;
+$primary-500: #1B9AC4;
+$primary-300: #19B9DE;
+$primary-100: #F0F5F7;
+
+$secondary-300: #FADB1E;
+
+$grayscale-900: #262730;
+$grayscale-700: #4D4D4D;
+$grayscale-500: #939598;
+$grayscale-300: #DADCDF;
+$grayscale-100: #FFFFFF;
+
+$system-red: #FF3645;
+$system-red-2: #FF9E57;
+$system-green: #4CAF50;

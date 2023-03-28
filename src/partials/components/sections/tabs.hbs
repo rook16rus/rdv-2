@@ -1,0 +1,119 @@
+<section class="tabs js-tabs">
+    <div class="container">
+        <h2 class="tabs__title">Чем RDV Маркет поможет продавцам в работе с Wildberries</h2>
+        <div class="tabs__inner" data-sticky-container>
+            <div class="tabs__navigation-wrapper">
+                <div class="js-sticky" data-margin-top="40">
+                    <div class="swiper">
+                        <ul class="tabs__navigation swiper-wrapper">
+                            {{#each tabs}}
+                                <li class="js-tab swiper-slide {{#if this.active}}active{{/if}}">
+                                    <span class="tabs__navigation-item">{{this.name}}</span>
+                                </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <ul class="tabs__bodies">
+                {{#each tabs}}
+                    <li class="tabs__body js-body js-show-hide {{#if this.active}}active{{/if}}" data-count="2">
+                        <ul class="tabs__body-list">
+                            {{#each this.items}}
+                                <li class="tabs__body-item js-show-hide-item">
+                                    <div class="gallery">
+                                        <div class="gallery__content">
+                                            <h2 class="gallery__title">{{this.title}}</h2>
+                                            <div class="gallery__description">
+                                                {{{this.description}}}
+                                            </div>
+                                        </div>
+                                        <div class="gallery__slider swiper js-gallery loading">
+                                            <ul class="swiper-wrapper">
+                                                {{#each this.images}}
+                                                    <li class="swiper-slide">
+                                                        <div class="gallery__image-wrapper">
+                                                            <img src="{{this}}" alt="Gallery Image" data-src="https://via.placeholder.com/1920x1080" data-fancybox="gallery-{{../this.id}}">
+                                                        </div>
+                                                    </li>
+                                                {{/each}}
+                                            </ul>
+                                            <div class="gallery__placeholder show-on-mobile">
+                                                <svg width="30" height="30">
+                                                    <use xlink:href="#screen" />
+                                                </svg>
+                                                <span>{{this.label}}</span>
+                                            </div>
+                                            {{>ui/navigation}}
+                                            {{>ui/pagination}}
+                                        </div>
+                                    </div>
+                                </li>
+                            {{/each}}
+
+                          <li class="tabs__body-item js-show-hide-item">
+                            <div class="gallery">
+                              <div class="gallery__content">
+                                <h2 class="gallery__title">Заголовок</h2>
+                                <div class="gallery__description">
+                                  <p>Описание</p>
+                                </div>
+                              </div>
+                              <div class="gallery__slider swiper js-gallery loading">
+                                <ul class="swiper-wrapper">
+                                  <li class="swiper-slide">
+                                    <div class="gallery__image-wrapper">
+                                      <video preload="metadata" controls="" data-fancybox="gallery-{{../this.id}}">
+                                        <source src="" type="video/mp4">
+                                      </video>
+                                    </div>
+                                  </li>
+                                </ul>
+                                <div class="gallery__placeholder show-on-mobile">
+                                  <svg width="30" height="30">
+                                    <use xlink:href="#screen" />
+                                  </svg>
+                                  <span>Смотреть</span>
+                                </div>
+                                {{>ui/navigation}}
+                                {{>ui/pagination}}
+                              </div>
+                            </div>
+                          </li>
+
+                          <li class="tabs__body-item js-show-hide-item">
+                            <div class="gallery">
+                              <div class="gallery__content">
+                                <h2 class="gallery__title">Заголовок</h2>
+                                <div class="gallery__description">
+                                  <p>Описание</p>
+                                </div>
+                              </div>
+                              <div class="gallery__slider swiper js-gallery loading">
+                                <ul class="swiper-wrapper">
+                                  <li class="swiper-slide">
+                                    <div class="gallery__image-wrapper">
+                                      <iframe data-fancybox="gallery-{{../this.id}}" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                    </div>
+                                  </li>
+                                </ul>
+                                <div class="gallery__placeholder show-on-mobile">
+                                  <svg width="30" height="30">
+                                    <use xlink:href="#screen" />
+                                  </svg>
+                                  <span>Смотреть</span>
+                                </div>
+                                {{>ui/navigation}}
+                                {{>ui/pagination}}
+                              </div>
+                            </div>
+                          </li>
+
+                        </ul>
+                        {{>ui/show-more}}
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,41 @@
+<section class="section {{data.mods}} {{data.bemClass}}">
+    <div class="container">
+        <div class="section__inner">
+            {{#if data.image.left}}
+                <div class="section__heading-block">
+                    <h2 class="section__heading">{{data.title}}</h2>
+                </div>
+            {{/if}}
+            <div class="section__grid">
+                {{#if data.image.left}}
+                    <div class="section__image">
+                        <img src="{{data.image.url}}" alt="Section Image">
+                    </div>
+                    <div class="section__gap"></div>
+                    <div class="section__content">
+                        <div class="section__inner-content">
+                            {{#block "content"}}
+
+                            {{/block}}
+                        </div>
+                    </div>
+                {{else}}
+                    <div class="section__content">
+                        <div class="section__heading-block">
+                            <h2 class="section__heading">{{data.title}}</h2>
+                        </div>
+                        <div class="section__inner-content">
+                            {{#block "content"}}
+
+                            {{/block}}
+                        </div>
+                    </div>
+                    <div class="section__gap"></div>
+                    <div class="section__image">
+                        <img src="{{data.image.url}}" alt="Section Image">
+                    </div>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</section>

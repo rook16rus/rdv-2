@@ -1,0 +1,62 @@
+.card-links {
+  margin: var(--s-1) 0;
+
+  &__inner {
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    display: block;
+    padding: 3.5rem 4rem;
+    border-radius: 1.2rem;
+    background-color: $primary-500;
+    overflow: hidden;
+
+    @include breakpoint(tablet) {
+      padding: 2.5rem;
+    }
+  }
+
+  &__item-title {
+    max-width: 25rem;
+
+    color: $grayscale-100;
+    @extend %fs-h4;
+
+    @include breakpoint(tablet) {
+      max-width: 18.8rem;
+    }
+  }
+
+  &__item-image {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+
+    height: 17rem;
+    width: auto;
+    max-width: 17rem;
+
+    object-fit: contain;
+
+    @include breakpoint(tablet) {
+      top: 1.4rem;
+      right: 1rem;
+
+      height: 12rem;
+      max-width: 12rem;
+    }
+  }
+}

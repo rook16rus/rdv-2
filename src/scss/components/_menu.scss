@@ -1,0 +1,159 @@
+.menu {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+
+  &__links {
+    flex-grow: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4.4rem;
+    padding-bottom: 1.5rem;
+  }
+
+  &__item {
+    flex-shrink: 0;
+    &--has-submenu {
+      &:hover {
+        .menu__submenu {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      .menu__head {
+        &::after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-left: 0.5rem solid transparent;
+          border-right: 0.5rem solid transparent;
+          border-top: 0.5rem solid $primary-300;
+          top: 0.6rem;
+          right: -1.5rem;
+        }
+      }
+    }
+  }
+
+  &__head {
+    position: relative;
+
+    font-size: 1.35rem;
+    line-height: 1.4;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    @media screen and (min-width: 1681px) {
+      font-size: 1.2rem;
+    }
+
+    @include breakpoint(tablet) {
+      font-size: 1.2rem;
+    }
+
+    &:link,
+    &:visited {
+      color: $primary-900;
+    }
+
+    &:hover {
+      color: black;
+    }
+  }
+
+  &__submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+    height: auto;
+    padding: 2.2rem 1rem;
+
+    background-color: #fff;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.8rem 1.6rem rgb(0 0 0 / 18%);
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: visibility 0.3s ease, opacity 0.3s ease;
+
+    font-size: 1.6rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint(mobile) {
+      grid-template-columns: 1fr;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .accent {
+      font-size: 1.35rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: $primary-900;
+      &:link,
+      &:visited {
+        color: $primary-900;
+      }
+    }
+  }
+}
+
+.modal .menu {
+  padding: 0;
+  &__links {
+    align-items: stretch;
+    flex-direction: column;
+
+    @include breakpoint(tablet) {
+      gap: 2.4rem;
+    }
+  }
+
+  &__head {
+    font-size: 1.8rem;
+
+    &::after {
+      content: none;
+    }
+
+    &:link,
+    &:visited {
+      color: $primary-300;
+    }
+  }
+
+
+  &__submenu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 1.4rem;
+  }
+}

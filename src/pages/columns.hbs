@@ -1,0 +1,69 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="attention-simple">
+            <div class="container">
+                <div class="attention-simple__inner">
+                    <img class="attention-simple__image" width="142" height="106" src="img/content/attention/attention.png" alt="Attention Image">
+                    <div class="attention-simple__text">
+                        <b>Вам</b> не нужно <b>дорабатывать свою систему для интеграции с маркетплейсами!</b>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="columns">
+            <div class="container">
+                <div class="columns__inner">
+                    <ul class="columns__list">
+                        {{#each columns}}
+                            <li class="columns__item">
+                                <h3 class="columns__heading">{{this.title}}</h3>
+                                <div class="columns__text">
+                                    {{{this.text}}}
+                                </div>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="icon-cards">
+            <div class="container">
+                <div class="icon-cards__inner">
+                    <ul class="icon-cards__list">
+                        {{#each iconCards}}
+                            <li class="icon-cards__item">
+                                <div class="icon-cards__icon-wrapper">
+                                    <img class="icon-cards__icon" width="48" height="48" src="{{this.icon}}" alt="Card Icon">
+                                </div>
+                                <div class="icon-cards__text">
+                                    {{{this.text}}}
+                                </div>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="card-links">
+            <div class="container">
+                <div class="card-links__inner">
+                    <ul class="card-links__list">
+                        {{#each cardLinks}}
+                            <li>
+                                <a class="card-links__item" href="#">
+                                    <h3 class="card-links__item-title">{{this.title}}</h3>
+                                    <img class="card-links__item-image" width="180" height="180" src="{{this.image}}" alt="Card Link Image">
+                                </a>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    {{/content}}
+{{/extend}}

@@ -1,0 +1,52 @@
+.custom-error {
+	font-size: 12px;
+
+	position: absolute;
+	z-index: 10;
+	top: 100%;
+	left: 0;
+
+	display: flex;
+	align-items: flex-end;
+
+	transform: translateY(1px);
+
+	color: color(red-main);
+
+	&__tooltip {
+		@include below($tablet) {
+			max-width: 110%;
+		}
+	}
+}
+
+.custom-error__tooltip-ico {
+	display: inline-block;
+
+	width: 12px;
+	height: 12px;
+	margin-bottom: 2px;
+	margin-left: 4px;
+
+	cursor: pointer;
+
+	&:hover {
+		.info__content {
+			display: block;
+		}
+	}
+
+	.info__content {
+		right: -25px;
+		bottom: 132%;
+
+		width: 400px;
+	}
+
+	svg {
+		display: block;
+
+		width: inherit;
+		height: inherit;
+	}
+}

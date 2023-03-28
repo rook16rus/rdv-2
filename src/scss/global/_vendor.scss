@@ -1,0 +1,71 @@
+@import '../../node_modules/swiper/swiper-bundle';
+@import '../../node_modules/intl-tel-input/build/css/intlTelInput';
+@import '../libs/hystmodal.scss';
+@import '../../node_modules/@fancyapps/ui/dist/fancybox';
+
+// https://swiperjs.com/swiper-api
+
+.swiper {
+  width: 100%;
+  overflow: visible;
+}
+
+.swiper-slide {
+  box-sizing: border-box;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+// https://parsleyjs.org/doc/annotated-source/defaults.html
+
+.parsley-errors-list {
+  @extend %fs-t3;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: translateY(1px);
+  color: #ff3645;
+}
+
+// https://github.com/jackocnr/intl-tel-input
+
+.iti {
+  width: 100%;
+
+  user-select: none;
+}
+
+.iti__flag {background-image: url("../img/flags/flags.png");}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {background-image: url("../img/flags/flags@2x.png");}
+}
+
+// https://addmorescripts.github.io/hystModal/index_ru.html
+
+.hystmodal__opened {
+  .hystmodal--active {
+    visibility: visible;
+    pointer-events: all;
+  }
+
+  .hystmodal--active .hystmodal__window {
+    opacity: 1;
+  }
+}
+
+
+// https://fancyapps.com/docs/ui/installation
+.fancybox__thumbs,
+.fancybox__button--zoom,
+.fancybox__button--slideshow,
+.fancybox__button--fullscreen,
+.fancybox__button--thumbs {
+  display: none;
+}
+
+.carousel__button:focus {
+  box-shadow: none;
+}

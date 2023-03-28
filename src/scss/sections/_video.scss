@@ -1,0 +1,96 @@
+.video {
+  padding: var(--s-1) 0;
+  background-color: $primary-100;
+
+  &__inner {
+    overflow: hidden;
+
+    @include breakpoint(tablet) {
+      overflow: visible;
+    }
+  }
+
+  &__title {
+    max-width: 70rem;
+
+    color: $primary-900;
+    @extend %fs-h2;
+
+    @include breakpoint(mobile) {
+      font-size: 2.8rem;
+    }
+  }
+
+  &__slider {
+    margin-top: var(--s-2);
+
+    @include breakpoint(tablet) {
+      margin-left: 0;
+    }
+  }
+
+  .swiper-slide {
+    max-width: 60rem;
+  }
+
+  &__slide-iframe-wrapper {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    border-radius: 3.2rem;
+    overflow: hidden;
+
+    background-color: $grayscale-300;
+
+    @include breakpoint(mobile) {
+      border-radius: 1.6rem;
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+
+      cursor: pointer;
+    }
+  }
+
+  &__slide-title {
+    margin-top: 2rem;
+
+    color: $primary-900;
+    @extend %fs-h5;
+  }
+}
+
+.video .swiper-scrollbar {
+  position: relative;
+  left: unset;
+  bottom: unset;
+  width: 100%;
+  height: 0.5rem;
+  margin-top: 2rem;
+
+  @include breakpointMF(mobile) {
+    display: none;
+  }
+}
+
+.video .single .swiper-scrollbar {
+  display: none;
+}

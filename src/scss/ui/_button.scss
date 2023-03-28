@@ -1,0 +1,102 @@
+.button {
+  align-items: center;
+  justify-content: center;
+
+  display: inline-flex;
+  padding: 1.6rem 3rem;
+
+  border-radius: 3.5rem;
+  border: 0.1rem solid $primary-300;
+
+  background-color: $primary-300;
+
+  @extend %button;
+  
+  color: white;
+  text-align: center;
+
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+  &:link,
+  &:visited {
+    color: white;
+  }
+
+  &:hover {
+    background-color: $secondary-300;
+    color: $grayscale-900;
+    border-color: $secondary-300;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &--bold {
+    padding: 2.4rem 3rem;
+    font-size: 1.4rem;
+    min-width: 17.9rem;
+
+    @include breakpoint(mobile) {
+      font-size: 1.2rem;
+      padding: 1.7rem 3rem;
+      width: 100%;
+    }
+  }
+
+  &--min {
+    padding: 1.6rem 2.2rem;
+  }
+
+  &--stroke {
+    background-color: $grayscale-100;
+    color: $primary-300;
+
+    &:link,
+    &:visited {
+      color: $primary-300;
+    }
+  }
+
+  &--stroke-bold {
+    border-color: $primary-900;
+    background-color: rgba(0,0,0,0);
+    color: $primary-900;
+
+    &:link,
+    &:visited {
+      color: $primary-900;
+    }
+  }
+
+  &--secondary {
+    background-color: $secondary-300;
+    border-color: $secondary-300;
+    color: $grayscale-900;
+
+    &:link,
+    &:visited {
+      color: $grayscale-900;
+    }
+
+    &:hover {
+      background-color: $primary-900;
+      color: $secondary-300;
+      border-color: $primary-900;
+    }
+  }
+
+  .active-label {
+    display: none;
+  }
+
+  &.active {
+    .default-label {
+      display: none;
+    }
+
+    .active-label {
+      display: block;
+    }
+  }
+}

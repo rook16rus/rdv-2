@@ -1,0 +1,11 @@
+.image {
+  margin: var(--s-1) 0;
+
+  &__inner {
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+}

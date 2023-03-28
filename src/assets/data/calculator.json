@@ -1,0 +1,153 @@
+{
+  "currency": "₽",
+  "marketplaces": [
+    {
+      "logo": "img/content/calculator/ozon.svg",
+      "name": "Ozon",
+      "options": [
+        {
+          "key": 1,
+          "name": "FBS",
+          "cost": 150,
+          "active": true
+        },
+        {
+          "key": 2,
+          "name": "FBM",
+          "cost": 100,
+          "active": false
+        }
+      ]
+    },
+    {
+      "logo": "img/content/calculator/wb.svg",
+      "name": "Wildberries",
+      "options": [
+        {
+          "key": 3,
+          "name": "FBS",
+          "cost": 150,
+          "active": false
+        },
+        {
+          "key": 4,
+          "name": "FBO",
+          "cost": 25,
+          "active": false,
+          "tooltip": "Данная схема доступна к покупке при одновременном приобретении тарифа Ozon FBS или Wildberries FBM"
+        }
+      ]
+    },
+    {
+      "logo": "img/content/calculator/sber.svg",
+      "name": "Sber",
+      "options": [
+        {
+          "key": 5,
+          "name": "FBS",
+          "cost": 100,
+          "active": false
+        }
+      ]
+    },
+    {
+      "logo": "img/content/calculator/ali.svg",
+      "name": "AliExpress",
+      "options": [
+        {
+          "key": 6,
+          "name": "FBS",
+          "cost": 100,
+          "active": false
+        }
+      ]
+    },
+    {
+      "logo": "img/content/calculator/yandex.svg",
+      "name": "Yandex",
+      "options": [
+        {
+          "key": 7,
+          "name": "FBS",
+          "cost": 100,
+          "active": false
+        }
+      ]
+    }
+  ],
+  "license": {
+    "name": "Пользовательские лицензии",
+    "cost": 70,
+    "count": 1,
+    "discounts": [
+      {
+        "count": 1,
+        "discount": 0
+      },
+      {
+        "count": 5,
+        "discount": 0.1
+      },
+      {
+        "count": 10,
+        "discount": 0.2
+      }
+    ]
+  },
+  "modules": [
+    {
+      "key": 1,
+      "name": "Создание карточек товаров на Wildberries",
+      "cost": 100,
+      "active": false,
+      "tooltip": "Можно массово создавать и актуализировать карточки товаров в онлайн-режиме единого окна вашей системы 1С для быстрой трансляции новых карточек на Wildberries."
+    },
+    {
+      "key": 2,
+      "name": "Внешний мониторинг цен",
+      "cost": 150,
+      "active": false,
+      "tooltip": "Модуль, позволяющий в автоматическом режиме получать рекомендованные цены на маркетплейсах для последующего сравнения, определения актуальной рыночной цены и оценки рентабельности продаж."
+    },
+    {
+      "key": 3,
+      "name": "Коннектор",
+      "cost": 400,
+      "active": false,
+      "tooltip": "Отдельный модуль, состоящий из набора подсистем, которые встраиваются в вашу ERP или WMS систему. Модуль позволяет оперативно передавать остатки и цены в облачную систему RDV Маркет и собирать из нее новые заказы с маркетплейсов."
+    },
+    {
+      "key": 4,
+      "name": "Доступ к среде разработки",
+      "cost": 160,
+      "active": false,
+      "tooltip": "Доступ к среде разработки дает возможность получить выделенную тестовую среду (копию рабочей базы клиента) с доступом в конфигуратор. Клиент может самостоятельно проводить доработки конфигурации в соответствии со стандартами разработки продукта RDV Маркет. После реализации доработок клиентом мы осуществляем code-review и переносим изменения на рабочую базу клиента."
+    }
+  ],
+  "days": [
+    {
+      "key": 1,
+      "count": 30,
+      "discount": 0,
+      "active": true
+    },
+    {
+      "key": 2,
+      "count": 90,
+      "discount": 0.05,
+      "active": false
+    },
+    {
+      "key": 3,
+      "count": 180,
+      "discount": 0.15,
+      "active": false
+    },
+    {
+      "key": 4,
+      "count": 360,
+      "discount": 0.25,
+      "active": false
+    }
+  ]
+}

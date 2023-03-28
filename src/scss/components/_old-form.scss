@@ -1,0 +1,124 @@
+.old-form {
+  &.loading .button::before {
+    width: 100%;
+    transition: width 4s linear;
+  }
+
+  &.loading .button {
+    pointer-events: none;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  &__input-wrapper {
+    position: relative;
+
+    &.error {
+      .old-form__input {
+        border-color: $system-red;
+      }
+
+      .old-form__textarea {
+        border-color: $system-red;
+      }
+    }
+  }
+
+  &__input {
+    padding: 1.4rem 2rem;
+
+    border: 0.1rem solid white;
+    border-radius: 0.6rem;
+
+    @extend %fs-t1;
+
+    background-color: white;
+
+    transition: border-color 0.3s ease;
+
+    &::placeholder {
+      @extend %fs-t1;
+      color: #939598;
+    }
+
+    &:hover {
+      border-color: $primary-300;
+    }
+  }
+
+  &__textarea {
+    padding: 1.4rem 2rem;
+    min-height: 12rem;
+    max-height: 24rem;
+
+    border: 0.1rem solid white;
+    border-radius: 0.6rem;
+
+    @extend %fs-t1;
+
+    background-color: white;
+
+    transition: border-color 0.3s ease;
+
+    resize: vertical;
+
+    &::placeholder {
+      @extend %fs-t1;
+      color: #939598;
+    }
+
+    &:hover {
+      border-color: $primary-300;
+    }
+  }
+
+  .button {
+    width: fit-content;
+  }
+
+  &__policy {
+    @extend %fs-t2;
+    color: #939598;
+
+    @include breakpoint(tablet) {
+      max-width: 64rem;
+    }
+
+    a {
+      text-decoration: underline;
+
+      &:link,
+      &:visited {
+        color: #939598;
+      }
+
+      &:hover {
+        color: $primary-300;
+      }
+    }
+  }
+
+  .button {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      content: '';
+      background-color: #1b9ac4;
+    }
+  }
+
+  span {
+    z-index: 4;
+  }
+}

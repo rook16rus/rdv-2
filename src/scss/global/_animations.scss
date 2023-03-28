@@ -1,0 +1,97 @@
+@keyframes backgroundMovement {
+  0% {
+      background-position: 100%;
+  }
+  100% {
+      background-position: -100%;
+  }
+}
+
+@keyframes modal-loader-animation {
+  0% {
+      top: 4rem;
+      left: 4rem;
+      width: 0;
+      height: 0;
+      opacity: 0;
+  }
+  4.9% {
+      top: 3.6rem;
+      left: 3.6rem;
+      width: 0;
+      height: 0;
+      opacity: 0;
+  }
+  5% {
+      top: 4rem;
+      left: 4rem;
+      width: 0;
+      height: 0;
+      opacity: 1;
+  }
+  100% {
+      top: 0;
+      left: 0;
+      width: 8rem;
+      height: 8rem;
+      opacity: 0;
+  }
+}
+
+.ajax-loader {
+  background: linear-gradient(270deg, rgba(27,80,26,.1) 0, #E5E2DB 80%, rgba(27,80,26,.1) 100%);
+  background-size: 200%;
+
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: backgroundMovement;
+  animation-timing-function: linear;
+}
+
+.modal-loader {
+  display: inline-block;
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  margin: 0 auto;
+}
+.modal-loader span {
+  position: absolute;
+  display: block;
+  border: 0.4rem solid #1b501a;
+  opacity: 1;
+  border-radius: 50%;
+  animation: modal-loader-animation 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.modal-loader span:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
+.swiper {
+  width: 100%;
+  overflow: visible;
+
+  &.loading {
+    overflow: hidden;
+    // background-color: #F1F4F9;
+    border-radius: 0.3rem;
+    pointer-events: none;
+
+    background: linear-gradient(270deg, rgba(91, 91, 91, 0.1) 0, #F1F4F9 80%, rgba(91, 91, 91, 0.1) 100%);
+    background-size: 200%;
+
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: backgroundMovement;
+    animation-timing-function: linear;
+
+    .swiper-wrapper,
+    .progressbar,
+    .navigation,
+    .pagination {
+      opacity: 0;
+    }
+  }
+}

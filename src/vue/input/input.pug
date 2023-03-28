@@ -1,0 +1,13 @@
+mixin input(params)
+	.input&attributes(params.rootAttrs)
+		if (params.tag !== 'textarea')
+			input.input__control-2(type=`${params.type || 'text'}`, data-input='', placeholder=`${params.placeholder}` autocomplete="off")&attributes(attributes)
+		else
+			textarea.input__control.input__control--textarea(data-input='', placeholder=`${params.placeholder}`)&attributes(attributes)
+		label.input__placeholder= params.placeholder
+		if (params.tooltip)
+			.info
+				img(src="img/questions-gray.svg" alt="information")
+				.info__content
+					.t-base.t-base--size--small.t-base--color--gray-dark.v-indent.v-indent--red 
+						| Поле должно содержать латинские буквы и арабские цифры

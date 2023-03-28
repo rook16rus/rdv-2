@@ -1,0 +1,20 @@
+<section class="problems">
+    <div class="container">
+        <div class="problems__inner js-show-hide js-show-hide--mobile" data-count="3">
+            <div class="problems__heading">
+                <h2 class="problems__title">С какими проблемами сталкиваются продавцы на&nbsp;Wildberries</h2>
+                <div class="problems__picture-wrapper">
+                    <img class="problems__picture" src="img/content/problems/problem.png" alt="Problems Picture">
+                </div>
+            </div>
+            <ol class="numbered-list">
+                {{#each problems}}
+                    <li class="numbered-list__item js-show-hide-item">
+                        {{{this.text}}}
+                    </li>
+                {{/each}}
+            </ol>
+            {{>ui/show-more}}
+        </div>
+    </div>
+</section>

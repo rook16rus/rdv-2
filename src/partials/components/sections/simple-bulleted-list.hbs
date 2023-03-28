@@ -1,0 +1,16 @@
+{{#extend "section"}}
+    {{#content "content"}}
+        <ul class="simple-bulleted-list">
+            {{#each simpleBulletedList}}
+                <li class="simple-bulleted-list__item">
+                    {{{this}}}
+                </li>
+            {{/each}}
+        </ul>
+        <ul class="buttons buttons--offset-top">
+            <li>
+                <a class="button button--bold" href="#">Оставить заявку</a>
+            </li>
+        </ul>
+    {{/content}}
+{{/extend}}

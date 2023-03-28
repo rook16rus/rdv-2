@@ -1,0 +1,25 @@
+.buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  @include breakpoint(tablet) {
+    gap: 1.6rem;
+  }
+
+  @include breakpoint(mobile) {
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 2rem;
+  }
+}
+
+.buttons--offset-top {
+  margin-top: 6rem;
+
+  @include breakpoint(tablet) {
+    margin-top: 3rem;
+  }
+}

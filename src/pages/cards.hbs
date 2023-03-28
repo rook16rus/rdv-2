@@ -1,0 +1,96 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="two-columns left-accent">
+    <div class="container">
+        <h2 class="two-columns__bold-title">Преимущества работы с RDV Маркет в облаке</h2>
+        <div class="two-columns__inner">
+            <div class="two-columns__left">
+                <div class="slider swiper loading js-gallery js-gallery-only-desktop js-show-hide js-show-hide--mobile" data-count="2">
+                    <ul class="swiper-wrapper">
+                        {{#each slider}}
+                           <li class="slider__slide swiper-slide js-show-hide-item">
+                                {{>card data=this}}
+                           </li>
+                        {{/each}}
+                    </ul>
+                    {{>ui/navigation}}
+                    {{>ui/pagination}}
+                    {{>ui/show-more}}
+                </div>
+            </div>
+            <div class="two-columns__right">
+                <div class="image-wrapper image-wrapper--wide">
+                    <img width="400" height="272" src="img/content/illustrations/1.png" alt="Illustration">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="two-columns two-columns--grey">
+    <div class="container">
+        <h2 class="two-columns__bold-title">Вы можете интегрировать вашу 1С с маркетплейсами</h2>
+        <div class="two-columns__inner">
+            <div class="two-columns__left">
+                <div class="image-wrapper image-wrapper--position-left">
+                    <img width="400" height="272" src="img/content/illustrations/2.png" alt="Illustration">
+                </div>
+            </div>
+            <div class="two-columns__right text-content-wrapper">
+                <div class="text-container">
+                    <p>У вас старая или сильно доработанная версия 1С*? Вы не хотите менять текущие бизнес-процессы? Вам подойдет наш готовый модуль, который позволит сохранить вашу учетную систему и автоматизировать торговлю на маркетплейсах.</p>
+                </div>
+                {{>remarks}}
+                <ul class="buttons">
+                    <li>
+                        <a class="button" href="#">Оставить заявку</a>
+                    </li>
+                    <li>
+                        <a class="button button--secondary" href="#">Узнать больше</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="two-columns">
+    <div class="container">
+        <div class="two-columns__inner">
+            <div class="two-columns__left">
+                <h2 class="two-columns__bold-title">Кому подойдет работа с&nbsp;RDV&nbsp;Маркет через Коннектор</h2>
+                <div class="image-wrapper image-wrapper--position-left">
+                    <img width="400" height="272" src="img/content/illustrations/2.png" alt="Illustration">
+                </div>
+            </div>
+            <div class="two-columns__right">
+                <ul class="numbered-list numbered-list--column">
+                    <li class="numbered-list__item">
+                        <p>Если у вас ранние версии 1С *</p>
+                        <ul>
+                            <li>1С:УТ 11</li>
+                            <li>1С:КА 2.4</li>
+                            <li>1C:ERP 2.4</li>
+                            <li>1С:УПП 1.3</li>
+                            <li>1С:УТ 10.3</li>
+                            <li>1С:УНФ 1.6</li>
+                        </ul>
+                    </li>
+                    <li class="numbered-list__item">
+                        <p>Если вы не хотите менять стандартный функционал 1С дополнительными расширениями</p>
+                    </li>
+                    <li class="numbered-list__item">
+                        <p>Если ваша система сильно доработана под потребности бизнеса</p>
+                    </li>
+                    <li class="numbered-list__item">
+                        <p>Если вы используете ERP-системы других вендоров: SAP, Oracle, Axapta и любые другие (у нас есть открытый унифицированный API для подключения)</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}

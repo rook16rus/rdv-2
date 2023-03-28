@@ -1,0 +1,75 @@
+@import 'old/input';
+
+@import "global/legacy";
+
+@import 'global/fonts';
+@import 'global/mixins';
+@import 'global/variables';
+@import 'global/extends';
+@import 'global/vendor';
+
+@import 'global/global';
+@import 'global/utils';
+@import 'global/animations';
+
+@import "global/section";
+
+@import 'layout/layout';
+@import 'layout/header';
+@import 'layout/footer';
+
+@import 'ui/button';
+
+@import 'components/old-form';
+@import 'components/modal';
+@import 'components/breadcrumbs';
+@import "components/gallery";
+@import "components/navigation";
+@import "components/pagination";
+@import "components/image-wrapper";
+@import "components/card";
+@import "components/slider";
+@import "components/remarks";
+@import "components/text-container";
+@import "components/buttons";
+@import "components/numbered-list";
+@import "components/simple-numbered-list";
+@import "components/simple-bulleted-list";
+@import "components/heading";
+@import "components/faq";
+@import "components/menu";
+@import "components/socials";
+@import "components/review";
+@import "components/new-pagination";
+
+@import 'sections/form';
+@import 'sections/two-columns';
+@import 'sections/integration';
+@import 'sections/partners';
+@import 'sections/problems';
+@import "sections/video";
+@import "sections/call";
+@import "sections/simple-intro";
+@import "sections/tabs";
+@import "sections/links-list";
+@import "sections/steps";
+@import "sections/attention";
+@import "sections/attention-simple";
+@import "sections/columns";
+@import "sections/icon-cards";
+@import "sections/card-links";
+@import "sections/buttons-section";
+@import "sections/comparison";
+@import "sections/intro-video";
+@import "sections/text";
+@import "sections/image";
+@import "sections/calculator";
+@import "sections/cards-section";
+@import "sections/cards-slider";
+@import "sections/text-image";
+@import "sections/intro-section";
+@import "sections/horizontal-cards";
+@import "sections/marquee-cards";
+@import "sections/first-section";
+@import "sections/reviews";
+@import "sections/basic-services";

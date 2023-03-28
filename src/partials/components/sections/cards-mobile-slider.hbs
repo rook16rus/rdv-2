@@ -1,0 +1,30 @@
+<section class="cards-slider">
+  <div class="container">
+    <div class="cards-slider__inner js-init-slider js-init-slider--mobile --799">
+      <div class="cards-slider__top">
+        <h2 class="cards-slider__heading">Модули интеграции вашей 1С с маркетплейсами</h2>
+      </div>
+      <div class="swiper loading cards-slider__list-wrapper">
+        <ul class="swiper-wrapper cards-slider__list">
+          {{#each 01_b_slides}}
+            <li class="swiper-slide cards-slider__item">
+              <div class="cards-slider__item-image-wrapper">
+                <img src="{{this.image}}" alt="Image">
+              </div>
+              <div>
+                <h3 class="cards-slider__item-heading">{{this.heading}}</h3>
+                <div class="cards-slider__item-text">
+                  {{this.text}}
+                </div>
+              </div>
+              <div class="cards-slider__item-button-wrapper">
+                <a class="button button--min button--stroke-bold" href="#">Подробнее</a>
+              </div>
+            </li>
+          {{/each}}
+        </ul>
+        <div class="cards-slider__pagination js-pagination"></div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,109 @@
+.navigation {
+  display: flex;
+  gap: 2rem;
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+
+    border-radius: 50%;
+    background-color: #F6DA00;
+
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+
+    &.disabled {
+      opacity: 0.4;
+      pointer-events: none;
+      cursor: default;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:hover {
+      background-color: $primary-900;
+
+      svg {
+        stroke: white;
+      }
+    }
+
+    svg {
+      width: 1.4rem;
+      height: 0.9rem;
+
+      stroke: black;
+      stroke-width: 2px;
+    }
+  }
+
+  &__button.prev svg {
+    transform: rotate(90deg) translateY(0.2rem);
+  }
+
+  &__button.next svg {
+    transform: rotate(-90deg) translateY(0.1rem);
+  }
+}
+
+.navigation--new {
+  .navigation__button {
+    width: 6.4rem;
+    height: 6.4rem;
+
+    background-color: rgba(0,0,0,0);
+    border: 0.1rem solid $primary-900;
+
+    &.disabled {
+      opacity: 0.4;
+      pointer-events: none;
+      cursor: default;
+    }
+
+    &.swiper-button-lock {
+      // display: none;
+    }
+
+    &:hover {
+      background-color: $primary-900;
+
+      svg {
+        stroke: none;
+        fill: white;
+      }
+    }
+
+    svg {
+      width: 1.6rem;
+      height: 1.6rem;
+
+      stroke: none;
+      fill: $primary-900;
+      stroke-width: 2px;
+    }
+  }
+
+  .navigation__button.prev svg {
+    transform: rotate(0deg) translateX(-0.2rem);
+  }
+
+  .navigation__button.next svg {
+    transform: rotate(-180deg) translateX(-0.2rem);
+  }
+}
+
+.navigation--small {
+  .navigation__button {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  svg {
+    width: 1.4rem;
+    height: 0.9rem;
+  }
+}

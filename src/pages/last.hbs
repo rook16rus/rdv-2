@@ -1,0 +1,53 @@
+{{#extend "layout"}}
+  {{#content "main"}}
+
+    <section class="reviews">
+      <div class="container">
+        <div class="reviews__inner js-reviews-slider">
+          <h2 class="reviews__heading">Отзывы о работе с RDV Маркет</h2>
+          <div class="reviews__slider swiper loading">
+            <ul class="reviews__slider-wrapper swiper-wrapper">
+              {{#each reviews}}
+                <li class="reviews__slider-item swiper-slide">
+                  <div class="review__logo-wrapper mobile">
+                    <img src="{{this.logo}}" alt="" class="review__logo">
+                  </div>
+                  <div class="review">
+                    <div class="review__info">
+                      <div class="review__logo-wrapper desktop">
+                        <img src="{{this.logo}}" alt="" class="review__logo">
+                      </div>
+                      <h3 class="review__title">
+                        {{this.title}}
+                      </h3>
+                      <div class="review__description">
+                        {{this.description}}
+                      </div>
+                    </div>
+                    <div class="review__text">
+                      {{{this.text}}}
+                    </div>
+                  </div>
+                </li>
+              {{/each}}
+            </ul>
+            <div class="navigation navigation--new navigation--small">
+              <button class="navigation__button prev" type="button" title="Prev">
+                <svg width="13" height="8">
+                  <use xlink:href="#chevron-2" />
+                </svg>
+              </button>
+              <button class="navigation__button next" type="button" title="Next">
+                <svg width="13" height="8">
+                  <use xlink:href="#chevron-2" />
+                </svg>
+              </button>
+            </div>
+            <div class="new-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  {{/content}}
+{{/extend}}

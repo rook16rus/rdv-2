@@ -1,0 +1,46 @@
+.marquee-cards {
+  position: relative;
+  padding: var(--s-1) 0;
+  background-color: #F0F5F7;
+
+  // .marquee-cards__inner
+  &__inner {
+    &.not-initialized .marquee-cards__list {
+      display: block;
+
+      .marquee-cards__item {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+
+  // .marquee-cards__list
+  &__list {
+    transition-timing-function: linear;
+  }
+
+  // .marquee-cards__item
+  &__item {
+    width: 25rem;
+    height: 5rem;
+  }
+
+  // .marquee-cards__item-link
+  &__item-link {
+    position: relative;
+    display: block;
+    width: 25rem;
+    height: 5rem;
+  }
+
+  // .marquee-cards__item-image
+  &__item-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 0 4rem;
+  }
+}

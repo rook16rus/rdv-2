@@ -1,0 +1,51 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="steps">
+            <div class="container">
+                <div class="steps__inner">
+                    <h2 class="steps__title">Схема работы RDV Маркет при массовой упаковке и отгрузке заказов</h2>
+                    <ul class="steps__list">
+                        {{#each steps}}
+                            <li class="steps__step">
+                                <div class="steps__step-heading-block">
+                                    <span class="steps__step-number">
+                                        {{inc @index}}
+                                    </span>
+                                    <h3 class="steps__step-heading">{{this.title}}</h3>
+                                </div>
+                                <div class="steps__step-text">
+                                    {{{this.text}}}
+                                </div>
+                                <img class="steps__step-image" width="350" height="60" src="{{this.image}}" alt="Step Image">
+                            </li>
+                        {{/each}}
+                    </ul>
+                    <ul class="buttons">
+                        <li>
+                            <a class="button button--secondary button--bold" href="#">Оставить заявку</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        {{>sections/faq data=sections.faq}}
+
+        <section class="attention">
+            <div class="container">
+                <div class="attention__inner">
+                    <img class="attention__decoration-bottom-left" width="185" height="300" src="img/content/decorations/1.png" alt="Decoration Bottom Left">
+                    <img class="attention__decoration-top-right" width="185" height="300" src="img/content/decorations/2.png" alt="Decoration Top Right">
+                    <div class="attention__text"><b>Мы выстроили</b> простой унифицированный процесс <b>для работы со всеми маркетплейсами, который закрывает</b> все проблемные места, <b>связанные со сборкой, упаковкой, маркировкой, отгрузкой и взаиморасчетами.</b></div>
+                    <ul class="buttons">
+                        <li>
+                            <a class="button button--bold" href="#">Узнать Стоимость</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    {{/content}}
+{{/extend}}

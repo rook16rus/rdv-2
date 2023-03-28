@@ -1,0 +1,46 @@
+<section class="cards-section" id="03">
+  <span class="section-number">03</span>
+  <div class="container">
+    <div class="cards-section__inner">
+      <div class="cards-section__heading-block">
+        <div class="cards-section__left">
+          <span class="section-label">/ Маркетинг</span>
+          <h2 class="cards-section__heading">Комплексное бизнес-сопровождение на маркетплейсах</h2>
+        </div>
+        <div class="cards-section__right">
+          <div class="cards-section__text">
+            В рамках партнерства с популярными маркетплейсами мы оказываем полный цикл услуг по выходу и развитию
+            вашей компании на маркетплейсах.
+          </div>
+          <div class="cards-section__link-wrapper">
+            <a class="button button--stroke-bold button--min cards-section__link" href="#" data-modal="#form1">
+              <span class="hide-on-mobile">Подробнее</span>
+              <span class="show-on-mobile">Показать всё</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards-section__list-wrapper js-show-hide js-show-hide--mobile" data-count="3">
+        <ul class="cards-section__list">
+          {{#each 03_cards}}
+            <li class="cards-section__item js-show-hide-item">
+              <div class="cards-section__item-inner">
+                <div class="cards-section__item-heading-container">
+                  <h3 class="cards-section__item-heading">{{{this.title}}}</h3>
+                </div>
+                <div class="cards-section__item-text">
+                  {{this.text}}
+                </div>
+              </div>
+            </li>
+          {{/each}}
+        </ul>
+        <button class="button button--stroke-bold js-show-hide-button cards-section__show-more" type="button">
+          <span class="default-label">Показать ещё</span>
+          <span class="active-label">Скрыть</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

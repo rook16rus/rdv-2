@@ -1,0 +1,443 @@
+@import './config';
+
+.input {
+	font-size: $input-font-size;
+	font-family: $font-geometria;
+
+	position: relative;
+
+	width: 100%;
+
+	&__wrapper {
+		position: relative;
+	}
+
+	&__icon {
+		position: absolute;
+		top: calc(50% - 10px);
+		right: 13px;
+
+		height: 20px;
+
+		pointer-events: none;
+	}
+
+	&__control {
+		font-size: inherit;
+
+		position: relative;
+
+		display: block;
+
+		width: 100%;
+		height: 50px;
+		padding-right: 16px;
+		padding-left: 16px;
+
+		transition: font-size #{$transition}, padding-top #{$transition},
+			border-color #{$transition}, box-shadow#{$transition};
+		transform: translateZ(0);
+
+		color: transparent;
+		//border: 2px solid $input-border-color;
+
+		border-radius: 6px;
+		background-color: $input-control-bg-color;
+
+		box-shadow: 1px 1px color('gray-medium'), -1px -1px color('gray-medium'),
+			-1px 1px color('gray-medium'), 1px -1px color('gray-medium');
+
+		&:hover {
+			box-shadow: 2px 2px color('gray-dark'), -2px -2px color('gray-dark'),
+				-2px 2px color('gray-dark'), 2px -2px color('gray-dark');
+			//border-color: $input-hover-border-color;
+		}
+
+		&::placeholder {
+			color: transparent;
+		}
+
+		&.error {
+			//border-color: $input-border-error-color;
+			box-shadow: 2px 2px $input-border-error-color, -2px -2px $input-border-error-color,
+				-2px 2px $input-border-error-color, 2px -2px $input-border-error-color;
+		}
+
+		.is-focused &,
+		.is-changed & {
+			padding-top: 16px;
+
+			color: $input-text-color;
+		}
+
+		.is-focused &,
+		&:focus {
+			border-color: $input-focus-border-color;
+			outline: none;
+			box-shadow: 2px 2px color('gray-dark'), -2px -2px color('gray-dark'),
+				-2px 2px color('gray-dark'), 2px -2px color('gray-dark');
+		}
+
+		&[disabled] {
+			cursor: not-allowed;
+
+			color: $input-disabled-color;
+			border-color: $input-disabled-border-color;
+			background-color: $input-disabled-bg;
+		}
+	}
+
+	&__control--textarea {
+		min-height: 100px;
+		padding-bottom: 15px;
+
+		resize: none;
+
+		.is-focused &,
+		.is-changed & {
+			padding-top: 23px;
+		}
+	}
+
+	&__control--textarea-md {
+		min-height: 150px;
+	}
+
+	&__placeholder {
+		left: 16px;
+
+		overflow: hidden;
+
+		width: calc(100% - 16px);
+
+		transition: transform #{$transition};
+		transform-origin: top left;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		pointer-events: none;
+
+		color: $input-placeholder-color;
+		will-change: transform;
+
+		@include center($horiz: false);
+	}
+
+	&__control--textarea ~ &__placeholder {
+		top: 16px;
+
+		transform: none;
+	}
+
+	&--phone &__control {
+		z-index: 3 !important;
+
+		padding-top: 14px;
+		padding-bottom: 12px;
+
+		.is-focused &,
+		.is-changed & {
+			padding-top: 14px;
+		}
+	}
+
+	&--phone {
+		.iti {
+			width: 100%;
+
+			&--container {
+				z-index: 2;
+				top: 100% !important;
+				left: 0 !important;
+
+				padding: 0;
+			}
+
+			.iti__flag-container {
+				position: static;
+
+				padding: 0;
+			}
+
+			.iti__selected-flag {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				z-index: 4;
+
+				padding-left: 19px;
+				padding-right: 17px;
+
+				&::before {
+					position: absolute;
+					top: 5px;
+					right: 0;
+					bottom: 5px;
+
+					width: 1px;
+
+					content: '';
+
+					background: color('gray-medium');
+				}
+			}
+
+			.iti__flag {
+				width: 30px;
+				height: 30px;
+
+				box-shadow: none;
+
+				&.iti__ru {
+					background: url('../img/flags/ru.svg') no-repeat center center / cover;
+				}
+
+				&.iti__az {
+					background: url('../img/flags/az.svg') no-repeat center center / cover;
+				}
+
+				&.iti__am {
+					background: url('../img/flags/am.svg') no-repeat center center / cover;
+				}
+
+				&.iti__by {
+					background: url('../img/flags/by.svg') no-repeat center center / cover;
+				}
+
+				&.iti__kz {
+					background: url('../img/flags/kz.svg') no-repeat center center / cover;
+				}
+
+				&.iti__kg {
+					background: url('../img/flags/kg.svg') no-repeat center center / cover;
+				}
+
+				&.iti__md {
+					background: url('../img/flags/md.svg') no-repeat center center / cover;
+				}
+
+				&.iti__tj {
+					background: url('../img/flags/tj.svg') no-repeat center center / cover;
+				}
+
+				&.iti__uz {
+					background: url('../img/flags/uz.svg') no-repeat center center / cover;
+				}
+
+				&.iti__ua {
+					background: url('../img/flags/ua.svg') no-repeat center center / cover;
+				}
+
+				&.iti__ge {
+					background: url('../img/flags/ge.svg') no-repeat center center / cover;
+				}
+
+				&.iti__abh {
+					background: url('../img/flags/abh.svg') no-repeat center center / cover;
+				}
+			}
+
+			.iti__country-list {
+				top: calc(100% + 2px);
+				left: -4px;
+
+				width: calc(100% + 8px);
+				max-height: 230px;
+				margin: 0;
+				padding-top: 13px;
+
+				border: none;
+				border-bottom-right-radius: 10px;
+				border-bottom-left-radius: 10px;
+
+				box-shadow: 0 0 15px rgba(23, 79, 119, .15);
+			}
+
+			.iti__dial-code {
+				color: $input-placeholder-color;
+			}
+
+			.iti__country-name {
+				margin-right: 10px;
+
+				color: color(dark-main);
+			}
+
+			.iti__flag-box {
+				width: 30px;
+				margin-right: 11px;
+			}
+
+			.iti__country.iti__highlight {
+				background-color: color(gray-light);
+			}
+
+			.iti__country {
+				padding: 5px 23px;
+			}
+
+			.iti__arrow {
+				width: 13px;
+				height: 8px;
+				margin-top: 4px;
+				margin-left: 12px;
+
+				transition: transform .25s ease;
+
+				border: none;
+				background: url('../img/svg/chevron.svg') no-repeat center center / cover;
+			}
+
+			.iti__arrow--up {
+				margin-top: -2px;
+
+				transform: rotate(180deg);
+
+				border: none;
+			}
+
+			// .iti__country {
+			// 	font-size: 0;
+			// 	display: flex;
+			// 	align-items: center;
+			// }
+
+			// .iti__country-name, .iti__dial-code {
+			// 	font-size: 16px;
+			// }
+		}
+
+		.iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
+			background: none;
+		}
+
+		.iti--allow-dropdown input,
+		.iti--allow-dropdown input[type='text'],
+		.iti--allow-dropdown input[type='tel'],
+		.iti--separate-dial-code input,
+		.iti--separate-dial-code input[type='text'],
+		.iti--separate-dial-code input[type='tel'] {
+			padding-left: 107px;
+		}
+	}
+
+	&--iti-open {
+		position: relative;
+
+		&::before {
+			position: absolute;
+			z-index: 1;
+			top: -4px;
+			left: -4px;
+
+			width: calc(100% + 8px);
+			height: calc(100% + 8px);
+
+			content: '';
+
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+			background: #ffffff;
+			box-shadow: 0 0 15px rgba(23, 79, 119, .15);
+		}
+
+		&::after {
+			position: absolute;
+			z-index: 2;
+			top: -4px;
+			left: -4px;
+
+			width: calc(100% + 8px);
+			height: calc(100% + 8px);
+
+			content: '';
+
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+			background: #ffffff;
+		}
+	}
+
+	&--iti-open &__control {
+		border-color: $input-focus-border-color;
+		outline: none;
+		box-shadow: 2px 2px color('gray-dark'), -2px -2px color('gray-dark'),
+			-2px 2px color('gray-dark'), 2px -2px color('gray-dark');
+	}
+
+	&--contrast-bg &__control {
+		box-shadow: 2px 2px transparent, -2px -2px transparent, -2px 2px transparent,
+			2px -2px transparent;
+
+		&:hover {
+			box-shadow: 2px 2px color('blue-dark'), -2px -2px color('blue-dark'),
+				-2px 2px color('blue-dark'), 2px -2px color('blue-dark');
+		}
+
+		.is-focused &,
+		&:focus {
+			box-shadow: 2px 2px color('blue-dark'), -2px -2px color('blue-dark'),
+				-2px 2px color('blue-dark'), 2px -2px color('blue-dark');
+		}
+
+		&.error {
+			box-shadow: 2px 2px color('red-main'), -2px -2px color('red-main'),
+				-2px 2px color('red-main'), 2px -2px color('red-main');
+		}
+	}
+
+	.is-focused &__placeholder,
+	.is-changed &__placeholder {
+		transform: translateY(-19px) scale(.85);
+	}
+
+	.is-focused &__control--textarea ~ &__placeholder,
+	.is-changed &__control--textarea ~ &__placeholder {
+		transform: translateY(-11px) scale(.85);
+	}
+
+	label.error {
+		font-size: 12px;
+
+		position: absolute;
+		top: 100%;
+		left: 0;
+
+		transform: translateY(1px);
+
+		color: $input-label-error-color;
+	}
+
+	&--contrast-bg {
+		label.error {
+			color: color('yellow-main');
+		}
+	}
+
+	.info {
+		position: absolute;
+		right: 20px;
+		top: 50%;
+
+		transform: translateY(-50%);
+
+		&__content {
+			right: -20px;
+			left: auto;
+
+			transform: translateX(0%);
+
+			&::before {
+				right: 0;
+				left: auto;
+
+				transform: translate(0%, -50%);
+			}
+
+			&::after {
+				right: 10px;
+				left: auto;
+			}
+		}
+	}
+}

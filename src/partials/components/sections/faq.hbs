@@ -1,0 +1,21 @@
+{{#extend "section"}}
+    {{#content "content"}}
+        <ul class="faq">
+            {{#each faq}}
+                <li class="faq__item js-accordion">
+                    <div class="faq__question js-accordion-btn">
+                        <h3 class="faq__title">{{this.title}}</h3>
+                        <div class="faq__button"></div>
+                    </div>
+                    <div class="faq__answer js-accordion-content">
+                        <div class="faq__answer-inner">
+                            <div class="faq__answer-text">
+                                {{{this.text}}}
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+    {{/content}}
+{{/extend}}

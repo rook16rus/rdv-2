@@ -1,0 +1,293 @@
+.integration {
+  position: relative;
+
+  background-color: #004773;
+  color: white;
+
+  &--ozon {
+    background: linear-gradient(-74deg, #0069FF 16%, #174F77 100%);
+  }
+
+  &--yandex {
+    background: linear-gradient(-74deg, #209F66 16%, #174F77 100%);
+  }
+
+  &--wb {
+    background: linear-gradient(-74deg, #D500B9 0%, #1668A3 100%);
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr;
+    }
+
+    @include breakpoint(mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__content {
+    grid-column: span 7;
+
+    position: relative;
+    z-index: 2;
+
+    padding: 5.5rem 0 4rem;
+
+    @include breakpoint(tablet) {
+      grid-column: span 1;
+
+      padding: 2.5rem 0 3rem;
+    }
+  }
+
+  &__heading {
+    @include breakpoint(mobile) {
+      position: relative;
+    }
+  }
+
+  &__tag {
+    display: inline-block;
+    margin-bottom: 2rem;
+    padding: 0.5rem 1.6rem 0.3rem;
+
+    background-color: $primary-300;
+
+    @extend %fs-t1;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
+
+  &__title {
+    @extend %fs-h1;
+
+    @include breakpoint(mobile) {
+      max-width: 35rem;
+      font-size: 3.4rem;
+    }
+
+    @media only screen and (max-width: (380px)) {
+      font-size: 3rem
+    }
+  }
+
+  &__description {
+    position: relative;
+    margin-top: 4rem;
+    max-width: 58rem;
+
+    @extend %fs-h4;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: -2.5rem;
+      left: 0;
+
+      width: 6.5rem;
+      height: 0.5rem;
+
+      background-color: $secondary-300;
+    }
+
+    @include breakpoint(tablet) {
+      max-width: 38rem;
+
+      font-size: 1.6rem;
+    }
+
+    @include breakpoint(mobile) {
+      max-width: 24rem;
+      font-size: 1.6rem;
+    }
+
+    @media only screen and (max-width: (380px)) {
+      max-width: 22rem;
+    }
+  }
+
+  &__heading{
+
+    &--modf{
+
+      @media only screen and (max-width: (430px)) {
+        display: flex;
+        flex-direction: column;
+        .integration__heading-picture{
+          position: relative;
+          height: 17rem;
+          width: 100%;
+          order: -1;
+          margin: 0 auto 1rem auto;
+        }  
+
+        .integration__description{
+          max-width: 100%;
+        }
+        .integration__picture--mobile {
+          object-position: center bottom;
+        }
+      }
+    }
+  }
+
+  &__heading-picture {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    display: none;
+    margin-top: 2.5rem;
+    height: calc(100% - 7.5rem);
+    width: 100%;
+    max-width: 24rem;
+
+    pointer-events: none;
+
+    @include breakpoint(tablet) {
+      display: block;
+    }
+
+    @include breakpoint(mobile) {
+      margin-top: 0;
+      width: 20rem;
+      height: calc(100% + 1rem);
+      margin-right: -4rem;
+    }
+
+    @media only screen and (max-width: (380px)) {
+      width: 17rem;
+    }
+  }
+
+  &__footer {
+    margin-top: 4.2rem;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    @include breakpoint(tablet) {
+      gap: 1.6rem;
+      margin-top: 2.8rem;
+    }
+
+    @include breakpoint(mobile) {
+      flex-direction: column;
+      align-items: stretch;
+      flex-wrap: nowrap;
+      gap: 2rem;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    @include breakpoint(tablet) {
+      gap: 1.6rem;
+    }
+
+    @include breakpoint(mobile) {
+      flex-direction: column;
+      align-items: stretch;
+      flex-wrap: nowrap;
+      gap: 2rem;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    max-width: 15.8rem;
+
+    @extend %fs-t1;
+    font-style: italic;
+
+    @include breakpoint(tablet) {
+      flex-basis: 80%;
+      max-width: unset;
+      font-weight: 700;
+    }
+
+    @include breakpoint(mobile) {
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-top: -1rem;
+      width: 100%;
+    }
+  }
+
+  &__picture-block {
+    align-self: center;
+    pointer-events: none;
+    grid-column: span 5;
+
+    position: relative;
+    z-index: 1;
+
+    max-height: 45rem;
+    height: 100%;
+    width: 100%;
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
+
+  &__picture {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
+
+    &--mobile {
+      display: none;
+
+      @include breakpoint(tablet) {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        display: block;
+
+        object-position: right bottom;
+      }
+    }
+  }
+
+  .breadcrumbs {
+    margin-bottom: 3rem;
+  }
+
+  .button {
+    padding: 2.4rem 3rem;
+    font-size: 1.4rem;
+    min-width: 19.6rem;
+
+    @include breakpoint(tablet) {
+      font-size: 1.2rem;
+      padding: 1.7rem 3rem;
+      min-width: 17.8rem;
+      width: 100%;
+    }
+  }
+}

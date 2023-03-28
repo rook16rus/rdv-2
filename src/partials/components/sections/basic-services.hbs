@@ -1,0 +1,52 @@
+<section class="basic-services">
+  <div class="container">
+    <h2 class="basic-services__title">Основные услуги</h2>
+    <ul class="basic-services__list">
+      {{#each basicServices}}
+        <li class="basic-services__item">
+          <h3 class="basic-services__item-title">{{this.title}}</h3>
+          <div class="basic-services__item-body">
+            <p class="basic-services__item-desc">{{this.desc}}</p>
+            <ul class="basic-services__item-conditions">
+              {{# each this.list }}
+                <li class="basic-services__item-condition">
+                  <div class="basic-services__item-condition-content">
+                    <p>{{this.text}}</p>
+                    <div class="basic-services__item-tip">
+                      <svg>
+                        <use xlink:href="#tip-icon" />
+                      </svg>
+                      <div class="basic-services__item-tip-content">
+                        подробно об особенностях ведения бизнеса на маркетплейсе
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              {{/each}}
+            </ul>
+            {{# if this.bonus }}
+              <div class="basic-services__bonus">
+                <span class="basic-services__bonus-desc">бонус</span>
+                <button class="basic-services__bonus-button">
+                  <svg>
+                    <use xlink:href="#bonus-icon" />
+                  </svg>
+                </button>
+                <p class="basic-services__bonus-text">
+                  При подписке от 1 месяца мы поможем с регистрацией и настройкой вашего личного кабинета БЕСПЛАТНО!
+                </p>
+              </div>
+            {{/if}}
+          </div>
+          <div class="basic-services__item-bottom">
+            <div class="basic-services__price-block">
+              <span class="basic-services__price">15 000</span>
+              <span class="basic-services__price-desc">руб/мес</span>
+            </div>
+            <a class="basic-services__item-link button button--secondary" href="#">заказать</a>
+          </div>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,51 @@
+<form class="old-form js-handle-form" data-need-validation>
+  <input class="js-result-input" name="calculator" type="hidden" value="">
+  <input name="page" type="hidden" value="/">
+  <div class="old-form__grid">
+    <div class="input">
+      <input class="input__control js-old-input" name="name" type="text" data-input="" placeholder="Имя"
+        autocomplete="off" data-parsley-pattern="^[а-яА-ЯA-Za-z ]+$" required>
+      <label class="input__placeholder">Имя</label>
+    </div>
+    <div class="input">
+      <input class="input__control js-old-input" name="company" type="text" data-input=""
+        placeholder="Название компании" autocomplete="off" required>
+      <label class="input__placeholder">Название компании</label>
+    </div>
+    <div class="input input--phone">
+      <input class="input__control js-old-input" name="phone" type="tel" data-input="" placeholder="Телефон"
+        autocomplete="off" required data-parsley-phone>
+      <label class="input__placeholder">Телефон</label>
+    </div>
+    {{#unless noEmail}}
+    <div class="input">
+      <input class="input__control js-old-input" type="email" data-input="" placeholder="Корпоративный Email"
+        autocomplete="off" required name="email">
+      <label class="input__placeholder">Корпоративный Email</label>
+    </div>
+    {{/unless}}
+    {{#unless noSite}}
+    <div class="input">
+      <input class="input__control js-old-input" type="url" data-input="" placeholder="Сайт" autocomplete="off"
+        name="site">
+      <label class="input__placeholder">Сайт</label>
+    </div>
+    {{/unless}}
+    {{#unless noMessage}}
+    <div class="input">
+      <textarea class="input__control input__control--textarea js-old-input" data-input="" placeholder="Ваши задачи"
+        required name="comment"></textarea>
+      <label class="input__placeholder">Ваши задачи</label>
+    </div>
+    {{/unless}}
+    <button class="button js-submit-form" type="submit">
+      <span>Отправить заявку</span>
+    </button>
+    <div class="old-form__policy">
+      Отправляя заявку, вы даете свое согласие на обработку <a href="#" target="_blank">персональных
+        данных</a> и соглашаетесь с <a href="#" target="_blank">политикой конфеденциальности и
+        обработки
+        персональных данных компании</a>
+    </div>
+  </div>
+</form>

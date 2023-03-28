@@ -1,0 +1,92 @@
+%fs-h1 {
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 1.2;
+
+  @media screen and (max-width: 1359px) {
+    font-size: 4rem;
+  }
+
+  @media screen and (max-width: 1099px) {
+    font-size: 3.4rem;
+  }
+}
+
+%fs-h2 {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 1.2;
+
+  @media screen and (max-width: 1359px) {
+    font-size: 3rem;
+  }
+
+  @media screen and (max-width: 1099px) {
+    font-size: 2.8rem;
+  }
+}
+
+%fs-h3 {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.2;
+
+  @media screen and (max-width: 1359px) {
+    font-size: 2.5rem;
+  }
+
+  @media screen and (max-width: 1099px) {
+    font-size: 2rem;
+  }
+}
+
+%fs-h4 {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.2;
+
+  @media screen and (max-width: 1359px) {
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: 1099px) {
+    font-size: 1.6rem;
+  }
+}
+
+%fs-h5 {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 700;
+
+  @media screen and (max-width: 1359px) {
+    font-size: 1.6rem;
+  }
+}
+
+%fs-t1 {
+  font-size: 1.6rem;
+  line-height: 1.4;
+
+  @media screen and (max-width: 1099px) {
+    font-size: 1.4rem;
+  }
+}
+
+%fs-t2 {
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+%fs-t3 {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+%button {
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}

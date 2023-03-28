@@ -1,0 +1,368 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        {{>sections/form}}
+
+        {{>sections/two-columns}}
+
+        {{>sections/integration}}
+
+        {{>sections/partners}}
+
+        {{>sections/problems}}
+
+        {{>sections/video}}
+
+        {{>sections/tabs}}
+
+        {{>sections/call}}
+
+        {{>sections/simple-intro}}
+
+        <section class="default-margins">
+            <div class="container">
+                <h1 class="heading heading--line-blue">Блок с заголовком с чертой на всю ширину (H1)</h1>
+            </div>
+        </section>
+
+        <section class="default-margins">
+            <div class="container">
+                <h2 class="heading heading--605">Блок с заголовком на пол страницы (H2, 605)</h2>
+            </div>
+        </section>
+
+        <section class="default-margins">
+            <div class="container">
+                <h2 class="heading heading--line-blue heading--605">Блок с заголовком на пол страницы с чертой (H2, 605)</h2>
+            </div>
+        </section>
+
+        <section class="default-margins">
+            <div class="container">
+                <h1 class="heading heading--line-yellow">Блок с заголовком с чертой на всю ширину (H1)</h1>
+            </div>
+        </section>
+
+        <section class="default-margins">
+            <div class="container">
+                <h2 class="heading heading--711">Блок с заголовком (H2, 711)</h2>
+            </div>
+        </section>
+
+        <section class="default-margins">
+            <div class="container">
+                <h2 class="heading heading--711 heading--line-yellow">Блок с заголовком с чертой (H2, 711)</h2>
+            </div>
+        </section>
+
+        <section class="two-columns left-accent">
+            <div class="container">
+                <h2 class="two-columns__bold-title">Преимущества работы с RDV Маркет в облаке</h2>
+                <div class="two-columns__inner">
+                    <div class="two-columns__left">
+                        <div class="slider swiper loading js-gallery js-gallery-only-desktop js-disable-if-admin js-show-hide js-show-hide--mobile" data-count="2">
+                            <ul class="swiper-wrapper">
+                                {{#each slider}}
+                                    <li class="slider__slide swiper-slide js-show-hide-item">
+                                        {{>card data=this}}
+                                    </li>
+                                {{/each}}
+                            </ul>
+                            {{>ui/navigation}}
+                            {{>ui/pagination}}
+                            {{>ui/show-more}}
+                        </div>
+                    </div>
+                    <div class="two-columns__right">
+                        <div class="image-wrapper image-wrapper--wide">
+                            <img width="400" height="272" src="img/content/illustrations/1.png" alt="Illustration">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="two-columns two-columns--grey">
+            <div class="container">
+                <h2 class="two-columns__bold-title">Вы можете интегрировать вашу 1С с маркетплейсами</h2>
+                <div class="two-columns__inner">
+                    <div class="two-columns__left">
+                        <div class="image-wrapper image-wrapper--position-left">
+                            <img width="400" height="272" src="img/content/illustrations/2.png" alt="Illustration">
+                        </div>
+                    </div>
+                    <div class="two-columns__right text-content-wrapper">
+                        <div class="text-container">
+                            <p>У вас старая или сильно доработанная версия 1С*? Вы не хотите менять текущие бизнес-процессы? Вам подойдет наш готовый модуль, который позволит сохранить вашу учетную систему и автоматизировать торговлю на маркетплейсах.</p>
+                        </div>
+                        {{>remarks}}
+                        <ul class="buttons">
+                            <li>
+                                <a class="button" href="#">Оставить заявку</a>
+                            </li>
+                            <li>
+                                <a class="button button--secondary" href="#">Узнать больше</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{>sections/remarks data=sections.remarks}}
+
+        <section class="two-columns">
+            <div class="container">
+                <div class="two-columns__inner">
+                    <div class="two-columns__left">
+                        <h2 class="two-columns__bold-title">Кому подойдет работа с&nbsp;RDV&nbsp;Маркет через Коннектор</h2>
+                        <div class="image-wrapper image-wrapper--position-left">
+                            <img width="400" height="272" src="img/content/illustrations/2.png" alt="Illustration">
+                        </div>
+                    </div>
+                    <div class="two-columns__right">
+                        <ul class="numbered-list numbered-list--column">
+                            <li class="numbered-list__item">
+                                <p>Если у вас ранние версии 1С *</p>
+                                <ul>
+                                    <li>1С:УТ 11</li>
+                                    <li>1С:КА 2.4</li>
+                                    <li>1C:ERP 2.4</li>
+                                    <li>1С:УПП 1.3</li>
+                                    <li>1С:УТ 10.3</li>
+                                    <li>1С:УНФ 1.6</li>
+                                </ul>
+                            </li>
+                            <li class="numbered-list__item">
+                                <p>Если вы не хотите менять стандартный функционал 1С дополнительными расширениями</p>
+                            </li>
+                            <li class="numbered-list__item">
+                                <p>Если ваша система сильно доработана под потребности бизнеса</p>
+                            </li>
+                            <li class="numbered-list__item">
+                                <p>Если вы используете ERP-системы других вендоров: SAP, Oracle, Axapta и любые другие (у нас есть открытый унифицированный API для подключения)</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{>sections/simple-numbered-list data=sections.numberedLeft}}
+
+        {{>sections/simple-numbered-list data=sections.numberedRight}}
+
+        <section class="steps">
+            <div class="container">
+                <div class="steps__inner">
+                    <h2 class="steps__title">Схема работы RDV Маркет при массовой упаковке и отгрузке заказов</h2>
+                    <ul class="steps__list">
+                        {{#each steps}}
+                            <li class="steps__step">
+                                <div class="steps__step-heading-block">
+                                    <span class="steps__step-number">
+                                        {{inc @index}}
+                                    </span>
+                                    <h3 class="steps__step-heading">{{this.title}}</h3>
+                                </div>
+                                <div class="steps__step-text">
+                                    {{{this.text}}}
+                                </div>
+                                <img class="steps__step-image" width="350" height="60" src="{{this.image}}" alt="Step Image">
+                            </li>
+                        {{/each}}
+                    </ul>
+                    <ul class="buttons">
+                        <li>
+                            <a class="button button--secondary button--bold" href="#">Оставить заявку</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        {{>sections/faq data=sections.faq}}
+
+        <section class="attention">
+            <div class="container">
+                <div class="attention__inner">
+                    <img class="attention__decoration-bottom-left" width="185" height="300" src="img/content/decorations/1.png" alt="Decoration Bottom Left">
+                    <img class="attention__decoration-top-right" width="185" height="300" src="img/content/decorations/2.png" alt="Decoration Top Right">
+                    <div class="attention__text"><b>Мы выстроили</b> простой унифицированный процесс <b>для работы со всеми маркетплейсами, который закрывает</b> все проблемные места, <b>связанные со сборкой, упаковкой, маркировкой, отгрузкой и взаиморасчетами.</b></div>
+                    <ul class="buttons">
+                        <li>
+                            <a class="button button--bold" href="#">Узнать Стоимость</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="attention-simple">
+            <div class="container">
+                <div class="attention-simple__inner">
+                    <img class="attention-simple__image" width="142" height="106" src="img/content/attention/attention.png" alt="Attention Image">
+                    <div class="attention-simple__text">
+                        <b>Вам</b> не нужно <b>дорабатывать свою систему для интеграции с маркетплейсами!</b>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="columns">
+            <div class="container">
+                <div class="columns__inner">
+                    <ul class="columns__list">
+                        {{#each columns}}
+                            <li class="columns__item">
+                                <h3 class="columns__heading">{{this.title}}</h3>
+                                <div class="columns__text">
+                                    {{{this.text}}}
+                                </div>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="icon-cards">
+            <div class="container">
+                <div class="icon-cards__inner">
+                    <ul class="icon-cards__list">
+                        {{#each iconCards}}
+                            <li class="icon-cards__item">
+                                <div class="icon-cards__icon-wrapper">
+                                    <img class="icon-cards__icon" width="48" height="48" src="{{this.icon}}" alt="Card Icon">
+                                </div>
+                                <div class="icon-cards__text">
+                                    {{{this.text}}}
+                                </div>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="card-links">
+            <div class="container">
+                <div class="card-links__inner">
+                    <ul class="card-links__list">
+                        {{#each cardLinks}}
+                            <li>
+                                <a class="card-links__item" href="#">
+                                    <h3 class="card-links__item-title">{{this.title}}</h3>
+                                    <img class="card-links__item-image" width="180" height="180" src="{{this.image}}" alt="Card Link Image">
+                                </a>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="buttons-section buttons-section--align-left">
+            <div class="container">
+                <div class="buttons-section__inner">
+                    <ul class="buttons">
+                        <li>
+                            <a class="button button--secondary button--bold" href="#">Оставить заявку</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="buttons-section">
+            <div class="container">
+                <div class="buttons-section__inner">
+                    <ul class="buttons">
+                        <li>
+                            <a class="button button--secondary button--bold" href="#">Оставить заявку</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="buttons-section buttons-section--align-right">
+            <div class="container">
+                <div class="buttons-section__inner">
+                    <ul class="buttons">
+                        <li>
+                            <a class="button button--secondary button--bold" href="#">Оставить заявку</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="comparison">
+            <div class="container">
+                <div class="comparison__inner">
+                    {{#each comparison}}
+                        <div class="comparison__block">
+                            <h3 class="comparison__title">{{this.title}}</h3>
+                            <ul class="comparison__items">
+                                {{#each this.items}}
+                                    <li class="comparison__item">
+                                        <div class="comparison__image-wrapper">
+                                            <img src="{{this.image}}" alt="Comparison Image">
+                                        </div>
+                                        <div class="comparison__text">
+                                            {{{this.text}}}
+                                        </div>
+                                    </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </section>
+
+        <section class="text">
+            <div class="container">
+                <div class="text__inner text-container">
+                    <h2>Проблемы логистики торговых площадок на ECOM-Рынке</h2>
+                    <p>Разберем некоторые проблемы, с которыми сталкиваются владельцы онлайн-площадок при попытке наладить логистику.</p>
+                    <h3>1. Зонирование складских площадей</h3>
+                    <p>Товар на складах торговых площадок не только хранится, но сортируется и комплектуется, а иногда товар на склад возвращается, если от него отказались клиенты. Чтобы организовать грамотную логистику необходимо разбить склад на несколько зон. Например, для выполнения технологически операций по приемке, хранению и отгрузке товара покупателям на складах выделяют следующие зоны:</p>
+                    <ul>
+                        <li>Зона разгрузки транспортных средств.</li>
+                        <li>Экспедиция приемки товаров.</li>
+                        <li>Основная зона хранения.</li>
+                        <li>Зона погрузки грузов в транспортные средства.</li>
+                    </ul>
+                    <blockquote>
+                        Кстати, по поводу автоматизации массовой упаковки, сборки и отгрузки заказов с маркетплейсов. В нашем
+                        <a href="#">онлайн-сервисе RDV Маркет</a> разработаны готовые инструменты, которые вам помогут автоматизировать все складские процессы.
+                        <a href="#">Посмотрите видеообзор!</a>
+                    </blockquote>
+                    <h3>2. Плавающая загруженность персонала</h3>
+                    <p>В сезон роста продаж вам может потребоваться найм временных сотрудников. Ими могут оказаться недостаточно квалифицированные люди, которые не посвящены во все тонкости и процессы вашего бизнеса. Входом из данной ситуации может стать <b>конвейерный принцип работы</b>, при котором сезонные сотрудники будут выполнять элементарные задачи и функции. Также вы можете создать базу сезонных сотрудников для упрощения логистики в дальнейшем.</p>
+                </div>
+            </div>
+        </section>
+
+      {{>sections/intro-video}}
+
+        <section class="image">
+            <div class="container">
+                <div class="image__inner">
+                    <img width="1240" height="455" src="img/content/images/1.jpg" alt="Image">
+                </div>
+            </div>
+        </section>
+
+        {{>sections/problems-new}}
+
+        {{>sections/faq-2}}
+
+        <div data-calculator style="display: none;" v-cloak>
+          <calculator header="Тарифы" priority-item="wildberries" :integration="true" class="header-bottom-80m header-top-0m calculator"></calculator>
+        </div>
+
+    {{/content}}
+{{/extend}}

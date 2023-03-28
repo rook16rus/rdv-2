@@ -1,0 +1,101 @@
+.form {
+	transition: opacity .25s ease;
+
+	&__wrapper--column--2 {
+		@include above($tablet) {
+			column-count: 2;
+		}
+	}
+
+	&__control {
+		&:not(:last-child) {
+			@include indent-level(margin-bottom, yellow);
+		}
+
+		&--col {
+			width: 100%;
+
+			padding: 0 8px;
+
+			@include indent-level(margin-bottom, yellow);
+
+			&--33 {
+				@include above($tablet) {
+					flex: 0 0 33.333%;
+
+					max-width: 33.333%;
+				}
+			}
+
+			&--50 {
+				@include above($tablet) {
+					flex: 0 0 50%;
+
+					max-width: 50%;
+				}
+			}
+
+			&--66 {
+				@include above($tablet) {
+					flex: 0 0 66.666%;
+
+					max-width: 66.666%;
+				}
+			}
+		}
+
+		.form__label {
+			@include text-base-medium();
+			@include indent-level(margin-bottom, red);
+		}
+	}
+
+	&__row-controls {
+		display: flex;
+		flex-wrap: wrap;
+
+		margin: 0 -8px;
+	}
+
+	&__radio-group {
+		display: flex;
+		flex-wrap: wrap;
+
+		margin-bottom: -12px;
+
+		@include margin-x(-6px);
+
+		.radio {
+			margin-bottom: 12px;
+
+			@include padding-x(6px);
+		}
+	}
+
+	&__buttons {
+		& > [class*='col-'] {
+			margin-right: 45px;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+
+	&.is-loading {
+		pointer-events: none;
+
+		// opacity: .4;
+	}
+
+	&.is-dispatched &__front {
+		display: none;
+	}
+
+	&.is-dispatched &__success {
+		display: block;
+
+		animation: showOpacity #{$transition};
+	}
+	$this: &;
+}

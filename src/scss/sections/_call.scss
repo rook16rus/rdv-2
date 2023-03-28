@@ -1,0 +1,56 @@
+.call {
+  padding: var(--s-1) 0;
+  background-color: $primary-100;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 3rem;
+    align-items: center;
+    padding: 2rem 0;
+    border-radius: 0.8rem;
+    border: 0.2rem dashed $grayscale-300;
+
+    @include breakpoint(tablet) {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: flex-start;
+
+      padding: 2rem;
+    }
+  }
+
+  &__title {
+    grid-column: span 3;
+
+    margin-left: 5rem;
+
+    color: $primary-900;
+    @extend %fs-h5;
+
+    @include breakpoint(tablet) {
+      margin-left: 0;
+    }
+  }
+
+  &__text {
+    grid-column: span 6;
+
+    max-width: 58rem;
+
+    @extend %fs-t2;
+  }
+
+  .button {
+    grid-column: span 3;
+    justify-self: flex-end;
+    width: fit-content;
+    margin-right: 3rem;
+
+    @include breakpoint(tablet) {
+      margin-right: 0;
+      margin-top: 1rem;
+    }
+  }
+}

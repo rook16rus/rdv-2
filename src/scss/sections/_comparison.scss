@@ -1,0 +1,93 @@
+.comparison {
+  margin: var(--s-1) 0 var(--s-0);
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr;
+      gap: 5rem;
+    }
+  }
+
+  &__block {
+    &:last-of-type {
+      .comparison__title {
+        background-color: $secondary-300;
+        color: #262730;
+      }
+    }
+  }
+
+  &__title {
+    padding: 1.8rem;
+    text-align: center;
+
+    font-size: 1.6rem;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    margin-bottom: 5rem;
+
+    background-color: $grayscale-500;
+    color: $grayscale-100;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    padding-left: 7rem;
+
+    @include breakpoint(tablet) {
+      gap: 1.5rem;
+      padding-left: 5rem;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    @include breakpoint(tablet) {
+      gap: 1.5rem;
+    }
+  }
+
+  &__image-wrapper {
+    position: relative;
+
+    width: 4rem;
+    height: 4rem;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+    }
+  }
+
+  &__text {
+    color: #4D4D4D;
+    @extend %fs-t1;
+
+    b {
+      color: $primary-900;
+    }
+  }
+}

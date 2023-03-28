@@ -1,0 +1,101 @@
+.text-container {
+  color: $grayscale-700;
+  @extend %fs-t1;
+
+  max-width: 71rem;
+
+  h1, h2 {
+    color: $primary-900;
+    @extend %fs-h3;
+    margin-bottom: 2rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  h3 {
+    color: $primary-900;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    @extend %fs-h4;
+
+    @include breakpoint(tablet) {
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  h4, h5, h6 {
+    color: $primary-900;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    @extend %fs-t1;
+
+    @include breakpoint(tablet) {
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  p {
+    margin-bottom: 2rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-left: 2rem;
+    margin-bottom: 3rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2rem;
+      padding-left: 1rem;
+    }
+
+    li {
+      position: relative;
+      padding-left: 2rem;
+
+
+      &::before {
+        content: '';
+
+        position: absolute;
+        top: 0.8rem;
+        left: 0.3rem;
+
+        width: 0.6rem;
+        height: 0.6rem;
+        border-radius: 50%;
+        background-color: $primary-300;
+      }
+    }
+  }
+
+  blockquote {
+    font-style: italic;
+    padding-left: 2.5rem;
+
+    border-left: 0.5rem solid $primary-300;
+
+    @include breakpoint(tablet) {
+      padding-left: 1rem;
+    }
+  }
+
+  a {
+    color: $primary-300;
+
+    &:visited,
+    &:link {
+      color: $primary-300;
+    }
+  }
+
+}

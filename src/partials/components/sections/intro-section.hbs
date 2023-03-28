@@ -1,0 +1,35 @@
+<section class="intro-section" id="01">
+  <span class="section-number">01</span>
+  <div class="container">
+    <div class="intro-section__inner">
+      <div class="intro-section__left">
+        <span class="section-label">/ Собственный продукт</span>
+        <h2 class="intro-section__heading">RDV МАРКЕТ</h2>
+        <div class="intro-section__text">
+          <p>Мы разработали продукт для автоматизации всех процессов при работе с популярными маркетплейсами
+            в едином окне 1С.</p>
+          <p>Решение подходит как начинающим продавцам, которые готовы уже на старте заложить основу для будущего
+            масштабирования, так и крупным торговым компаниям с уже выстроенной инфраструктурой и большим
+            количеством заказов с маркетплейсов.</p>
+        </div>
+        <div class="intro-section__link-wrapper">
+          <a class="button button--stroke-bold button--min intro-section__link" href="#" data-modal="#form1">О продукте</a>
+        </div>
+      </div>
+      <div class="intro-section__right">
+        <div class="intro-section__image-wrapper">
+          <img src="img/content/illustrations/7.png" alt="Illustration">
+        </div>
+      </div>
+    </div>
+    <ul class="intro-section__partners">
+      {{#each partners}}
+        <li class="intro-section__partner">
+          <a class="intro-section__partner-link" href="#" title="{{this.name}}">
+            <img class="intro-section__partner-image" src="{{this.logo}}" alt="Partner">
+          </a>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>

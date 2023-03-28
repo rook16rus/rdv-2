@@ -1,0 +1,34 @@
+<section class="horizontal-cards" id="04">
+  <span class="section-number">04</span>
+  <div class="container">
+    <div class="horizontal-cards__inner js-init-slider js-init-slider--mobile">
+      <span class="section-label">/ Сопровождение и поддержка</span>
+      <h2 class="horizontal-cards__heading">Постоянное сопровождение и поддержка на всем цикле</h2>
+      <div class="horizontal-cards__list-wrapper swiper loading">
+        <ul class="horizontal-cards__list swiper-wrapper">
+          {{#each 04_cards}}
+            <li class="horizontal-cards__item swiper-slide">
+              <div class="horizontal-cards__item-inner">
+                <div class="horizontal-cards__item-left">
+                  <div class="horizontal-cards__item-image-wrapper">
+                    <img src="{{this.image}}" alt="Image">
+                  </div>
+                </div>
+                <div class="horizontal-cards__item-right">
+                  <h3 class="horizontal-cards__item-heading">{{this.heading}}</h3>
+                  <div class="horizontal-cards__item-text">
+                    {{this.text}}
+                  </div>
+                  <div class="horizontal-cards__item-link-wrapper">
+                    <a class="button button--stroke-bold button--min horizontal-cards__item-link" href="#" data-modal="#form1">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          {{/each}}
+        </ul>
+        <div class="horizontal-cards__pagination js-pagination"></div>
+      </div>
+    </div>
+  </div>
+</section>

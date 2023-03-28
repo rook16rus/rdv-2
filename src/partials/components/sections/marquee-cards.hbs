@@ -1,0 +1,15 @@
+<section class="marquee-cards">
+  <div class="container">
+    <div class="marquee-cards__inner swiper loading js-infinity-slider">
+      <ul class="swiper-wrapper marquee-cards__list">
+        {{#each partners}}
+          <li class="swiper-slide marquee-cards__item">
+            <a class="marquee-cards__item-link" href="#" title="{{this.name}}">
+              <img class="marquee-cards__item-image" src="{{this.logo}}" alt="Partner">
+            </a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</section>

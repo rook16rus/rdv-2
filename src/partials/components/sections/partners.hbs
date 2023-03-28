@@ -1,0 +1,18 @@
+<section class="partners">
+    <div class="container">
+        <div class="partners__inner">
+            <div class="partners__text">
+                <h2 class="partners__title">RDV — единственный интегратор в России и СНГ, являющийся официальным технологическим партнером маркетплейсов</h2>
+            </div>
+            <ul class="partners__list">
+                {{#each partners}}
+                    <li>
+                        <a class="partners__link" href="#" title="{{this.name}}" target="_blank">
+                            <img src="{{this.logo}}" alt="{{this.name}}">
+                        </a>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</section>

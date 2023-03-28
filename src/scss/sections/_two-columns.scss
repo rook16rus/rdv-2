@@ -1,0 +1,220 @@
+.two-columns {
+  margin: var(--s-0) 0;
+
+  @include breakpoint(mobile) {
+    margin: 2.5rem 0;
+  }
+
+  &--grey {
+    margin: 0;
+    padding: var(--s-0) 0;
+    background-color: $primary-100;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 3rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  &__text-block {
+    grid-column: span 6;
+    padding: 10rem 6.5rem;
+
+    background-color: #F0F5F7;
+    color: #174F77;
+    margin-right: -3rem;
+
+    @include breakpoint(tablet) {
+      grid-column: span 1;
+      margin: 0 calc(-1 * var(--content-padding)) -2rem;
+      padding: 4rem var(--content-padding);
+    }
+  }
+
+  &__title {
+    @extend %fs-h2;
+
+    @include breakpoint(tablet) {
+      max-width: 64rem;
+    }
+  }
+
+  &__bold-title {
+    max-width: 71rem;
+    margin-bottom: 7rem;
+
+    color: $primary-900;
+    @extend %fs-h2;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__text {
+    margin-top: 3rem;
+
+    @extend %fs-h4;
+
+    @include breakpoint(tablet) {
+      margin-top: 2rem;
+    }
+  }
+
+  &__image-wrapper {
+    position: relative;
+
+    margin-top: 4rem;
+
+    width: 35rem;
+    height: 30rem;
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+  }
+
+  &__content-block {
+    grid-column: span 6;
+
+    @include breakpoint(tablet) {
+      grid-column: span 1;
+    }
+  }
+
+  &__left {
+    grid-column: span 6;
+
+    min-width: 0;
+
+    @include breakpoint(tablet) {
+      grid-column: span 1;
+    }
+
+    .two-columns__bold-title {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__right {
+    grid-column: span 6;
+
+    @include breakpoint(tablet) {
+      grid-column: span 1;
+    }
+  }
+
+  &.left-accent {
+    .two-columns__left {
+      grid-column: 1/8;
+
+      @include breakpoint(tablet) {
+        order: 2;
+        grid-column: span 1;
+      }
+    }
+
+    .two-columns__right {
+      grid-column: 9/-1;
+
+      @include breakpoint(tablet) {
+        order: 1;
+        grid-column: span 1;
+      }
+    }
+
+    .slider {
+      padding-left: 5.5rem;
+
+      @include breakpoint(tablet) {
+        padding: 0 5.5rem;
+      }
+
+      @include breakpoint(mobile) {
+        padding: 0;
+      }
+    }
+
+    .not-initialized.slider {
+      padding-left: 0;
+    }
+
+    .slider .navigation {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(calc(-50% - 2.1rem));
+      width: calc(100% + 5.5rem);
+      justify-content: space-between;
+
+      @include breakpoint(tablet) {
+        width: 100%;
+      }
+    }
+
+    .slider .pagination {
+      margin-top: 3rem;
+    }
+
+    .slider .button.js-show-hide-button {
+      position: relative;
+      z-index: 3;
+
+      display: none;
+      margin-top: 2rem;
+      width: 100%;
+      min-height: 5rem;
+
+      @include breakpoint(mobile) {
+        display: block;
+      }
+    }
+  }
+
+  &.right-accent {
+    .two-columns__left {
+      grid-column: span 5;
+
+      @include breakpoint(tablet) {
+        grid-column: span 1;
+      }
+    }
+
+    .two-columns__right {
+      grid-column: span 7;
+
+      @include breakpoint(tablet) {
+        grid-column: span 1;
+      }
+    }
+  }
+
+  .old-form {
+    padding: 10rem;
+    height: 100%;
+
+    background-color: #DBEBF1;
+
+    @include breakpoint(tablet) {
+      margin: 0 calc(-1 * var(--content-padding));
+      padding: 6rem var(--content-padding);
+    }
+  }
+}

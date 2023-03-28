@@ -1,0 +1,17 @@
+.modal-info {
+	position: fixed;
+	z-index: 60;
+	bottom: 0;
+	left: 0;
+
+	width: 100%;
+	padding: 40px 20px 25px;
+
+	background-color: color(white-main);
+
+	&__close {
+		position: absolute;
+		top: 15px;
+		right: 20px;
+	}
+}

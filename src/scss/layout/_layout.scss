@@ -1,0 +1,148 @@
+.container {
+    width: 100%;
+    max-width: calc(var(--max-container-width) + 2 * var(--content-padding));
+    margin: 0 auto;
+    padding: 0 var(--content-padding);
+    @supports (width: max(20vw, 100px)) {
+        padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding));
+        padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
+    }
+
+    &_wide {
+        --max-container-width: 179rem;
+        --content-padding: 6.5rem;
+    }
+}
+
+.page-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.page-main {
+    flex-grow: 1;
+    padding-top: 15.5rem;
+
+    @include breakpoint(laptop) {
+        padding-top: 16.4rem;
+    }
+
+    @include breakpoint(small-mobile) {
+        padding-top: 13.6rem;
+    }
+}
+
+.default-margins {
+    margin: var(--s-0) 0;
+
+    @include breakpoint(mobile) {
+        padding: 2.5rem 0;
+    }
+}
+
+.text-content-wrapper {
+    .remarks {
+        margin-top: 4rem;
+
+        @include breakpoint(tablet) {
+            margin-top: 2rem;
+        }
+    }
+
+    .buttons {
+        margin-top: 6rem;
+
+        @include breakpoint(tablet) {
+            margin-top: 3rem;
+        }
+
+        .button {
+            padding: 2.4rem 3rem;
+            font-size: 1.4rem;
+            min-width: 17.9rem;
+
+            @include breakpoint(tablet) {
+                font-size: 1.2rem;
+                padding: 1.7rem 3rem;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.top_button {
+    box-shadow: 0 0 0 0 rgb(25 185 222 / 10%);
+    transition: all .3s cubic-bezier(0.29, 0.03, 0.96, 0.35);
+    border-radius: 50%;
+    background-color: transparent;
+    outline: none;
+    display: none;
+    z-index: 50;
+    position: fixed;
+    bottom: 5rem;
+    left: 5rem;
+    background-image: url("../img/top_button.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 7rem;
+    height: 7rem;
+
+    &:hover {
+        box-shadow: 0 0 0 1.5rem rgb(25 185 222 / 10%);
+
+        @include breakpoint(tablet) {
+            box-shadow: 0 0 0 1rem rgb(25 185 222 / 10%);
+        }
+    }
+
+    @include breakpoint(tablet) {
+        bottom: 8rem;
+        left: 2rem;
+
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+.section-number {
+    position: absolute;
+    top: var(--s-0);
+    left: 0;
+
+    padding: 0.5rem 1rem 0.5rem 5.8rem;
+    background-color: white;
+    border-radius: 0 0.8rem 0.8rem 0;
+
+    font-size: 1.6rem;
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    color: #174F77;
+
+    @include breakpoint(tablet) {
+        padding-left: var(--content-padding);
+    }
+
+    @include breakpoint(mobile) {
+        right: 0;
+        left: unset;
+
+        border-radius: 0.8rem 0 0 0.8rem;
+        padding: 0.5rem 3rem 0.5rem 1rem;
+    }
+}
+
+.section-label {
+    display: block;
+    margin-bottom: 1.2rem;
+
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0.08em;
+    color: #1D7CAA;
+    opacity: 0.4;
+    text-transform: uppercase;
+}

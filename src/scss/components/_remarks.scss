@@ -1,0 +1,32 @@
+.remarks {
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-left: 1.4rem;
+
+  & > * {
+    padding: 0.4rem 1.2rem 0.2rem;
+    background: #FFFFFF;
+    border-radius: 3.4rem;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.4rem;
+    color: $primary-500;
+  }
+
+  &::before {
+    content: '*';
+
+    position: absolute;
+    top: 0.5em;
+    left: 0;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1rem;
+    color: $primary-500;
+  }
+}

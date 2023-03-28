@@ -1,0 +1,85 @@
+<section class="form">
+    <div class="container">
+        <h2 class="form__title">Ваша заявка</h2>
+        <form class="form__form js-lock-form js-handle-form" data-need-validation>
+            <input name="page" type="hidden" value="/">
+            <fieldset class="form__grid-inputs">
+                <div class="form__input-wrapper js-validation-wrapper">
+                    <svg class="form__input-icon">
+                        <use xlink:href="#form-1" />
+                    </svg>
+                    <input class="form__input" name="name" type="text" placeholder="Ваше имя"
+                           data-parsley-pattern="^[а-яА-ЯA-Za-z ]+$" required>
+                    <svg class="form__input-validation-icon">
+                        <use xlink:href="#check" />
+                    </svg>
+                </div>
+                <div class="form__input-wrapper js-validation-wrapper">
+                    <svg class="form__input-icon">
+                        <use xlink:href="#form-2" />
+                    </svg>
+                    <input class="form__input" name="company" type="text" placeholder="Название компании" required>
+                    <svg class="form__input-validation-icon">
+                        <use xlink:href="#check" />
+                    </svg>
+                </div>
+                <div class="input input--phone">
+                    <svg class="form__input-icon">
+                        <use xlink:href="#form-3" />
+                    </svg>
+                    <input class="input__control js-old-input" name="phone" type="tel" data-input=""
+                           placeholder="Телефон" autocomplete="off" required data-parsley-phone>
+                    <label class="input__placeholder">Телефон</label>
+                    <svg class="form__input-validation-icon">
+                        <use xlink:href="#check" />
+                    </svg>
+                </div>
+                <div class="form__input-wrapper js-validation-wrapper">
+                    <svg class="form__input-icon">
+                        <use xlink:href="#form-4" />
+                    </svg>
+                    <input class="form__input" name="email" type="email" placeholder="Ваш корпоративный E-mail"
+                           required>
+                    <svg class="form__input-validation-icon">
+                        <use xlink:href="#check" />
+                    </svg>
+                </div>
+                <div class="form__input-wrapper js-validation-wrapper">
+                    <svg class="form__input-icon">
+                        <use xlink:href="#form-5" />
+                    </svg>
+                    <input class="form__input" name="site" type="url" placeholder="Ваш сайт" required>
+                    <svg class="form__input-validation-icon">
+                        <use xlink:href="#check" />
+                    </svg>
+                </div>
+            </fieldset>
+
+            <div class="form__input-wrapper js-validation-wrapper">
+                <svg class="form__input-icon">
+                    <use xlink:href="#form-6" />
+                </svg>
+                <textarea class="form__textarea" name="message" placeholder="Опишите свои задачи" required></textarea>
+                <svg class="form__input-validation-icon">
+                    <use xlink:href="#check" />
+                </svg>
+            </div>
+
+            <button class="form__submit-button js-submit-form" type="submit">
+                <span>Отправить</span>
+                <svg width="9" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m1 1 6 6-6 6" />
+                </svg>
+            </button>
+
+            <div class="form__policy-wrapper">
+                <label class="form__policy js-validation-wrapper">
+                    <input class="js-lock-form-input" name="policy" type="checkbox" required checked>
+                    <span class="form__checkmark"></span>
+                    <span>Отправляя заявку, вы даете свое согласие на обработку <a href="#" target="_blank">персональных
+                            данных</a> и соглашаетесь с <a href="#" target="_blank">условиями оферты</a>.</span>
+                </label>
+            </div>
+        </form>
+    </div>
+</section>

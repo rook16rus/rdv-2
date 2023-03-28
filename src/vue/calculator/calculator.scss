@@ -1,0 +1,21 @@
+.calculator {
+	font-size: 14px;
+
+	&__tarif-list.wildberries &__product-item.wildberries {
+		order: -1;
+	}
+
+	&.header-top-0m .section.mt-5 {
+		margin-top: 0 !important;
+	}
+
+	&.header-bottom-80m .section.mt-5 {
+		line-height: 70%;
+
+		margin-bottom: 80px !important;
+
+		@include below($desktop) {
+			margin-bottom: 55px !important;
+		}
+	}
+}

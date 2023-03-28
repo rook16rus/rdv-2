@@ -1,0 +1,24 @@
+{{#extend "section"}}
+    {{#content "content"}}
+        <div class="simple-numbered-list js-numbered-list-line">
+            <div class="simple-numbered-list__line"></div>
+            <ul class="simple-numbered-list__list">
+                {{#each simpleNumberedList}}
+                    <li class="simple-numbered-list__item">
+                    <span class="simple-numbered-list__number">
+                        {{inc @index}}
+                    </span>
+                        <div class="simple-numbered-list__content">
+                            {{{this}}}
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+        <ul class="buttons buttons--offset-top">
+            <li>
+                <a class="button button--bold button--secondary" href="#">Оставить заявку</a>
+            </li>
+        </ul>
+    {{/content}}
+{{/extend}}

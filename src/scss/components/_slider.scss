@@ -1,0 +1,39 @@
+.slider {
+  counter-reset: ordered-list;
+
+  &__slide {
+    align-self: center;
+
+    &.hidden {
+      display: none;
+    }
+
+    &.last {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+
+        border-radius: 3.2rem;
+
+        background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+      }
+    }
+  }
+
+  .swiper-wrapper {
+    @include breakpoint(mobile) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+}
+
+.is-admin .slider .swiper-wrapper {
+  flex-direction: column;
+  gap: 2rem;
+}

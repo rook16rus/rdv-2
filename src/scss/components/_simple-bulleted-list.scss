@@ -1,0 +1,36 @@
+.simple-bulleted-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  @include breakpoint(tablet) {
+    gap: 0.7rem;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 2rem;
+
+    @extend %fs-t1;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+
+      top: 0.8rem;
+      left: 0.3rem;
+
+      width: 0.6rem;
+      height: 0.6rem;
+
+      border-radius: 50%;
+      background-color: $primary-300;
+
+      @include breakpoint(tablet) {
+        top: 0.6rem;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "title": "LAST",
+  "isAdmin": "is-admin123",
+  "reviews": [
+    {
+      "logo": "img/content/reviews/1.png",
+      "title": "ООО «Динатон»",
+      "description": "Дистрибьютор музыкальных инструментов и аксессуаров",
+      "text": "<p>Наша компания уже несколько лет продает на маркетплейсах Wildberries, Ozon и Яндекс.Маркет. Для\n                        WB у нас заведено 4 личных кабинета, для Ozon - 3 ЛК. С учетом частых изменений в работе\n                        маркетплейсов мы столкнулись с трудностями реализации необходимых обновлений для каждого\n                        маркетплейса. На это у нас уходило много времени, вылезали ошибки, мы стали терять заказы.\n                        Поняли,\n                        что нам нужен сервис, где все процессы будут автоматизированы, а все операции будут протекать в\n                        единой системе. </p>\n                      <p>Так мы начали работать в облачной системе RDV Маркет. В едином окне 1С мы ведем учет по всем\n                        маркетплейсам без необходимости переключения  в отдельные ЛК, а  любые изменения на стороне\n                        площадок для нас проходят безболезненно за счет автоматических обновлений. При работе с RDV\n                        Маркет\n                        мы заметно ускорили процессы сборки и упаковки заказов, упростили обработку большого количества\n                        заказов, увеличили количество SKU (с 5000 до 21000). </p>\n                      <p>Благодарим команду RDV Маркет для профессионализм и продолжаем плодотворное\n                        сотрудничество. </p>"
+    },
+    {
+      "logo": "img/content/reviews/1.png",
+      "title": "ООО «Lorem ipsum»",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor dolorem, et eum nisi reiciendis repellat. 2",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor dolorem, et eum nisi reiciendis repellat. 2"
+    },
+    {
+      "logo": "img/content/reviews/1.png",
+      "title": "ООО «Lorem ipsum»",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor dolorem, et eum nisi reiciendis repellat. 3",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor dolorem, et eum nisi reiciendis repellat. 3"
+    },
+    {
+      "logo": "img/content/reviews/1.png",
+      "title": "ООО «Lorem ipsum»",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor dolorem, et eum nisi reiciendis repellat. 4",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor dolorem, et eum nisi reiciendis repellat. 4"
+    },
+    {
+      "logo": "img/content/reviews/1.png",
+      "title": "ООО «Lorem ipsum»",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor dolorem, et eum nisi reiciendis repellat. 5",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor dolorem, et eum nisi reiciendis repellat. 5"
+    },
+    {
+      "logo": "img/content/reviews/1.png",
+      "title": "ООО «Lorem ipsum»",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor dolorem, et eum nisi reiciendis repellat. 6",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor dolorem, et eum nisi reiciendis repellat. 6"
+    }
+  ]
+}

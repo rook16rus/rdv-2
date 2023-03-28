@@ -1,0 +1,149 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12.6rem;
+  padding: 3rem 8rem 6rem 4rem;
+
+  border-radius: 3.2rem;
+  background-color: $primary-100;
+
+  @include breakpoint(tablet) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+
+    padding: 3rem 3rem 6rem 3rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding: 3rem;
+    border-radius: 1.6rem;
+  }
+
+  &__content {
+    margin-top: 0.5rem;
+  }
+
+  &__title {
+    color: $primary-900;
+    @extend %fs-h5;
+
+    @include breakpoint(tablet) {
+      max-width: 56rem;
+    }
+  }
+
+  &__description {
+    margin-top: 1.5rem;
+    color: $grayscale-700;
+    @extend %fs-t1;
+
+    @include breakpoint(tablet) {
+      max-width: 56rem;
+    }
+  }
+
+  &__slider {
+    min-width: 0;
+    height: 21rem;
+
+    @include breakpoint(tablet) {
+      max-width: 38rem;
+      width: 100%;
+    }
+
+    @include breakpoint(mobile) {
+      height: 8rem;
+      max-width: unset;
+    }
+  }
+
+  &__image-wrapper {
+    position: relative;
+
+    border-radius: 0.8rem;
+    overflow: hidden;
+
+    aspect-ratio: 16/9;
+
+    @include breakpoint(mobile) {
+      height: 8rem;
+      width: 100%;
+      border-radius: 1.6rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      cursor: pointer;
+
+      @include breakpoint(mobile) {
+        object-fit: cover;
+      }
+    }
+
+    video,
+    iframe {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 1.6rem;
+    background: linear-gradient(0deg, rgba(23, 79, 119, 0.7), rgba(23, 79, 119, 0.7));
+
+    color: $grayscale-100;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.1;
+
+    pointer-events: none;
+
+    svg {
+      width: 3rem;
+      height: 3rem;
+      fill: $grayscale-100;
+    }
+  }
+
+  .navigation,
+  &__navigation {
+    position: absolute;
+    top: 50%;
+    left: -5.5rem;
+    transform: translateY(-50%);
+
+    justify-content: space-between;
+    width: calc(100% + 11rem);
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
+  }
+
+  .pagination,
+  &__pagination {
+    margin-top: 2rem;
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
+  }
+}

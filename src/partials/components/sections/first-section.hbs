@@ -1,0 +1,44 @@
+<section class="first-section">
+  <div class="container">
+    {{>breadcrumbs}}
+    <div class="first-section__inner">
+      <div class="first-section__content">
+        <div class="first-section__content-left">
+          <h2 class="first-section__heading">Выбирайте комплексный подход для работы с маркетплейсами</h2>
+          <div class="first-section__text">
+            Работаем на стыке консалтинга, автоматизации, сопровождения и собственных инструментов
+          </div>
+          <ul class="buttons">
+            <li>
+              <a class="button button--bold button--secondary" href="#">оставить заявку</a>
+            </li>
+            <li>
+              <a class="button button--bold button--stroke-bold" href="#">Тест-драйв</a>
+            </li>
+          </ul>
+        </div>
+        <div class="first-section__content-right">
+          <ul class="first-section__puzzles">
+            {{#each puzzles}}
+              <li class="first-section__puzzle">
+                <h3 class="first-section__puzzle-title">{{this.title}}</h3>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+      <ul class="first-section__navigation">
+        {{#each anchors}}
+          <li class="first-section__navigation-item">
+            <a class="first-section__navigation-link js-smooth-scroll" href="{{this.link}}">
+              <h3 class="first-section__navigation-link-heading">{{this.title}}</h3>
+              <div class="first-section__navigation-link-text">
+                {{this.text}}
+              </div>
+            </a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</section>

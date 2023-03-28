@@ -1,0 +1,53 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.4rem;
+
+  li {
+    &:last-of-type {
+      .breadcrumbs__link {
+        pointer-events: none;
+        &:link,
+        &:visited {
+          color: $primary-300;
+        }
+
+        &::after {
+          content: none;
+        }
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+
+    transition: color 0.3s ease;
+
+    @extend %fs-t2;
+
+    &:link,
+    &:visited {
+      color: #85B0C2;
+    }
+
+    &::after {
+      content: '/';
+
+      position: absolute;
+      top: 0;
+      right: -1rem;
+
+      color: #85B0C2;
+    }
+
+    &:focus {
+      color: white;
+    }
+
+    &:hover {
+      color: white;
+    }
+  }
+}

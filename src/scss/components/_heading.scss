@@ -1,0 +1,59 @@
+h1.heading {
+  color: $primary-900;
+  @extend %fs-h1;
+
+  @include breakpoint(mobile) {
+    font-size: 2.8rem;
+  }
+}
+
+h2.heading {
+  max-width: 70rem;
+
+  color: $primary-900;
+  @extend %fs-h2;
+
+  @include breakpoint(mobile) {
+    font-size: 2.4rem;
+  }
+}
+
+.heading {
+  position: relative;
+
+  &--line-blue,
+  &--line-yellow {
+    padding-bottom: 2.5rem;
+
+    @include breakpoint(mobile) {
+      padding-bottom: 1.5rem;
+    }
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 6.5rem;
+      height: 0.5rem;
+    }
+  }
+
+  &--line-blue::before {
+    background-color: $primary-300;
+  }
+
+  &--line-yellow::before {
+    background-color: $secondary-300;
+  }
+
+  &--605 {
+    max-width: 60rem;
+  }
+
+  &--711 {
+    max-width: 70rem;
+  }
+}

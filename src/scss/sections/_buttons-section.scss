@@ -1,0 +1,26 @@
+.buttons-section {
+  margin: 2.5rem 0;
+
+  &--align-left {
+    .buttons-section__inner {
+      justify-content: flex-start;
+    }
+  }
+
+  &--align-right {
+    .buttons-section__inner {
+      justify-content: flex-end;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+
+    @include breakpoint(mobile) {
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+    }
+  }
+}

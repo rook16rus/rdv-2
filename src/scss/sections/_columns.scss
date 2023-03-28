@@ -1,0 +1,32 @@
+.columns {
+  margin: var(--s-1) 0;
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+  }
+
+  &__item {
+    padding-left: 2.5rem;
+    border-left: 0.5rem solid $primary-300;
+
+    @include breakpoint(tablet) {
+      padding-left: 1.5rem;
+    }
+  }
+
+  &__heading {
+    color: $primary-900;
+    @extend %fs-h4;
+  }
+
+  &__text {
+    margin-top: 1rem;
+    @extend %fs-t1;
+  }
+}

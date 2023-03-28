@@ -1,0 +1,21 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  &__item {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+
+    border: 0.1rem solid $primary-900;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &.active {
+      background-color: $primary-900;
+    }
+  }
+}

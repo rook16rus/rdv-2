@@ -1,0 +1,95 @@
+.partners {
+  margin: 3rem 0;
+
+  @include breakpoint(tablet) {
+    margin: 0;
+
+    padding: 2rem 0;
+    background-color: #F0F5F7;
+  }
+
+  &__inner {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 1.6rem 2.4rem;
+    border-radius: 1.6rem;
+
+    background-color: #F0F5F7;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr;
+      padding: 0;
+      border-radius: 0;
+      gap: 1.5rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 1rem;
+    }
+  }
+
+  &__text {
+  }
+
+  &__title {
+    max-width: 48rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.1;
+
+    @include breakpoint(tablet) {
+      max-width: unset;
+      font-size: 1.4rem;
+      line-height: 1.2;
+    }
+
+    @include breakpoint(mobile) {
+      font-weight: 400;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.6rem;
+
+    @include breakpoint(mobile) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 1.5rem 1.6rem;
+    background-color: white;
+    border-radius: 0.8rem;
+
+    transition: opacity 0.3s ease;
+
+    @include breakpoint(mobile) {
+      padding: 1.4rem 1.6rem;
+    }
+
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    img {
+      max-width: 100%;
+      width: auto;
+      height: auto;
+
+      object-fit: contain;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="buttons-section buttons-section--align-left">
+            <div class="container">
+                <div class="buttons-section__inner">
+                    <ul class="buttons">
+                        <li>
+                            <a class="button button--secondary button--bold" href="#">Оставить заявку</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="buttons-section">
+            <div class="container">
+                <div class="buttons-section__inner">
+                    <ul class="buttons">
+                        <li>
+                            <a class="button button--secondary button--bold" href="#">Оставить заявку</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="buttons-section buttons-section--align-right">
+            <div class="container">
+                <div class="buttons-section__inner">
+                    <ul class="buttons">
+                        <li>
+                            <a class="button button--secondary button--bold" href="#">Оставить заявку</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="comparison">
+            <div class="container">
+                <div class="comparison__inner">
+                    {{#each comparison}}
+                        <div class="comparison__block">
+                            <h3 class="comparison__title">{{this.title}}</h3>
+                            <ul class="comparison__items">
+                                {{#each this.items}}
+                                    <li class="comparison__item">
+                                        <div class="comparison__image-wrapper">
+                                            <img src="{{this.image}}" alt="Comparison Image">
+                                        </div>
+                                        <div class="comparison__text">
+                                            {{{this.text}}}
+                                        </div>
+                                    </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </section>
+
+    {{/content}}
+{{/extend}}

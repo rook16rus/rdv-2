@@ -1,0 +1,13 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        {{>sections/simple-numbered-list data=sections.numberedLeft}}
+
+        {{>sections/simple-numbered-list data=sections.numberedRight}}
+
+        {{>sections/simple-bulleted-list data=sections.bulletedLeft}}
+
+        {{>sections/simple-bulleted-list data=sections.bulletedRight}}
+
+    {{/content}}
+{{/extend}}
