@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>
+        Кнопки и сравнение
+    </title>
+</head>
+
+<body class="no-touch " ontouchstart="" data-assets-path="assets/">
+    <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+        <?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol fill="none" viewBox="0 0 35 35" id="bonus-icon" xmlns="http://www.w3.org/2000/svg"><rect x="8.583" y="11.211" width="17.835" height="3.567" rx=".905" stroke="#F0F5F7" stroke-linecap="round" stroke-linejoin="round"/><path d="M25.526 14.781v9.66c0 1.068-.899 1.933-2.007 1.933H11.481c-1.108 0-2.007-.865-2.007-1.932v-9.66" stroke="#F0F5F7" stroke-linecap="round" stroke-linejoin="round"/><path clip-rule="evenodd" d="M15.716 7.645v0c.986 0 1.784.798 1.784 1.783v1.783h-1.784a1.783 1.783 0 01-1.783-1.783v0c0-.985.799-1.783 1.784-1.783zM19.284 7.645v0c.985 0 1.783.798 1.783 1.783v0c0 .985-.799 1.783-1.784 1.783H17.5V9.428c0-.985.799-1.783 1.784-1.783zM17.298 18.01l.202.196.202-.195c.368-.357.87-.558 1.395-.558.524 0 1.027.201 1.394.558v0a1.876 1.876 0 010 2.704l-1.567 1.52c-.376.364-.889.569-1.424.569a2.046 2.046 0 01-1.424-.57l-1.568-1.52a1.876 1.876 0 010-2.703v0c.368-.357.87-.558 1.395-.558s1.027.201 1.395.558v0z" stroke="#F0F5F7" stroke-linecap="round" stroke-linejoin="round"/></symbol><symbol viewBox="0 0 20 20" id="check" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10"/><path d="M8.2 14.38a1.4 1.4 0 01-.99-.4L4.24 11A.82.82 0 015.4 9.85l2.8 2.8 7.4-7.41a.82.82 0 011.16 1.16l-7.58 7.58c-.26.26-.61.4-.98.4z" fill="#fff"/></symbol><symbol fill="none" viewBox="0 0 13 8" id="chevron" xmlns="http://www.w3.org/2000/svg"><path d="M.5.657l5.657 5.657L11.814.657" stroke-linecap="round" stroke="#000"/></symbol><symbol viewBox="0 0 9 15" id="chevron-2" xmlns="http://www.w3.org/2000/svg"><path d="M.296 7.874a.959.959 0 010-1.38L6.66.286a1.018 1.018 0 011.414 0c.39.38.39.999 0 1.38L2.417 7.184l5.657 5.52c.39.38.39.998 0 1.379a1.018 1.018 0 01-1.414 0L.296 7.874zm1.374.286h-.667V6.209h.667V8.16z"/></symbol><symbol viewBox="0 0 18 18" id="close" xmlns="http://www.w3.org/2000/svg"><path d="M17.41.44a1.5 1.5 0 010 2.12L2.56 17.41a1.5 1.5 0 11-2.12-2.12L15.29.44a1.5 1.5 0 012.12 0z"/><path d="M17.41 17.41a1.5 1.5 0 01-2.12 0L.44 2.56A1.5 1.5 0 012.56.44l14.85 14.85a1.5 1.5 0 010 2.12z"/></symbol><symbol viewBox="0 0 20 20" id="form-1" xmlns="http://www.w3.org/2000/svg"><path d="M14.53 13.45c-2.1-.77-2.77-1.41-2.77-2.8 0-.82.69-1.36.92-2.07.24-.71.37-1.55.48-2.17.12-.6.16-.84.22-1.5C13.46 4.1 12.91 2 10 2S6.54 4.1 6.62 4.91c.06.66.1.9.22 1.5.11.62.24 1.46.48 2.17.23.7.92 1.25.92 2.07 0 1.39-.67 2.03-2.77 2.8C3.37 14.2 2 14.97 2 15.5V18h16v-2.5c0-.53-1.37-1.29-3.47-2.05z"/></symbol><symbol class="gform__input-icon" viewBox="0 0 20 21" id="form-2" xmlns="http://www.w3.org/2000/svg"><path d="M10.8 12v1.5H9.2V12H1v7.5h18V12h-8.3zm8.2-1.5V6.7a2.3 2.3 0 00-2.3-2.2h-2.2V3A1.5 1.5 0 0013 1.5H7A1.5 1.5 0 005.5 3v1.5H3.2A2.2 2.2 0 001 6.8v3.7h18zM7 3h6v1.5H7V3z"/></symbol><symbol class="hform__input-icon" viewBox="0 0 20 20" id="form-3" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.89 2.51a1.75 1.75 0 012.6.16l1.8 2.3c.33.43.45.98.32 1.5l-.55 2.2a.68.68 0 00.18.64l2.45 2.45a.68.68 0 00.65.18l2.19-.55a1.74 1.74 0 011.5.32l2.3 1.8c.83.64.9 1.86.16 2.6l-1.03 1.04a2.78 2.78 0 01-2.88.7A18.64 18.64 0 012.15 6.42a2.78 2.78 0 01.7-2.88L3.9 2.51z"/></symbol><symbol class="iform__input-icon" viewBox="0 0 20 20" id="form-4" xmlns="http://www.w3.org/2000/svg"><path d="M18.1 3H2.12c-.1 0-.2.02-.3.05l8.13 8.1L18.1 3z"/><path d="M18.93 3.79l-8.19 8.15a1.12 1.12 0 01-1.58 0l-8.12-8.1c-.03.1-.04.2-.04.3v11.24a1.13 1.13 0 001.13 1.13h15.75A1.12 1.12 0 0019 15.38V4.13c0-.12-.03-.23-.07-.34zM2.9 15.39h-.8v-.81l4.1-4.06.79.8-4.1 4.06zm14.96 0h-.78l-4.1-4.08.79-.79 4.09 4.06v.8z"/></symbol><symbol class="jform__input-icon" viewBox="0 0 20 20" id="form-5" xmlns="http://www.w3.org/2000/svg"><path d="M5.25 8.61L3.27 10.6a4.34 4.34 0 106.13 6.13l2.64-2.64a4.34 4.34 0 00-1.2-6.98l-.84.85c-.09.08-.16.18-.22.28a2.9 2.9 0 011.24 4.83L8.38 15.7a2.9 2.9 0 11-4.09-4.1l1.15-1.14a5.8 5.8 0 01-.19-1.86z"/><path d="M7.96 5.91a4.34 4.34 0 001.2 6.98l1.11-1.12a2.89 2.89 0 01-1.3-4.84l2.65-2.64a2.9 2.9 0 014.09 4.1l-1.15 1.14c.17.6.23 1.23.19 1.86l1.98-1.99a4.34 4.34 0 00-6.13-6.13L7.96 5.91z"/></symbol><symbol class="kform__input-icon" viewBox="0 0 20 21" id="form-6" xmlns="http://www.w3.org/2000/svg"><path d="M10.8 12v1.5H9.2V12H1v7.5h18V12h-8.3zm8.2-1.5V6.7a2.3 2.3 0 00-2.3-2.2h-2.2V3A1.5 1.5 0 0013 1.5H7A1.5 1.5 0 005.5 3v1.5H3.2A2.2 2.2 0 001 6.8v3.7h18zM7 3h6v1.5H7V3z"/></symbol><symbol fill="none" viewBox="0 0 25 24" id="info" xmlns="http://www.w3.org/2000/svg"><rect x=".5" width="24" height="24" rx="12" fill="#F0F5F7"/><path d="M14.694 17.99c-.559.22-1.004.387-1.337.503-.333.116-.72.174-1.16.174-.678 0-1.204-.166-1.58-.496a1.6 1.6 0 01-.561-1.257c0-.198.013-.4.041-.606.029-.206.074-.437.135-.698l.7-2.471c.061-.237.115-.463.157-.672a2.98 2.98 0 00.063-.582c0-.315-.066-.535-.195-.66-.132-.124-.38-.184-.748-.184-.18 0-.366.026-.556.082-.189.058-.352.11-.487.162l.185-.761c.458-.187.897-.347 1.315-.48.418-.133.814-.2 1.186-.2.672 0 1.191.164 1.556.488.363.324.546.746.546 1.265 0 .107-.013.297-.038.567a3.798 3.798 0 01-.14.746l-.695 2.464a6.943 6.943 0 00-.154.677 3.575 3.575 0 00-.067.575c0 .328.073.551.22.67.145.118.4.178.76.178.17 0 .36-.03.576-.089.213-.059.368-.111.465-.156l-.187.76zm-.123-10.003a1.661 1.661 0 01-1.172.452c-.456 0-.85-.15-1.177-.452a1.444 1.444 0 01-.49-1.097c0-.428.165-.795.49-1.1.327-.305.72-.457 1.177-.457.457 0 .849.152 1.172.457.325.305.488.672.488 1.1 0 .43-.163.795-.488 1.097z" fill="#939598"/></symbol><symbol class="mbi mbi-info-circle" fill="currentColor" viewBox="0 0 16 16" id="info-simple" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" fill="#939598"/><path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" fill="#939598"/><circle cx="8" cy="4.5" r="1" fill="#939598"/></symbol><symbol fill="none" viewBox="0 0 48 48" id="minus" xmlns="http://www.w3.org/2000/svg"><path d="M32 24H16" stroke="#262730" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol><symbol fill="none" viewBox="0 0 48 48" id="plus" xmlns="http://www.w3.org/2000/svg"><path d="M24 16v16M32 24H16" stroke="#262730" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol><symbol viewBox="0 0 30 30" id="screen" xmlns="http://www.w3.org/2000/svg"><path d="M3.75 3.25v1.875h1.875V3.25H3.75zm3.75 0v1.875h1.875V3.25H7.5zm3.75 0v1.875h1.875V3.25H11.25zm3.75 0v1.875h1.875V3.25H15zm3.75 0v1.875h1.875V3.25H18.75zm3.75 0v1.875h1.875V3.25H22.5zM3.75 7v1.875h1.875V7H3.75zM22.5 7v1.875h1.875V7H22.5zM3.75 10.75v1.875h1.875V10.75H3.75zm18.75 0v1.875h1.875V10.75H22.5zm-8.906.938l-.293.38-1.114 1.495H7.5V25.75H26.25V13.562h-4.688l-1.113-1.494-.293-.38h-6.563zm.937 1.874h4.688l1.113 1.495.293.38h3.75v8.438h-15v-8.438h3.75l.293-.38 1.113-1.495zM3.75 14.5v1.875h1.875V14.5H3.75zm13.125.938c-2.06 0-3.75 1.69-3.75 3.75s1.69 3.75 3.75 3.75 3.75-1.69 3.75-3.75-1.69-3.75-3.75-3.75zm0 1.874c1.047 0 1.875.829 1.875 1.875a1.861 1.861 0 01-1.875 1.875A1.861 1.861 0 0115 19.188c0-1.046.828-1.875 1.875-1.875zM3.75 18.25v1.875h1.875V18.25H3.75z"/></symbol><symbol fill="none" viewBox="0 0 14 14" id="tip-icon" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="7" r="5.594" stroke="#85B0C2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.375 9.174H7.81" stroke="#85B0C2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.1 9.173V6.53h-.715" stroke="#85B0C2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.06 4.666a.155.155 0 11-.155-.155" stroke="#85B0C2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.91 4.51c.086 0 .156.07.156.156" stroke="#85B0C2" stroke-linecap="round" stroke-linejoin="round"/></symbol><symbol viewBox="0 0 21 21" id="twitter" xmlns="http://www.w3.org/2000/svg"><path d="M20.86 4.33a8.8 8.8 0 01-2.43.67 4.2 4.2 0 001.85-2.33c-.81.49-1.71.83-2.67 1.02a4.23 4.23 0 00-7.2 3.85c-3.5-.18-6.6-1.86-8.7-4.42a4.25 4.25 0 001.3 5.64 4.16 4.16 0 01-1.9-.52v.05a4.24 4.24 0 003.38 4.14 4.2 4.2 0 01-1.9.07 4.26 4.26 0 003.93 2.94A8.47 8.47 0 01.3 17.18c1.86 1.2 4.08 1.89 6.46 1.89 7.77 0 12-6.43 12-12v-.55a8.41 8.41 0 002.1-2.19z"/></symbol><symbol viewBox="0 0 22 23" id="vk" xmlns="http://www.w3.org/2000/svg"><path d="M21.88 16.28l-.07-.14c-.38-.68-1.1-1.51-2.16-2.5l-.02-.02-.01-.02h-.03c-.48-.47-.78-.78-.91-.93-.23-.3-.29-.61-.16-.92.1-.23.43-.73 1.02-1.48l.73-.96c1.3-1.74 1.87-2.84 1.7-3.33l-.07-.1c-.04-.08-.16-.14-.35-.2a1.78 1.78 0 00-.72-.02l-3.26.02a.42.42 0 00-.22 0l-.15.04-.06.03-.04.03a.5.5 0 00-.13.12.77.77 0 00-.11.2 18.46 18.46 0 01-1.98 3.76A5.85 5.85 0 0113.86 11c-.12.1-.22.14-.29.13a8.14 8.14 0 01-.2-.05.75.75 0 01-.25-.27c-.06-.12-.1-.27-.13-.44a4.88 4.88 0 01-.03-1l.01-.48a28.06 28.06 0 01.05-1.73v-.62c0-.22 0-.4-.03-.52a1.75 1.75 0 00-.12-.36.6.6 0 00-.23-.27 1.3 1.3 0 00-.38-.15c-.4-.1-.91-.14-1.53-.15-1.4-.01-2.3.08-2.7.27-.16.09-.3.2-.43.34-.14.17-.15.26-.06.27.46.07.78.23.96.49l.07.14c.06.1.1.27.16.52a8.8 8.8 0 01-.16 3.69l-.13.24a.2.2 0 01-.06.06c-.1.03-.2.05-.3.05-.11 0-.24-.05-.39-.16a2.7 2.7 0 01-.47-.43 5.82 5.82 0 01-.55-.78c-.2-.33-.41-.72-.63-1.17l-.18-.33a28.2 28.2 0 01-.98-2.1.75.75 0 00-.28-.35l-.05-.04a1.2 1.2 0 00-.44-.17L1 5.66c-.32 0-.53.07-.65.21l-.04.07a.37.37 0 00-.03.18c0 .08.02.18.06.3a37.31 37.31 0 004.06 7.17 25.1 25.1 0 001.12 1.37l.28.27a13.58 13.58 0 001.96 1.4 6.32 6.32 0 003.14.78h1.3a.9.9 0 00.6-.24l.05-.06a1.15 1.15 0 00.12-.52c0-.32.02-.62.07-.88.06-.26.13-.45.2-.58a1.44 1.44 0 01.43-.5.74.74 0 01.1-.04c.17-.06.39 0 .63.17.25.18.48.4.7.66.2.26.46.55.77.88.3.32.56.56.79.72l.22.13c.15.1.35.18.6.25.23.08.44.1.62.06l2.9-.05c.28 0 .5-.04.67-.14.15-.1.25-.2.28-.3a.87.87 0 000-.4 1.42 1.42 0 00-.08-.3z"/></symbol></svg>    </div>
+
+    <button class="top_button" type="button" tabindex="0" title="Наверх"></button>
+
+    <div class="page-content">
+        <header class="header">
+            <div class="container">
+                <div class="header__top">
+                    <a class="header__logo" href="#">
+                        <img src="img/logo.svg" width="146" height="43" alt="">
+                    </a>
+                    <button class="button" type="button" data-modal="#form1">Оставить заявку</button>
+                </div>
+                <div class="header__navigation">
+                    <button class="header__burger" type="button" data-modal="#menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <nav class="menu">
+                        <ul class="menu__links">
+                            <li class="menu__item menu__item--has-submenu">
+                                <a class="menu__head" href="#">
+                                    <span>Услуги</span>
+                                </a>
+                                <ul class="menu__submenu">
+                                    <li>
+                                        <ul>
+                                            <li>
+                                                <span class="accent">Просто текст</span>
+                                            </li>
+                                            <li>
+                                                <a class="accent" href="#">Ссылка 1</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Ссылка 2</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Ссылка 3</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li>
+                                                <a class="accent" href="#">Ссылка 4</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Ссылка 5</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Ссылка 6</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li>
+                                                <a class="accent" href="#">Ссылка 7</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Ссылка 8</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Ссылка 9</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item menu__item--has-submenu">
+                                <a class="menu__head" href="#">
+                                    <span>Проекты</span>
+                                </a>
+                                <ul class="menu__submenu">
+                                    <li>
+                                        <ul>
+                                            <li>
+                                                <a class="accent" href="#">Ссылка 10</a>
+                                            </li>
+                                            <li>
+                                                <a class="accent" href="#">Ссылка 11</a>
+                                            </li>
+                                            <li>
+                                                <a class="accent" href="#">Ссылка 12</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li>
+                                                <a class="accent" href="#">Ссылка 13</a>
+                                            </li>
+                                            <li>
+                                                <a class="accent" href="#">Ссылка 14</a>
+                                            </li>
+                                            <li>
+                                                <a class="accent" href="#">Ссылка 15</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li>
+                                                <a class="accent" href="#">Ссылка 16</a>
+                                            </li>
+                                            <li>
+                                                <a class="accent" href="#">Ссылка 17</a>
+                                            </li>
+                                            <li>
+                                                <a class="accent" href="#">Ссылка 18</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item menu__item--has-submenu">
+                              <a class="menu__head" href="#">
+                                <span>Продукты</span>
+                              </a>
+                              <ul class="menu__submenu">
+                                <li>
+                                  <ul>
+                                    <li>
+                                      <span class="accent">Просто текст</span>
+                                    </li>
+                                    <li>
+                                      <a class="accent" href="#">Ссылка 1</a>
+                                    </li>
+                                    <li>
+                                      <a href="#">Ссылка 2</a>
+                                    </li>
+                                    <li>
+                                      <a href="#">Ссылка 3</a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <ul>
+                                    <li>
+                                      <a class="accent" href="#">Ссылка 4</a>
+                                    </li>
+                                    <li>
+                                      <a href="#">Ссылка 5</a>
+                                    </li>
+                                    <li>
+                                      <a href="#">Ссылка 6</a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <ul>
+                                    <li>
+                                      <a class="accent" href="#">Ссылка 7</a>
+                                    </li>
+                                    <li>
+                                      <a href="#">Ссылка 8</a>
+                                    </li>
+                                    <li>
+                                      <a href="#">Ссылка 9</a>
+                                    </li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="menu__item menu__item--has-submenu">
+                              <a class="menu__head" href="#">
+                                <span>RDV Маркет</span>
+                              </a>
+                              <ul class="menu__submenu">
+                                <li>
+                                  <ul>
+                                    <li>
+                                      <a class="accent" href="#">Ссылка 10</a>
+                                    </li>
+                                    <li>
+                                      <a class="accent" href="#">Ссылка 11</a>
+                                    </li>
+                                    <li>
+                                      <a class="accent" href="#">Ссылка 12</a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <ul>
+                                    <li>
+                                      <a class="accent" href="#">Ссылка 13</a>
+                                    </li>
+                                    <li>
+                                      <a class="accent" href="#">Ссылка 14</a>
+                                    </li>
+                                    <li>
+                                      <a class="accent" href="#">Ссылка 15</a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <ul>
+                                    <li>
+                                      <a class="accent" href="#">Ссылка 16</a>
+                                    </li>
+                                    <li>
+                                      <a class="accent" href="#">Ссылка 17</a>
+                                    </li>
+                                    <li>
+                                      <a class="accent" href="#">Ссылка 18</a>
+                                    </li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                          <li class="menu__item">
+                            <a class="menu__head" href="#">
+                              <span>Мероприятия</span>
+                            </a>
+                          </li>
+                            <li class="menu__item">
+                              <a class="menu__head" href="#">
+                                <span>Блог</span>
+                              </a>
+                            </li>
+                            <li class="menu__item menu__item--has-submenu">
+                              <a class="menu__head" href="#">
+                                <span>О компании</span>
+                              </a>
+                              <ul class="menu__submenu">
+                                <li>
+                                  <ul>
+                                    <li>
+                                      <a class="accent" href="#">Ссылка 10</a>
+                                    </li>
+                                    <li>
+                                      <a class="accent" href="#">Ссылка 11</a>
+                                    </li>
+                                    <li>
+                                      <a class="accent" href="#">Ссылка 12</a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <ul>
+                                    <li>
+                                      <a class="accent" href="#">Ссылка 13</a>
+                                    </li>
+                                    <li>
+                                      <a class="accent" href="#">Ссылка 14</a>
+                                    </li>
+                                    <li>
+                                      <a class="accent" href="#">Ссылка 15</a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <ul>
+                                    <li>
+                                      <a class="accent" href="#">Ссылка 16</a>
+                                    </li>
+                                    <li>
+                                      <a class="accent" href="#">Ссылка 17</a>
+                                    </li>
+                                    <li>
+                                      <a class="accent" href="#">Ссылка 18</a>
+                                    </li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                        </ul>
+                    </nav>        </div>
+            </div>
+        </header>
+        <main class="page-main">
+
+        <section class="buttons-section buttons-section--align-left">
+            <div class="container">
+                <div class="buttons-section__inner">
+                    <ul class="buttons">
+                        <li>
+                            <a class="button button--secondary button--bold" href="#">Оставить заявку</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="buttons-section">
+            <div class="container">
+                <div class="buttons-section__inner">
+                    <ul class="buttons">
+                        <li>
+                            <a class="button button--secondary button--bold" href="#">Оставить заявку</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="buttons-section buttons-section--align-right">
+            <div class="container">
+                <div class="buttons-section__inner">
+                    <ul class="buttons">
+                        <li>
+                            <a class="button button--secondary button--bold" href="#">Оставить заявку</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="comparison">
+            <div class="container">
+                <div class="comparison__inner">
+                        <div class="comparison__block">
+                            <h3 class="comparison__title">До автоматизации</h3>
+                            <ul class="comparison__items">
+                                    <li class="comparison__item">
+                                        <div class="comparison__image-wrapper">
+                                            <img src="img/content/comparison/1.png" alt="Comparison Image">
+                                        </div>
+                                        <div class="comparison__text">
+                                            <p><b>100</b> заказов</p>
+                                        </div>
+                                    </li>
+                                    <li class="comparison__item">
+                                        <div class="comparison__image-wrapper">
+                                            <img src="img/content/comparison/2.png" alt="Comparison Image">
+                                        </div>
+                                        <div class="comparison__text">
+                                            <p>1 сотрудник на <b>1 маркетплейс</b></p>
+                                        </div>
+                                    </li>
+                                    <li class="comparison__item">
+                                        <div class="comparison__image-wrapper">
+                                            <img src="img/content/comparison/3.png" alt="Comparison Image">
+                                        </div>
+                                        <div class="comparison__text">
+                                            <p><b>10%</b> отмен</p>
+                                        </div>
+                                    </li>
+                                    <li class="comparison__item">
+                                        <div class="comparison__image-wrapper">
+                                            <img src="img/content/comparison/4.png" alt="Comparison Image">
+                                        </div>
+                                        <div class="comparison__text">
+                                            <p><b>Блокировки</b> ЛК на маркетплейсе</p>
+                                        </div>
+                                    </li>
+                            </ul>
+                        </div>
+                        <div class="comparison__block">
+                            <h3 class="comparison__title">После автоматизации</h3>
+                            <ul class="comparison__items">
+                                    <li class="comparison__item">
+                                        <div class="comparison__image-wrapper">
+                                            <img src="img/content/comparison/5.png" alt="Comparison Image">
+                                        </div>
+                                        <div class="comparison__text">
+                                            <p><b>> 500</b> заказов в день</p>
+                                        </div>
+                                    </li>
+                                    <li class="comparison__item">
+                                        <div class="comparison__image-wrapper">
+                                            <img src="img/content/comparison/6.png" alt="Comparison Image">
+                                        </div>
+                                        <div class="comparison__text">
+                                            <p>1 сотрудник на все <b>маркетплейсы</b></p>
+                                        </div>
+                                    </li>
+                                    <li class="comparison__item">
+                                        <div class="comparison__image-wrapper">
+                                            <img src="img/content/comparison/7.png" alt="Comparison Image">
+                                        </div>
+                                        <div class="comparison__text">
+                                            <p><b>1,5%</b> отмен</p>
+                                        </div>
+                                    </li>
+                                    <li class="comparison__item">
+                                        <div class="comparison__image-wrapper">
+                                            <img src="img/content/comparison/8.png" alt="Comparison Image">
+                                        </div>
+                                        <div class="comparison__text">
+                                            <p><b>Нет блокировок</b></p>
+                                        </div>
+                                    </li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__left">
+                        <a class="footer__email" href="mailto:info@rdv-it.ru">info@rdv-it.ru</a>
+                        <address class="footer__address">г. Москва, Красносельская нижн. ул., д. 35, стр. 64, офис 305, <br> Бизнес-центр «Виктория плаза»</address>
+                        <a class="footer__policy" href="#" target="_blank">Правовая информация</a>
+                        <div class="footer__copyright">
+                            © 2022 Все права защищены
+                        </div>
+                    </div>
+                    <div class="footer__right">
+                        <a class="footer__phone" href="tel:84951270347">8 (495) 127-03-47</a>
+                        <button class="button button--secondary" type="button" data-modal="#form1">Заказать звонок</button>
+                        <ul class="socials">
+                            <li class="socials__item">
+                                <a class="socials__link" href="#" target="_blank">
+                                    <img src="img/content/socials/youtube.svg" width="22" height="22" alt="Socials Link">
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a class="socials__link" href="#" target="_blank">
+                                    <img src="img/content/socials/tg.svg" width="22" height="22" alt="Socials Link">
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a class="socials__link" href="#" target="_blank">
+                                    <img src="img/content/socials/vk.svg" width="22" height="22" alt="Socials Link">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>        <style>
+            .ie-placeholder {
+                z-index: 4000;
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #202020;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                
+            }
+            .ie-placeholder__message {
+                font-size: 2rem;
+                line-height: 1.2;
+                font-weight: 500;
+                margin: auto;
+            }
+            @supports (display: grid) {
+                .ie-placeholder {
+                    display: none;
+                }
+            }
+        </style>
+        <div class="ie-placeholder">
+            <div class="ie-placeholder__message">
+                Извините, ваш браузер не поддерживается
+            </div>
+        </div>
+        <div class="hystmodal modal" id="form1" aria-hidden="true">
+          <div class="hystmodal__wrap modal__wrapper">
+            <div class="hystmodal__window modal__window" role="dialog" aria-modal="true">
+              <button data-hystclose class="modal__close" title="Закрыть">
+                <svg>
+                  <use xlink:href="#close" />
+                </svg>
+              </button>
+              <h2 class="modal__title">Ваша заявка №1</h2>
+        <form class="old-form js-handle-form" data-need-validation>
+          <input class="js-result-input" name="calculator" type="hidden" value="">
+          <input name="page" type="hidden" value="/">
+          <div class="old-form__grid">
+            <div class="input">
+              <input class="input__control js-old-input" name="name" type="text" data-input="" placeholder="Имя"
+                autocomplete="off" data-parsley-pattern="^[а-яА-ЯA-Za-z ]+$" required>
+              <label class="input__placeholder">Имя</label>
+            </div>
+            <div class="input">
+              <input class="input__control js-old-input" name="company" type="text" data-input=""
+                placeholder="Название компании" autocomplete="off" required>
+              <label class="input__placeholder">Название компании</label>
+            </div>
+            <div class="input input--phone">
+              <input class="input__control js-old-input" name="phone" type="tel" data-input="" placeholder="Телефон"
+                autocomplete="off" required data-parsley-phone>
+              <label class="input__placeholder">Телефон</label>
+            </div>
+            <div class="input">
+              <input class="input__control js-old-input" type="email" data-input="" placeholder="Корпоративный Email"
+                autocomplete="off" required name="email">
+              <label class="input__placeholder">Корпоративный Email</label>
+            </div>
+            <div class="input">
+              <input class="input__control js-old-input" type="url" data-input="" placeholder="Сайт" autocomplete="off"
+                name="site">
+              <label class="input__placeholder">Сайт</label>
+            </div>
+            <button class="button js-submit-form" type="submit">
+              <span>Отправить заявку</span>
+            </button>
+            <div class="old-form__policy">
+              Отправляя заявку, вы даете свое согласие на обработку <a href="#" target="_blank">персональных
+                данных</a> и соглашаетесь с <a href="#" target="_blank">политикой конфеденциальности и
+                обработки
+                персональных данных компании</a>
+            </div>
+          </div>
+        </form>    </div>
+          </div>
+        </div>        <div class="hystmodal modal" id="form2" aria-hidden="true">
+          <div class="hystmodal__wrap modal__wrapper">
+            <div class="hystmodal__window modal__window" role="dialog" aria-modal="true">
+              <button data-hystclose class="modal__close" title="Закрыть">
+                <svg>
+                  <use xlink:href="#close" />
+                </svg>
+              </button>
+              <h2 class="modal__title">Ваша заявка №2</h2>
+        <form class="old-form js-handle-form" data-need-validation>
+          <input class="js-result-input" name="calculator" type="hidden" value="">
+          <input name="page" type="hidden" value="/">
+          <div class="old-form__grid">
+            <div class="input">
+              <input class="input__control js-old-input" name="name" type="text" data-input="" placeholder="Имя"
+                autocomplete="off" data-parsley-pattern="^[а-яА-ЯA-Za-z ]+$" required>
+              <label class="input__placeholder">Имя</label>
+            </div>
+            <div class="input">
+              <input class="input__control js-old-input" name="company" type="text" data-input=""
+                placeholder="Название компании" autocomplete="off" required>
+              <label class="input__placeholder">Название компании</label>
+            </div>
+            <div class="input input--phone">
+              <input class="input__control js-old-input" name="phone" type="tel" data-input="" placeholder="Телефон"
+                autocomplete="off" required data-parsley-phone>
+              <label class="input__placeholder">Телефон</label>
+            </div>
+            <button class="button js-submit-form" type="submit">
+              <span>Отправить заявку</span>
+            </button>
+            <div class="old-form__policy">
+              Отправляя заявку, вы даете свое согласие на обработку <a href="#" target="_blank">персональных
+                данных</a> и соглашаетесь с <a href="#" target="_blank">политикой конфеденциальности и
+                обработки
+                персональных данных компании</a>
+            </div>
+          </div>
+        </form>    </div>
+          </div>
+        </div>        <div class="hystmodal modal" id="success" aria-hidden="true">
+          <div class="hystmodal__wrap modal__wrapper">
+            <div class="hystmodal__window modal__window" role="dialog" aria-modal="true">
+              <button data-hystclose class="modal__close" title="Закрыть">
+                <svg>
+                  <use xlink:href="#close" />
+                </svg>
+              </button>
+              <h2 class="modal__title">Ваша заявка успешно отправлена!</h2>
+        <p>Наш менеджер свяжется с вами для уточнения информации</p>
+            </div>
+          </div>
+        </div>        <div class="hystmodal modal" id="error" aria-hidden="true">
+          <div class="hystmodal__wrap modal__wrapper">
+            <div class="hystmodal__window modal__window" role="dialog" aria-modal="true">
+              <button data-hystclose class="modal__close" title="Закрыть">
+                <svg>
+                  <use xlink:href="#close" />
+                </svg>
+              </button>
+              <h2 class="modal__title">Ошибка...</h2>
+        <p>При отправке формы произошла ошибка. Попробуйте еще раз</p>
+            </div>
+          </div>
+        </div>        <div class="hystmodal modal modal--full-screen" id="menu" aria-hidden="true">
+            <div class="hystmodal__wrap modal__wrapper">
+                <div class="hystmodal__window modal__window" role="dialog" aria-modal="true">
+                    <div class="container">
+                        <button data-hystclose class="modal__close" title="Закрыть">
+                            <svg>
+                                <use xlink:href="#close" />
+                            </svg>
+                        </button>
+                        <nav class="menu">
+                            <ul class="menu__links">
+                                <li class="menu__item menu__item--has-submenu">
+                                    <a class="menu__head" href="#">
+                                        <span>Услуги</span>
+                                    </a>
+                                    <ul class="menu__submenu">
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    <span class="accent">Просто текст</span>
+                                                </li>
+                                                <li>
+                                                    <a class="accent" href="#">Ссылка 1</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Ссылка 2</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Ссылка 3</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    <a class="accent" href="#">Ссылка 4</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Ссылка 5</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Ссылка 6</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    <a class="accent" href="#">Ссылка 7</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Ссылка 8</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Ссылка 9</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu__item menu__item--has-submenu">
+                                    <a class="menu__head" href="#">
+                                        <span>Проекты</span>
+                                    </a>
+                                    <ul class="menu__submenu">
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    <a class="accent" href="#">Ссылка 10</a>
+                                                </li>
+                                                <li>
+                                                    <a class="accent" href="#">Ссылка 11</a>
+                                                </li>
+                                                <li>
+                                                    <a class="accent" href="#">Ссылка 12</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    <a class="accent" href="#">Ссылка 13</a>
+                                                </li>
+                                                <li>
+                                                    <a class="accent" href="#">Ссылка 14</a>
+                                                </li>
+                                                <li>
+                                                    <a class="accent" href="#">Ссылка 15</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    <a class="accent" href="#">Ссылка 16</a>
+                                                </li>
+                                                <li>
+                                                    <a class="accent" href="#">Ссылка 17</a>
+                                                </li>
+                                                <li>
+                                                    <a class="accent" href="#">Ссылка 18</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu__item menu__item--has-submenu">
+                                  <a class="menu__head" href="#">
+                                    <span>Продукты</span>
+                                  </a>
+                                  <ul class="menu__submenu">
+                                    <li>
+                                      <ul>
+                                        <li>
+                                          <span class="accent">Просто текст</span>
+                                        </li>
+                                        <li>
+                                          <a class="accent" href="#">Ссылка 1</a>
+                                        </li>
+                                        <li>
+                                          <a href="#">Ссылка 2</a>
+                                        </li>
+                                        <li>
+                                          <a href="#">Ссылка 3</a>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <ul>
+                                        <li>
+                                          <a class="accent" href="#">Ссылка 4</a>
+                                        </li>
+                                        <li>
+                                          <a href="#">Ссылка 5</a>
+                                        </li>
+                                        <li>
+                                          <a href="#">Ссылка 6</a>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <ul>
+                                        <li>
+                                          <a class="accent" href="#">Ссылка 7</a>
+                                        </li>
+                                        <li>
+                                          <a href="#">Ссылка 8</a>
+                                        </li>
+                                        <li>
+                                          <a href="#">Ссылка 9</a>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu__item menu__item--has-submenu">
+                                  <a class="menu__head" href="#">
+                                    <span>RDV Маркет</span>
+                                  </a>
+                                  <ul class="menu__submenu">
+                                    <li>
+                                      <ul>
+                                        <li>
+                                          <a class="accent" href="#">Ссылка 10</a>
+                                        </li>
+                                        <li>
+                                          <a class="accent" href="#">Ссылка 11</a>
+                                        </li>
+                                        <li>
+                                          <a class="accent" href="#">Ссылка 12</a>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <ul>
+                                        <li>
+                                          <a class="accent" href="#">Ссылка 13</a>
+                                        </li>
+                                        <li>
+                                          <a class="accent" href="#">Ссылка 14</a>
+                                        </li>
+                                        <li>
+                                          <a class="accent" href="#">Ссылка 15</a>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <ul>
+                                        <li>
+                                          <a class="accent" href="#">Ссылка 16</a>
+                                        </li>
+                                        <li>
+                                          <a class="accent" href="#">Ссылка 17</a>
+                                        </li>
+                                        <li>
+                                          <a class="accent" href="#">Ссылка 18</a>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                  </ul>
+                                </li>
+                              <li class="menu__item">
+                                <a class="menu__head" href="#">
+                                  <span>Мероприятия</span>
+                                </a>
+                              </li>
+                                <li class="menu__item">
+                                  <a class="menu__head" href="#">
+                                    <span>Блог</span>
+                                  </a>
+                                </li>
+                                <li class="menu__item menu__item--has-submenu">
+                                  <a class="menu__head" href="#">
+                                    <span>О компании</span>
+                                  </a>
+                                  <ul class="menu__submenu">
+                                    <li>
+                                      <ul>
+                                        <li>
+                                          <a class="accent" href="#">Ссылка 10</a>
+                                        </li>
+                                        <li>
+                                          <a class="accent" href="#">Ссылка 11</a>
+                                        </li>
+                                        <li>
+                                          <a class="accent" href="#">Ссылка 12</a>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <ul>
+                                        <li>
+                                          <a class="accent" href="#">Ссылка 13</a>
+                                        </li>
+                                        <li>
+                                          <a class="accent" href="#">Ссылка 14</a>
+                                        </li>
+                                        <li>
+                                          <a class="accent" href="#">Ссылка 15</a>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <ul>
+                                        <li>
+                                          <a class="accent" href="#">Ссылка 16</a>
+                                        </li>
+                                        <li>
+                                          <a class="accent" href="#">Ссылка 17</a>
+                                        </li>
+                                        <li>
+                                          <a class="accent" href="#">Ссылка 18</a>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                  </ul>
+                                </li>
+                            </ul>
+                        </nav>            </div>
+                </div>
+            </div>
+        </div>
+        <div class="js-phone-codes-data" data-url="assets/data/countries.json"></div>
+
+        <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+            integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+        <script src="js/app.js"></script>
+        <script src="assets/js/backend.js"></script>
+    </div>
+</body>
+
+</html>

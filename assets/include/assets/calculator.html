@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>/*Critical CSS*/</style>
+    <link rel="preload" href="styles/main.css" as="style">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body class="body">
+    <div class="body__wrapper">
+      <div class="header"></div>
+      <main>
+        <div class="page-bg page-bg--grey data-inshadow" data-calculator>
+          <section class="section mt-5">
+            <div class="section__container">
+              <div class="section__row">
+                <div class="col">
+                  <div class="v-indent v-indent--green">
+                    <div class="t-base t-base--size--h2 t-base--color--blue-dark">Калькулятор тарифов RDV Маркет</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section section--m-blue">
+            <div class="section__container">
+              <div class="row v-indent v-indent--green">
+                <div class="col">
+                  <div class="v-indent v-indent--green t-base t-base--size--h4 t-base--color--blue-dark">Выберите одну или несколько схем работы с маркетплейсом</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-12 col-lg-7 col-xl-7">
+                  <div class="row section__block d-flex flex-wrap">
+                    <div class="col-12 col-sm-auto col-xl-4 d-flex justify-content-center col--gap--20 v-indent v-indent--yellow-last" v-for="item in marketplaces">
+                      <div class="card">
+                        <div class="card__img v-indent v-indent--green d-flex justify-content-center"><img :src="item.logo"></div>
+                        <hr class="v-indent v-indent--green">
+                        <div class="v-indent v-indent--red t-base t-base--size--small t-base--weight--bold t-base--color--dark-light">выберите схему</div>
+                        <ul>
+                          <li class="v-indent v-indent--red" v-for="tarif in item.tarifs">
+                            <div class="schem-item" @click="activateTarif(tarif)" :class="{ 'is-active': tarif.isActive }">
+                              <div class="t-base t-base--size--small t-base--weight--bold text-uppercase t-base--color--dark-light">{{tarif.code}}</div>
+                              <div class="t-base t-base--size--small t-base--color--gray-dark"><span>{{tarif.price}}</span>&nbsp;<span>₽/день</span></div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row section__block">
+                    <div class="v-indent v-indent--green t-base t-base--size--h4 t-base--color--blue-dark">Выберите количество лицензий</div>
+                    <div class="col-12">
+                      <div class="card card--full card--p20" :class="{ 'is-active': licenseCounter&gt;0 }">
+                        <div class="d-sm-flex d-block justify-content-between">
+                          <div class="v-indent v-indent--red t-base t-base--weight--bold t-base--color--dark-light">Пользовательские лицензии</div>
+                          <div class="v-indent v-indent--red-last t-base t-base--size--small t-base--color--gray-dark"><span>{{licensePrice}}</span>&nbsp;<span>₽/день за одну лицензию</span></div>
+                        </div>
+                        <div class="row v-indent v-indent--orange">
+                          <div class="col-12 col-sm-8">
+                            <div class="t-base t-base--size--small t-base--color--dark-light">Количество лицензий соответствует количеству сотрудников, которые будут работать в системе</div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="input count-control count-control--small">
+                              <count-control :editable="true" :quantity="licenseCounter" :min="1" @update:quantity="licenseCounter = $event"></count-control>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row d-flex flex-wrap section__block">
+                    <div class="v-indent v-indent--green t-base t-base--size--h4 t-base--color--blue-dark">Добавьте дополнительные модули</div>
+                    <div class="col-12 col-sm-6 col-xl-6 d-flex justify-content-center col--gap--20 v-indent v-indent--yellow-last" v-for="item in modules">
+                      <div class="card card--full card--p20 d-flex flex-column justify-content-between" :class="{ 'is-active': item.isActive }">
+                        <div class="d-sm-flex d-block justify-content-between v-indent v-indent--orange">
+                          <div class="card__subtitle t-base t-base--weight--bold t-base--color--dark-light">{{item.title}}</div>
+                          <div class="t-base t-base--size--small t-base--color--gray-dark"><span>{{item.price}}</span>&nbsp;<span>₽/день</span></div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                          <button class="button-modern button-modern--small button-modern--type--bordered" v-if="!item.isActive" @click="activateModule(item)">добавить</button>
+                          <button class="button-modern button-modern--small" v-else="item.isActive" @click="activateModule(item)">убрать</button>
+                          <div class="info" @click="showModal" :id="item.id"><img src="img/information.svg" alt="information">
+                            <div class="info__content">
+                              <div class="t-base t-base--size--small t-base--color--gray-dark v-indent v-indent--red">{{item.infoText}}</div><span class="link link--color--blue"><span class="link__text">Подробнее</span></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="v-indent v-indent--green t-base t-base--size--h4 t-base--color--blue-dark">Выберите объём дискового пространства</div>
+                    <div class="col-12">
+                      <div class="card card--full card--p20" :class="{ 'is-active': diskSpaceCounter&gt;0 }">
+                        <div class="d-sm-flex d-block justify-content-between">
+                          <div class="v-indent v-indent--red t-base t-base--weight--bold t-base--color--dark-light">Дисковое пространство, ГБ</div>
+                          <div class="v-indent v-indent--red-last t-base t-base--size--small t-base--color--gray-dark"><span>{{storagePrice}}</span>&nbsp;<span>₽/ ГБ</span></div>
+                        </div>
+                        <div class="row v-indent v-indent--orange">
+                          <div class="col-12 col-sm-8">
+                            <div class="t-base t-base--size--small t-base--color--dark-light">Введите необходимый объём</div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-12">
+                            <count-control :editable="true" :quantity="diskSpaceCounter" :min="0" @update:quantity="diskSpaceCounter = $event"></count-control>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-5 col-xl-5 col--mobile-no-padding col--styky-block sidebar">
+                  <div class="row main-content">
+                    <div class="col col--gap--20 col--mobile-no-padding d-block d-lg-flex justify-content-end sidebar__inner">
+                      <div class="card card--lr-40 card--medium card--bg-blue-light sidebar__content">
+                        <div class="t-base t-base--weight--bold t-base--color--white-main v-indent v-indent--green">Стоимость тарифа</div>
+                        <div class="d-flex flex-wrap justify-content-between v-indent v-indent--green">
+                          <button class="button-modern button-modern--xs button-modern--tab mb-2" v-for="item in daysDiscount" @click="activateOneItem(daysDiscount,item)" :class="{ 'is-active': item.isActive }">{{item.days}} дней</button>
+                        </div>
+                        <div class="v-indent v-indent--green">
+                          <div class="d-flex justify-content-center align-items-center" v-if="activeDays[0]['days']&gt;30">
+                            <div class="t-base t-base--line--through t-base--align--center t-base--weight--bold t-base--color--white-main">{{allPriceDiscount}} ₽</div>
+                            <div class="label-sale">
+                              <div class="t-base t-base--size--small t-base--weight--bold t-base--color--blue-light">-{{activeDays[0]['discount']}}%</div>
+                            </div>
+                          </div>
+                          <div class="t-base--align--center t-base t-base--size--h2 t-base--color--yellow-main">{{allPrice}} ₽</div>
+                          <div class="t-base t-base--size--small t-base--color--white-main t-base--align--center">{{priceInDay}} ₽/день</div>
+                        </div>
+                        <hr class="v-indent v-indent--green card__hr-color-blue">
+                        <div class="t-base t-base--weight--bold t-base--color--white-main v-indent v-indent--green">В тариф включено:</div>
+                        <ul class="v-indent v-indent--green">
+                          <li class="v-indent v-indent--red" v-for="item in activeTarifs">
+                            <div class="price-item d-flex justify-content-between">
+                              <div class="price-item__descr">
+                                <div class="t-base t-base--color--white-main">{{item.name}} ({{item.code}})</div>
+                              </div>
+                              <div class="price-item__cost">
+                                <div class="price-item__cost-new t-base t-base--color--white-main">{{item.totalTarifPrice}} ₽</div>
+                                <div class="price-item__cost-old t-base t-base--size--small t-base--line--through t-base--color--white-main" v-if="activeDays[0]['days']&gt;30">{{item.totalTarifPriceDiscount}} ₽</div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="v-indent v-indent--red">
+                            <div class="price-item d-flex justify-content-between">
+                              <div class="price-item__descr">
+                                <div class="t-base t-base--color--white-main">Пользовательские лицензии</div>
+                                <div class="d-flex align-items-center t-base t-base--size--small t-base--color--white-main">
+                                  <div class="t-base t-base--size--xs t-base--color--white-main">{{licensePrice}} ₽</div>&nbsp;
+                                  &times;
+                                  &nbsp;
+                                  <div class="t-base t-base--size--xs t-base--color--white-main">{{licenseCounter}} шт</div>
+                                </div>
+                              </div>
+                              <div class="price-item__cost">
+                                <div class="price-item__cost-new t-base t-base--color--white-main">{{licensePriceCalc}} ₽</div>
+                                <div class="price-item__cost-old t-base t-base--size--small t-base--line--through t-base--color--white-main" v-if="activeDays[0]['days']&gt;30">{{licensePriceDiscountCalc}} ₽</div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="v-indent v-indent--red" v-for="item in activeModules">
+                            <div class="price-item d-flex justify-content-between">
+                              <div class="price-item__descr">
+                                <div class="t-base t-base--color--white-main">{{item.title}}</div>
+                              </div>
+                              <div class="price-item__cost">
+                                <div class="price-item__cost-new t-base t-base--color--white-main">{{item.totalTarifPrice}} ₽</div>
+                                <div class="price-item__cost-old t-base t-base--size--small t-base--line--through t-base--color--white-main" v-if="activeDays[0]['days']&gt;30">{{item.totalTarifPriceDiscount}} ₽</div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="v-indent v-indent--red" v-if="diskSpaceCounter">
+                            <div class="price-item d-flex justify-content-between">
+                              <div class="price-item__descr">
+                                <div class="t-base t-base--color--white-main">Дисковое пространство</div>
+                                <div class="d-flex align-items-center t-base t-base--size--small t-base--color--white-main">
+                                  <div class="t-base t-base--size--xs t-base--color--white-main">{{storagePrice}} ₽</div>&nbsp;
+                                  &times;
+                                  &nbsp;
+                                  <div class="t-base t-base--size--xs t-base--color--white-main">{{diskSpaceCounter}} Гб</div>
+                                </div>
+                              </div>
+                              <div class="price-item__cost">
+                                <div class="price-item__cost-new t-base t-base--color--white-main">{{diskSpacePriceCalc}} ₽</div>
+                                <div class="price-item__cost-old t-base t-base--size--small t-base--line--through t-base--color--white-main" v-if="activeDays[0]['days']&gt;30">{{diskSpacePriceDiscountCalc}} ₽</div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <button class="button-modern button-modern--theme--yellow button-modern--w100p v-indent v-indent--yellow">Отправить заявку</button>
+                        <div class="t-base t-base--weight--bold t-base--color--white-main t-base--align--center">
+                          Тестовый период 14 дней
+                          <br>
+                          и подключение 1 кабинета бесплатно!
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section section--m-blue">
+            <div class="section__container">
+              <div class="section__row">
+                <div class="card card--full card--lr-60 card--border-dashed card--bg-transparent">
+                  <div class="row">
+                    <div class="col-12 col-md-3 v-indent v-indent--yellow">
+                      <div class="t-base t-base--size--h4 t-base--color--blue-medium">Нужна помощь?</div>
+                    </div>
+                    <div class="col-12 col-md-6 v-indent v-indent--yellow">
+                      <div class="t-base t-base--color--blue-medium">Выберите опции выше или оставьте заявку — наш менеджер поможет с расчетом и расскажет про нужные для вас модули.</div>
+                    </div>
+                    <div class="col-12 col-md-3 d-md-flex justify-content-end">
+                      <button class="button-modern">Заказать звонок</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <modal-info v-if="openModal" @close-modal="closeInfoModal">{{chooceModuleText[0]['infoText']}}</modal-info>
+          <div class="modal-price d-xs-none d-block">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <div class="t-base t-base--size--h3 t-base--color--yellow-main">{{allPrice}} ₽</div>
+                <div class="t-base t-base--size--xs t-base--color--white-main">за {{daysDiscount[0]['days']}} дней</div>
+              </div>
+              <button class="button-modern button-modern--lg button-modern--theme--yellow">Отправить заявку</button>
+            </div>
+          </div>
+        </div>
+        <script>
+          window.calcData = {
+          	marketplaces: [
+          		{
+          			logo: "img/marketplaces/logo-ozon-big.svg",
+          			tarifs: [
+          				{
+          					name:'Ozon',
+          					code: "FBS",
+          					price: 150,
+          					isActive: true
+          				},
+          				{
+          					name:'Ozon',
+          					code: "FBO",
+          					price: 50,
+          					isActive: false
+          				},
+          				{
+          					name:'Ozon',
+          					code: "DBS",
+          					price: 150,
+          					isActive: false
+          				},
+          				{
+          					name:'Ozon',
+          					code: "RFBS",
+          					price: 150,
+          					isActive: false
+          				}
+          			]
+          
+          		},
+          		{
+          			logo:"img/marketplaces/logo-wildberries-big.svg",
+          			tarifs: [
+          				{
+          					name:'Wildberries',
+          					code:"FBS",
+          					price: 150,
+          					isActive: false
+          				},
+          				{
+          					name:'Wildberries',
+          					code:"FBМ",
+          					price: 100,
+          					isActive: false
+          				}
+          			]
+          		},
+          		{
+          			logo:"img/marketplaces/logo-sber-megamarket-big.svg",
+          			tarifs: [
+          				{
+          					name:'Sbermegamarket',
+          					code:"FBS",
+          					price: 100,
+          					isActive: false
+          				}
+          			]
+          		},
+          		{
+          			logo:"img/marketplaces/aliexpress-big.svg",
+          			tarifs: [
+          				{
+          					name:'Aliexpress',
+          					code:"FBS",
+          					price: 50,
+          					isActive: false
+          				}
+          			]
+          		},
+          		{
+          			logo:"img/marketplaces/logo-ya-market-big.svg",
+          			tarifs: [
+          				{
+          					name:'Yandex market',
+          					code:"FBS",
+          					price: 100,
+          					isActive: false
+          				}
+          			]
+          		}
+          	],
+          	licensePrice: 150,
+          	modules: [
+          		{
+          			id: 1,
+          			title: "Создание карточек товаров на Wildberries",
+          			price: 100,
+          			isActive:false,
+          			infoText: "Отдельный модуль, состоящий из набора подсистем, которые встраиваются в вашу ERP или WMS систему. Модуль позволяет оперативно передавать остатки и цены в облачную систему RDV Маркет и собирать из нее новые заказы с маркетплейсов."
+          		},
+          		{
+          			id: 2,
+          			title: "Создание карточек товаров на Ozon",
+          			price: 100,
+          			isActive:false,
+          			infoText: "Отдельный модуль, состоящий из набора подсистем, которые встраиваются в вашу ERP или WMS систему. Модуль позволяет оперативно передавать остатки и цены в облачную систему RDV Маркет и собирать из нее новые заказы с маркетплейсов."
+          		},
+          		{
+          			id: 3,
+          			title: "Внешний мониторинг цен",
+          			price: 150,
+          			isActive:false,
+          			infoText: "Отдельный модуль, состоящий из набора подсистем, которые встраиваются в вашу ERP или WMS систему. Модуль позволяет оперативно передавать остатки и цены в облачную систему RDV Маркет и собирать из нее новые заказы с маркетплейсов."
+          		},
+          		{
+          			id: 4,
+          			title: "Коннектор",
+          			price: 400,
+          			isActive:false,
+          			infoText: "Отдельный модуль, состоящий из набора подсистем, которые встраиваются в вашу ERP или WMS систему. Модуль позволяет оперативно передавать остатки и цены в облачную систему RDV Маркет и собирать из нее новые заказы с маркетплейсов."
+          		},
+          		{
+          			id: 5,
+          			title: "Доступ к среде разработки",
+          			price: 150,
+          			isActive:false,
+          			infoText: "Отдельный модуль, состоящий из набора подсистем, которые встраиваются в вашу ERP или WMS систему. Модуль позволяет оперативно передавать остатки и цены в облачную систему RDV Маркет и собирать из нее новые заказы с маркетплейсов."
+          
+          		}
+          	],
+          	storagePrice: 9,
+          	daysDiscount: [
+          		{days: 30, discount:0, isActive:true},
+          		{days: 90, discount:5, isActive:false},
+          		{days: 180, discount:8, isActive:false},
+          		{days: 360, discount:10, isActive:false}
+          	]
+          }
+        </script>
+      </main>
+    </div>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
