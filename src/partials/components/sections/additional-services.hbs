@@ -1,0 +1,105 @@
+<section class="additional-services">
+  <div class="container">
+    <h2 class="additional-services__title">Дополнительные услуги</h2>
+    <div class="additional-services__accordions">
+      <div class="additional-services__accordion js-accordion">
+        <div class="additional-services__header js-accordion-btn">
+          <h3 class="additional-services__title">
+            Аудит личного кабинета
+          </h3>
+          <button class="additional-services__button"></button>
+        </div>
+        <div class="additional-services__content js-accordion-content">
+          <div class="additional-services__audit">
+            <div class="additional-services__audit-left">
+              <h4 class="additional-services__accordion-subtitle">Что мы анализируем:</h4>
+              <ul class="additional-services__audit-list">
+                {{#each auditServices}}
+                  <li class="additional-services__audit-item">{{this}}</li>
+                {{/each}}
+              </ul>
+            </div>
+            <div class="additional-services__right">
+              <h4 class="additional-services__accordion-subtitle">Что вы получите:  </h4>
+              <div class="additional-services__audit-lead">
+                <div class="additional-services__audit-lead-icon">
+                  <svg>
+                    <use xlink:href="#audit-check"></use>
+                  </svg>
+                </div>
+                <div class="additional-services__audit-lead-text">
+                  <p>
+                    Детальную дорожную карту по дальнейшему развитию магазина: на что стоит обратить внимание и как оптимизировать процесс продаж для достижения наилучшего результата
+                  </p>
+                </div>
+              </div>
+              <ul class="additional-services__audit-prices">
+                {{#each auditPrices}}
+                  <li class="additional-services__audit-price-item">
+                    <span class="additional-services__audit-price-key">{{this.key}}</span>
+                    <span class="additional-services__audit-price-value">
+                      <span>{{this.value}}</span>
+                      <span>руб/карточка</span>
+                    </span>
+                  </li>
+                {{/each}}
+              </ul>
+              <a class="additional-services__audit-link button button--secondary" href="#">заказать</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="additional-services__accordion js-accordion">
+        <div class="additional-services__header js-accordion-btn">
+          <h3 class="additional-services__title">
+            Создание и редактирование контента
+          </h3>
+          <button class="additional-services__button"></button>
+        </div>
+        <div class="additional-services__content js-accordion-content">
+          <ul class="additional-services__creation">
+            {{#each creationServices }}
+              <li class="additional-services__creation-item">
+                <p class="additional-services__creation-desc">{{this.desc}}</p>
+                <div class="additional-services__creation-price-block">
+                  <span class="additional-services__creation-price">{{this.price}}</span>
+                  <span class="additional-services__creation-price-desc">руб/карточка</span>
+                </div>
+                <a class="additional-services__creation-link button button--secondary" href="#">
+                  заказать
+                </a>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+      <div class="additional-services__accordion js-accordion">
+        <div class="additional-services__header js-accordion-btn">
+          <h3 class="additional-services__title">
+            Расширенные консультации
+          </h3>
+          <button class="additional-services__button"></button>
+        </div>
+        <div class="additional-services__content js-accordion-content">
+          <div class="additional-services__consult">
+            <h3 class="additional-services__accordion-subtitle">
+              Предоставляем индивидуальные консультации:
+            </h3>
+            <div class="additional-services__consult-wrapper">
+              <ul class="additional-services__consult-list">
+                {{#each consultServices }}
+                  <li class="additional-services__consult-item">{{this}}</li>
+                {{/each}}
+              </ul>
+              <div class="additional-services__consult-price-block">
+                <span class="additional-services__consult-price">1900</span>
+                <span class="additional-services__consult-price-desc">руб/карточка</span>
+              </div>
+              <a class="additional-services__consult-link button button--secondary" href="#">заказать</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
