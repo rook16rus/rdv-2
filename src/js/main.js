@@ -28,6 +28,7 @@ import slider from '%src%/js/slider'
 import infinitySlider from '%src%/js/marquee-slider'
 import smoothScroll from '%src%/js/smoothScroll'
 import reviewsSlider from '%src%/js/reviewsSlider'
+import bonusButton from "./bonusButton";
 
 document.addEventListener('DOMContentLoaded', function () {
   window.rdv = {
@@ -55,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
   sticky()
   numberedListLine()
   initFaqAccordions()
+  bonusButton()
 
   initCalculator()
   newCalculator()
