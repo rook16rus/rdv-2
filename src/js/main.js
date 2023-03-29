@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
   sticky()
   numberedListLine()
   initFaqAccordions()
+  initServicesAccordions();
   bonusButton()
 
   initCalculator()
@@ -115,6 +116,20 @@ function initCalculator() {
 
 function initFaqAccordions() {
   const containers = document.querySelectorAll('.faq')
+  containers.forEach((container) => {
+    new Accordions({
+      selectors: {
+        container: container,
+        wrapper: '.js-accordion',
+        button: '.js-accordion-btn',
+        content: '.js-accordion-content',
+      },
+    })
+  })
+}
+
+function initServicesAccordions() {
+  const containers = document.querySelectorAll('.additional-services');
   containers.forEach((container) => {
     new Accordions({
       selectors: {
