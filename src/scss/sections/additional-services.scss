@@ -2,16 +2,24 @@
   margin-bottom: var(--s-0);
 
   &__title {
-    margin-bottom: 6.4rem;
+    margin-bottom: 4rem;
 
     @extend %fs-h2;
     color: $primary-900;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 3.3rem;
+    }
   }
 
   &__accordions {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.6rem;
+
+    @include breakpoint(mobile) {
+      gap: 1rem;
+    }
   }
 
   &__accordion {
@@ -19,6 +27,19 @@
 
     border-radius: 3.2rem;
     background-color: $primary-100;
+
+    @include breakpoint(tablet) {
+      padding: 4.2rem 3.2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 3.1rem 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 2rem 1.6rem;
+      border-radius: 1.2rem;
+    }
 
     &.active {
       .additional-services__button {
@@ -38,7 +59,7 @@
   &__header {
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: 2rem;
+    gap: 2.6rem;
     align-items: center;
 
     cursor: pointer;
@@ -64,6 +85,11 @@
     border-radius: 50%;
     background-color: $primary-900;
 
+    @include breakpoint(mobile) {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+
     &::before, &::after {
       content: '';
 
@@ -79,6 +105,11 @@
       background-color: #fff;
 
       transition: 0.3s;
+
+      @include breakpoint(mobile) {
+        width: 1.6rem;
+        height: 0.2rem;
+      }
     }
 
     &::after {
@@ -103,10 +134,26 @@
       height: 0.5rem;
 
       background-color: $secondary-300;
+
+      @include breakpoint(mobile) {
+        top: 1rem;
+      }
     }
 
     & > * {
       margin-top: 5.6rem;
+
+      @include breakpoint(tablet) {
+        margin-top: 4.7rem;
+      }
+
+      @include breakpoint(small-tablet) {
+        margin-top: 4.1rem;
+      }
+
+      @include breakpoint(mobile) {
+        margin-top: 3.5rem;
+      }
     }
   }
 
@@ -115,22 +162,40 @@
 
     @extend %fs-h4;
     color: $primary-900;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 1.6rem;
+    }
   }
 
   &__audit {
     display: flex;
     justify-content: space-between;
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+    }
   }
 
   &__audit-left {
     max-width: 52.7rem;
     margin-right: 2rem;
+
+    @include breakpoint(tablet) {
+      max-width: none;
+      margin-right: 0;
+      margin-bottom: 2.2rem;
+    }
   }
 
   &__audit-list {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.6rem;
+
+    @include breakpoint(mobile) {
+      gap: 0.6rem;
+    }
   }
 
   &__audit-item {
@@ -140,7 +205,12 @@
     gap: 0.8rem;
 
     @extend %fs-t2;
+    font-weight: 700;
     color: $grayscale-700;
+
+    @include breakpoint(mobile) {
+      gap: 0.6rem;
+    }
 
     &::before {
       content: '';
@@ -159,6 +229,10 @@
     flex-direction: column;
     align-items: flex-start;
     max-width: 56.3rem;
+
+    @include breakpoint(tablet) {
+      max-width: none;
+    }
   }
 
   &__audit-lead {
@@ -173,11 +247,26 @@
 
     @extend %fs-t2;
     color: $grayscale-700;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 0;
+      border-bottom: 0;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 0.7rem;
+      padding-bottom: 2rem;
+    }
   }
 
   &__audit-lead-icon {
     width: 3.2rem;
     height: 3.2rem;
+
+    @include breakpoint(mobile) {
+      width: 2rem;
+      height: 2rem;
+    }
 
     svg {
       width: 100%;
@@ -191,6 +280,14 @@
     gap: 0.6rem;
     margin-bottom: 2.8rem;
     width: 100%;
+
+    @include breakpoint(tablet) {
+      gap: 0;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 1.8rem;
+    }
   }
 
   &__audit-price-item {
@@ -199,14 +296,42 @@
     justify-content: space-between;
 
     color: $primary-900;
+
+    @include breakpoint(tablet) {
+      padding: 2rem 0;
+      border-top: 1px solid $grayscale-300;
+
+      &:first-child {
+        border-top: 0;
+        padding-top: 0;
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+
+    @include breakpoint(mobile) {
+      padding: 1.6rem 0;
+      align-items: flex-end;
+    }
   }
 
   &__audit-price-key {
     @extend %fs-t2;
     font-weight: 700;
+
+    @include breakpoint(mobile) {
+      max-width: 10.5rem;
+    }
   }
 
   &__audit-price-value {
+    @include breakpoint(mobile) {
+      max-width: 10rem;
+      margin-right: 0.1rem;
+    }
+
     span:first-child {
       @extend %fs-h3;
     }
@@ -230,6 +355,16 @@
 
     border-top: 1px solid $grayscale-300;
 
+    @include breakpoint(tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.6rem 0.8rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 1.6rem 0;
+    }
+
     &:first-child {
       padding-top: 0;
       border-top: 0;
@@ -247,7 +382,17 @@
     width: 100%;
     max-width: 54.7rem;
 
+    @include breakpoint(tablet) {
+      grid-column: span 2;
+      max-width: none;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 0.6rem;
+    }
+
     @extend %fs-t2;
+    color: $grayscale-700;
     font-weight: 700;
 
     &::before {
@@ -265,6 +410,15 @@
   &__creation-price-block {
     margin-right: auto;
     margin-left: 14.2rem;
+
+    @include breakpoint(tablet) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    @include breakpoint(mobile) {
+      max-width: 10rem;
+    }
   }
 
   &__creation-price {
@@ -282,6 +436,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include breakpoint(tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.6rem 0.8rem;
+    }
   }
 
   &__consult-list {
@@ -289,6 +449,15 @@
     grid-template-columns: 1fr;
     gap: 1.6rem;
     max-width: 54.7rem;
+
+    @include breakpoint(tablet) {
+      max-width: none;
+      grid-column: span 2;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 0.6rem;
+    }
   }
 
   &__consult-item {
@@ -296,6 +465,14 @@
     grid-template-columns: auto 1fr;
     gap: 0.8rem;
     align-items: flex-start;
+
+    @extend %fs-t2;
+    font-weight: 700;
+    color: $grayscale-700;
+
+    @include breakpoint(mobile) {
+      gap: 0.7rem;
+    }
 
     &::before {
       content: '';
@@ -312,6 +489,11 @@
   &__consult-price-block {
     margin-right: auto;
     margin-left: 14.2rem;
+
+    @include breakpoint(tablet) {
+      margin: 0;
+      max-width: 10rem;
+    }
   }
 
   &__consult-price {
