@@ -2,8 +2,35 @@
   padding-top: 8.8rem;
   padding-bottom: 12rem;
 
+  @include breakpoint(tablet) {
+    padding-top: 6.4rem;
+    padding-bottom: 10.6rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding-top: 4.4rem;
+    padding-bottom: 9.3rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-top: 2.4rem;
+    padding-bottom: 8rem;
+  }
+
   .breadcrumbs {
     margin-bottom: 3.2rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2.8rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+    }
 
     &__link {
       &:hover {
@@ -17,6 +44,10 @@
 
     @extend %fs-h1;
     color: #174F77;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 0.8rem;
+    }
   }
 
   &__desc {
@@ -24,6 +55,18 @@
 
     @extend %fs-t2;
     color: #174F77;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 6.6rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 5.3rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 4rem;
+    }
   }
 
   &__subtitle {
@@ -46,6 +89,18 @@
     gap: 1.6rem;
 
     counter-reset: order;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint(small-tablet) {
+      grid-template-columns: 1fr;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 0.8rem;
+    }
   }
   
   &__item {
@@ -53,6 +108,18 @@
     
     border-radius: 2.4rem;
     background-color: #F0F5F7;
+
+    @include breakpoint(tablet) {
+      padding: 2.8rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 2rem;
+    }
 
     &::before {
       display: none;
@@ -65,6 +132,18 @@
     align-items: center;
     gap: 2rem;
     margin-bottom: 3.2rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2.4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 1.8rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 1.2rem;
+    }
 
     &::before {
       counter-increment: order;
@@ -81,6 +160,27 @@
 
       font: 700 3.4rem/120% 'Geometria';
       color: #1D7CAA;
+
+      @include breakpoint(tablet) {
+        width: 6.5rem;
+        height: 6.5rem;
+
+        font-size: 2.8rem;
+      }
+
+      @include breakpoint(small-tablet) {
+        width: 6rem;
+        height: 6rem;
+
+        font-size: 2.4rem;
+      }
+
+      @include breakpoint(mobile) {
+        width: 5.6rem;
+        height: 5.6rem;
+
+        font-size: 2rem;
+      }
     }
   }
 
@@ -95,6 +195,10 @@
 
   &__item-link {
     height: 4rem;
+
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
   }
 
   &__item-key {
@@ -109,6 +213,10 @@
     font: 400 1.2rem/110% "Geometria";
     color: #939598;
     text-align: center;
+
+    @include breakpoint(mobile) {
+      margin-right: 0.8rem;
+    }
   }
 
   &__item-copy-button {
