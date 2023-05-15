@@ -100,4 +100,23 @@
       color: #19B9DE;
     }
   }
+
+  &__big-text {
+    margin-bottom: 2rem;
+
+    @extend %fs-h4;
+    color: #174F77;
+
+    @media only screen and (max-width: 1099px) {
+      margin-bottom: 1.2rem;
+    }
+
+    &:first-of-type {
+      margin-bottom: 4rem;
+
+      @media only screen and (max-width: 1099px) {
+        margin-bottom: 3.2rem;
+      }
+    }
+  }
 }
