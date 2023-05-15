@@ -1,5 +1,7 @@
 @import 'old/input';
 
+@import "libs/choices";
+
 @import "global/legacy";
 
 @import 'global/fonts';
@@ -75,3 +77,4 @@
 @import "sections/basic-services";
 @import "sections/additional-services";
 @import "sections/cases";
+@import "sections/expansion";

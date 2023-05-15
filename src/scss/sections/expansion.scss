@@ -1,0 +1,37 @@
+.modal-expansion {
+  &__title {
+    margin-bottom: 2rem;
+
+    font: 700 2.4rem/120% "Geometria";
+    color: $grayscale-900;
+
+    @media only screen and (max-width: 1099px) {
+      margin-top: 2rem;
+    }
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .button {
+    width: 14.4rem;
+  }
+
+  &__confidence {
+    @extend %fs-t2;
+    color: #939598;
+
+    a {
+      color: $grayscale-900;
+      text-decoration: underline;
+      text-underline-offset: 0.4rem;
+      
+      &:first-child {
+        color: #939598;
+      }
+    }
+  }
+}

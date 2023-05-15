@@ -29,6 +29,7 @@ import infinitySlider from '%src%/js/marquee-slider'
 import smoothScroll from '%src%/js/smoothScroll'
 import reviewsSlider from '%src%/js/reviewsSlider'
 import bonusButton from "./bonusButton";
+import customSelects from "./customSelects";
 
 document.addEventListener('DOMContentLoaded', function () {
   window.rdv = {
@@ -64,6 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   setHeaderHeight()
   fixedHeader()
+  customSelects();
 
   slider()
 
