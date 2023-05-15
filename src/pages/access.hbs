@@ -1,0 +1,53 @@
+{{#extend "layout"}}
+  {{#content "main"}}
+
+    <section class="access">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li>
+            <a class="breadcrumbs__link" href="#">Главная</a>
+          </li>
+          <li>
+            <a class="breadcrumbs__link" href="#">Страница с доступами</a>
+          </li>
+        </ul>
+        <h1 class="access__title">Все готово!</h1>
+        <p class="access__desc">
+          Вы можете начинать установку расширения
+        </p>
+        <h2 class="access__subtitle">3 простых шага для начала работы:</h2>
+        <p class="access__subdesc">Для вашего удобства мы продублировали данную информацию вам на почту</p>
+        <ol class="access__instruction">
+          {{#each accessInstruction }}
+          <li class="access__item">
+            <div class="access__item-header">
+              <h3 class="access__item-title">{{this.title}}</h3>
+            </div>
+            <div class="access__item-footer">
+              {{#if this.download }}
+                <a class="access__item-link button" href="#" download>
+                  Скачать
+                </a>
+              {{/if}}
+              {{#if this.key }}
+                <input class="access__item-key" type="text" readonly value="SD90ASD8814200F">
+                <button class="access__item-copy-button button" type="button">
+                  <svg>
+                    <use xlink:href="#copy-icon" />
+                  </svg>
+                </button>
+              {{/if}}
+              {{#if this.link }}
+                <a class="access__item-link button" href="#">
+                  Перейти
+                </a>
+              {{/if}}
+            </div>
+          </li>
+          {{/each }}
+        </ol>
+      </div>
+    </section>
+
+  {{/content}}
+{{/extend}}
