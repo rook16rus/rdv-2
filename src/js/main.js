@@ -30,6 +30,7 @@ import smoothScroll from '%src%/js/smoothScroll'
 import reviewsSlider from '%src%/js/reviewsSlider'
 import bonusButton from "./bonusButton";
 import customSelects from "./customSelects";
+import copyKey from "./copyKey";
 
 document.addEventListener('DOMContentLoaded', function () {
   window.rdv = {
@@ -66,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
   setHeaderHeight()
   fixedHeader()
   customSelects();
+  copyKey();
 
   slider()
 
