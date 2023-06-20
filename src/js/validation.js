@@ -103,6 +103,16 @@ export default function validation() {
             });
         })
 
+        form.addEventListener('submit', () => {
+            selects.forEach(select => {
+                $(select).parsley({
+                    classHandler: (field) => {
+                        return field.$element.closest('.choices');
+                    },
+                }).validate()
+            })
+        })
+
         $(form).parsley({
             focus: 'none',
             errorClass: 'error',

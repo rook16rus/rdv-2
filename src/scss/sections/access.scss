@@ -1,0 +1,231 @@
+.access {
+  padding-top: 8.8rem;
+  padding-bottom: 12rem;
+
+  @include breakpoint(tablet) {
+    padding-top: 6.4rem;
+    padding-bottom: 10.6rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding-top: 4.4rem;
+    padding-bottom: 9.3rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-top: 2.4rem;
+    padding-bottom: 8rem;
+  }
+
+  .breadcrumbs {
+    margin-bottom: 3.2rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2.8rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+    }
+
+    &__link {
+      &:hover {
+        color: #85b0c2;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 1.6rem;
+
+    @extend %fs-h1;
+    color: #174F77;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  &__desc {
+    margin-bottom: 8rem;
+
+    @extend %fs-t2;
+    color: #174F77;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 6.6rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 5.3rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 1.6rem;
+
+    @extend %fs-h3;
+    color: #174F77;
+  }
+
+  &__subdesc {
+    margin-bottom: 3.2rem;
+
+    @extend %fs-t2;
+    color: #174F77;
+  }
+
+  &__instruction {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+
+    counter-reset: order;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint(small-tablet) {
+      grid-template-columns: 1fr;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 0.8rem;
+    }
+  }
+  
+  &__item {
+    padding: 3.2rem;
+    
+    border-radius: 2.4rem;
+    background-color: #F0F5F7;
+
+    @include breakpoint(tablet) {
+      padding: 2.8rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 2rem;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &__item-header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3.2rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2.4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 1.8rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 1.2rem;
+    }
+
+    &::before {
+      counter-increment: order;
+      content: counter(order, decimal-leading-zero);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 7.2rem;
+      height: 7.2rem;
+
+      border-radius: 50%;
+      background-color: #fff;
+
+      font: 700 3.4rem/120% 'Geometria';
+      color: #1D7CAA;
+
+      @include breakpoint(tablet) {
+        width: 6.5rem;
+        height: 6.5rem;
+
+        font-size: 2.8rem;
+      }
+
+      @include breakpoint(small-tablet) {
+        width: 6rem;
+        height: 6rem;
+
+        font-size: 2.4rem;
+      }
+
+      @include breakpoint(mobile) {
+        width: 5.6rem;
+        height: 5.6rem;
+
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__item-title {
+    @extend %fs-h4;
+    color: #174F77;
+  }
+
+  &__item-footer {
+    display: flex;
+  }
+
+  &__item-link {
+    height: 4rem;
+
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+  }
+
+  &__item-key {
+    height: 4rem;
+    padding: 0 3rem;
+    margin-right: 1.2rem;
+    flex-grow: 1;
+
+    background-color: #fff;
+    border-radius: 3.5rem;
+
+    font: 400 1.2rem/110% "Geometria";
+    color: #939598;
+    text-align: center;
+
+    @include breakpoint(mobile) {
+      margin-right: 0.8rem;
+    }
+  }
+
+  &__item-copy-button {
+    height: 4rem;
+    padding: 0 3rem;
+
+    svg {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+}

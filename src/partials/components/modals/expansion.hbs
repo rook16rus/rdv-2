@@ -1,0 +1,52 @@
+<div class="hystmodal modal modal-expansion hystmodal--active" id="{{id}}" aria-hidden="true">
+  <div class="hystmodal__wrap modal__wrapper">
+    <div class="hystmodal__window modal__window" role="dialog" aria-modal="true">
+      <button data-hystclose class="modal__close" title="Закрыть">
+        <svg>
+          <use xlink:href="#close"/>
+        </svg>
+      </button>
+      <h2 class="modal-expansion__title">
+        Запрос на расширение
+      </h2>
+      <form class="modal-expansion__form js-handle-form" data-need-validation action="#">
+        <div class="input">
+          <input class="input__control js-old-input" name="name" type="text" data-input="" placeholder="Имя"
+                 autocomplete="off" data-parsley-pattern="^[а-яА-ЯA-Za-z ]+$" required>
+          <label class="input__placeholder">Имя</label>
+        </div>
+        <div class="input input--phone">
+          <input class="input__control js-old-input" name="phone" type="tel" data-input="" placeholder="Телефон"
+                 autocomplete="off" required data-parsley-phone>
+          <label class="input__placeholder">Телефон</label>
+        </div>
+        <div class="input">
+          <input class="input__control js-old-input" type="email" data-input="" placeholder="Корпоративный Email"
+                 autocomplete="off" required name="email">
+          <label class="input__placeholder">Корпоративный Email</label>
+        </div>
+        <div class="input">
+          <select class="input__select js-custom-select" name="select" id="select" required>
+            <option value="">Ваша система</option>
+            <option value="test1">test</option>
+            <option value="test2">test</option>
+            <option value="test3">test</option>
+            <option value="test4">test</option>
+            <option value="test5">test</option>
+            <option value="test6">test</option>
+            <option value="test7">test</option>
+            <option value="test8">test</option>
+          </select>
+        </div>
+        <button class="button js-submit-form" type="submit">
+          <span>Отправить</span>
+        </button>
+        <p class="modal-expansion__confidence">
+          Отправляя заявку, вы даете свое согласие на обработку <a href="#">персональных данных</a> и соглашаетесь с
+          <a href="#">политикой конфеденциальности</a> и
+          <a href="#">обработки персональных данных компании</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>

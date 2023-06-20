@@ -16,6 +16,7 @@ export default function reviewsSlider() {
           speed: 400,
           slidesPerView: 1,
           spaceBetween: 0,
+          autoHeight: true,
           effect: 'fade',
           // autoplay: {
           //   delay: 10000,
