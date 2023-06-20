@@ -28,6 +28,7 @@ export default function customSelects() {
           itemSelectText: '',
           shouldSort: false,
           allowHTML: true,
+
         });
     });
 }
