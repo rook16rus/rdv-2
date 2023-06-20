@@ -95,6 +95,14 @@ export default function validation() {
     const formsToValidate = Array.from(document.querySelectorAll('form[data-need-validation]'));
 
     formsToValidate.forEach((form) => {
+        const selects = form.querySelectorAll('select');
+
+        selects.forEach(select => {
+            select.addEventListener('change', () => {
+                $(select).parsley().validate()
+            });
+        })
+
         $(form).parsley({
             focus: 'none',
             errorClass: 'error',
