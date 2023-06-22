@@ -1,3 +1,36 @@
 <section class="rates">
-
+  <div class="container">
+    <h2 class="rates__title">
+      Упрощенный блок тарифов
+    </h2>
+    <div class="rates__inner">
+      <div class="rates__header">
+        <h3 class="rates__subtitle">
+          Цена за подписку
+        </h3>
+        <div class="rates__price">
+          <span class="rates__price-number">9900</span>
+          <div class="rates__price-info">
+            <span class="rates__price-discount">15000</span>
+            <span class="rates__price-desc">руб/месяц</span>
+          </div>
+        </div>
+      </div>
+      <ul class="rates__list">
+        {{#each rates}}
+          <li class="rates__item">
+            <p class="rates__item-key">
+              {{this.key}}
+            </p>
+            <span class="rates__item-value">
+              {{{this.value}}}
+            </span>
+          </li>
+        {{/each}}
+      </ul>
+      <button class="rates__button button button--secondary">
+        заказать
+      </button>
+    </div>
+  </div>
 </section>

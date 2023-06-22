@@ -1,3 +1,149 @@
 .rates {
+  margin-bottom: var(--s-0);
 
+  &__title {
+    margin-bottom: 4rem;
+
+    @extend %fs-h2;
+    color: $primary-900;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 3.3rem;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    padding: 5.4rem 4rem;
+
+    border-radius: 3.2rem;
+    background-color: $primary-100;
+
+    @include breakpoint(tablet) {
+      padding: 4.2rem 3.2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 3.1rem 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 2rem 1.6rem;
+      border-radius: 1.2rem;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4rem;
+  }
+
+  &__subtitle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @extend %fs-h3;
+    color: $primary-900;
+
+    &::after {
+      content: '';
+
+      margin-top: 2rem;
+      width: 6.5rem;
+      height: 0.5rem;
+
+      background-color: $secondary-300;
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__price-number {
+    margin-right: 1.6rem;
+
+    @extend %fs-h1;
+    color: $primary-900;
+  }
+
+  &__price-info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.8rem;
+
+    @extend %fs-t2;
+    color: $primary-900;
+    font-weight: 700;
+  }
+
+  &__price-discount {
+    opacity: 0.4;
+    text-decoration: line-through;
+  }
+
+  &__list {
+    margin-bottom: 4rem;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+
+    border-bottom: 1px solid $grayscale-300;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  &__item-key {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.1rem;
+
+    @extend %fs-t2;
+    font-weight: 700;
+    color: $grayscale-700;
+
+    &::before {
+      content: '';
+
+      width: 0.6rem;
+      height: 0.6rem;
+      margin-left: 0.3rem;
+      margin-top: 0.7rem;
+
+      border-radius: 50%;
+      background-color: $primary-300;
+    }
+  }
+
+  &__item-value {
+    display: flex;
+    align-items: flex-end;
+
+    @extend %fs-t2;
+    font-weight: 700;
+    color: $primary-900;
+
+    b {
+      margin-right: 0.6rem;
+      margin-bottom: -0.4rem;
+
+      @extend %fs-h3;
+    }
+  }
+
+  &__button {
+    align-self: flex-end;
+  }
 }
