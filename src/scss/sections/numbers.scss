@@ -1,0 +1,130 @@
+.numbers {
+  margin-bottom: var(--s-0);
+
+  &__title {
+    margin-bottom: 4rem;
+
+    @extend %fs-h2;
+    color: $primary-900;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 3.3rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6.4rem 3rem;
+
+    @include breakpoint(tablet) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.6rem;
+    }
+
+    @include breakpoint(mobile) {
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5.6rem 4rem;
+    
+    border-radius: 3.2rem;
+    background-color: rgba(240, 245, 247, 1);
+
+    text-align: center;
+
+    @include breakpoint(tablet) {
+      padding: 4.8rem 3.5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 4rem 3rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 3.2rem 2.4rem;
+      border-radius: 1.6rem;
+    }
+
+    &--large {
+      width: calc((100% - 6rem) / 3);
+
+      @include breakpoint(tablet) {
+        width: auto;
+      }
+    }
+
+    &--medium {
+      width: calc((100% - 9rem) / 4);
+
+      @include breakpoint(tablet) {
+        width: auto;
+      }
+    }
+
+    &--small {
+      width: calc((100% - 12rem) / 5);
+
+      @include breakpoint(tablet) {
+        width: auto;
+      }
+    }
+  }
+
+  &__item-number {
+    margin-bottom: 3.2rem;
+
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: $primary-900;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2.4rem;
+      font-size: 5.6rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 1.8rem;
+      font-size: 5.2rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 1.2rem;
+      font-size: 4.8rem;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 1.2rem;
+
+    @extend %fs-h3;
+    color: $primary-900;
+    font-size: 2rem;
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
+  }
+
+  &__item-text {
+    @extend %fs-t1;
+    color: $grayscale-900;
+
+    @include breakpoint(mobile) {
+      font-weight: 700;
+    }
+  }
+}

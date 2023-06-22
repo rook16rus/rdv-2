@@ -1,0 +1,30 @@
+<section class="numbers">
+  <div class="container">
+    <h2 class="numbers__title">
+      Блок важные цифры
+    </h2>
+    <ul class="numbers__list">
+      {{#each numbersLarge}}
+        <li class="numbers__item numbers__item--large">
+          <span class="numbers__item-number">{{this.number}}</span>
+          <h3 class="numbers__item-title">{{this.title}}</h3>
+          <p class="numbers__item-text">{{this.text}}</p>
+        </li>
+      {{/each}}
+      {{#each numbersMedium}}
+        <li class="numbers__item numbers__item--medium">
+          <span class="numbers__item-number">{{this.number}}</span>
+          <h3 class="numbers__item-title">{{this.title}}</h3>
+          <p class="numbers__item-text">{{this.text}}</p>
+        </li>
+      {{/each}}
+      {{#each numbersSmall}}
+        <li class="numbers__item numbers__item--small">
+          <span class="numbers__item-number">{{this.number}}</span>
+          <h3 class="numbers__item-title">{{this.title}}</h3>
+          <p class="numbers__item-text">{{this.text}}</p>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>
