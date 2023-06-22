@@ -39,6 +39,19 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 4rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 3.5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+      flex-direction: column;
+      margin-bottom: 2.4rem;
+    }
   }
 
   &__subtitle {
@@ -49,6 +62,10 @@
     @extend %fs-h3;
     color: $primary-900;
 
+    @include breakpoint(mobile) {
+      margin-bottom: 2.4rem;
+    }
+
     &::after {
       content: '';
 
@@ -57,6 +74,10 @@
       height: 0.5rem;
 
       background-color: $secondary-300;
+
+      @include breakpoint(mobile) {
+        margin-top: 1rem;
+      }
     }
   }
 
@@ -70,6 +91,10 @@
 
     @extend %fs-h1;
     color: $primary-900;
+
+    @include breakpoint(mobile) {
+      margin-right: 1.4rem;
+    }
   }
 
   &__price-info {
@@ -80,6 +105,11 @@
     @extend %fs-t2;
     color: $primary-900;
     font-weight: 700;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 0.6rem;
+      font-size: 1.2rem;
+    }
   }
 
   &__price-discount {
@@ -89,6 +119,18 @@
 
   &__list {
     margin-bottom: 4rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 3.5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2.4rem;
+    }
   }
 
   &__item {
@@ -99,6 +141,17 @@
     padding: 2rem 0;
 
     border-bottom: 1px solid $grayscale-300;
+
+    @include breakpoint(small-tablet) {
+      padding: 1.6rem 0;
+    }
+
+    @include breakpoint(mobile) {
+      grid-template-columns: 1fr;
+      align-items: flex-start;
+      gap: 0.3rem;
+      padding: 1.2rem 0;
+    }
 
     &:first-child {
       padding-top: 0;
@@ -113,6 +166,10 @@
     @extend %fs-t2;
     font-weight: 700;
     color: $grayscale-700;
+
+    @include breakpoint(mobile) {
+      gap: 0.9rem;
+    }
 
     &::before {
       content: '';
@@ -135,15 +192,30 @@
     font-weight: 700;
     color: $primary-900;
 
+    @include breakpoint(mobile) {
+      margin-left: 1.8rem;
+    }
+
     b {
       margin-right: 0.6rem;
       margin-bottom: -0.4rem;
 
       @extend %fs-h3;
+
+      @include breakpoint(mobile) {
+        margin-bottom: 0;
+        margin-right: 0.3rem;
+
+        font-size: 1.4rem;
+      }
     }
   }
 
   &__button {
     align-self: flex-end;
+
+    @include breakpoint(mobile) {
+      align-self: stretch;
+    }
   }
 }
