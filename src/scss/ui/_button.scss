@@ -17,8 +17,8 @@
 
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 
-  &:link,
-  &:visited {
+  &:link:not(.link),
+  &:visited:not(.link) {
     color: white;
   }
 
@@ -52,8 +52,8 @@
     background-color: $grayscale-100;
     color: $primary-300;
 
-    &:link,
-    &:visited {
+    &:link:not(.link),
+    &:visited:not(.link) {
       color: $primary-300;
     }
   }
@@ -63,8 +63,8 @@
     background-color: rgba(0,0,0,0);
     color: $primary-900;
 
-    &:link,
-    &:visited {
+    &:link:not(.link),
+    &:visited:not(.link) {
       color: $primary-900;
     }
   }
@@ -74,8 +74,8 @@
     border-color: $secondary-300;
     color: $grayscale-900;
 
-    &:link,
-    &:visited {
+    &:link:not(.link),
+    &:visited:not(.link) {
       color: $grayscale-900;
     }
 

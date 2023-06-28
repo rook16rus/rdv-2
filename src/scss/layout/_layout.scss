@@ -14,6 +14,17 @@
     }
 }
 
+.narrow-container {
+    width: 100%;
+    max-width: calc(var(--max-narrow-container-width) + 2 * var(--content-narrow-padding));
+    margin: 0 auto;
+    padding: 0 var(--content-narrow-padding);
+    @supports (width: max(20vw, 100px)) {
+        padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-narrow-padding));
+        padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-narrow-padding));
+    }
+}
+
 .page-content {
     flex-grow: 1;
     display: flex;

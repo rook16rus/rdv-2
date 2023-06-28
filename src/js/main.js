@@ -31,12 +31,19 @@ import reviewsSlider from '%src%/js/reviewsSlider'
 import bonusButton from "./bonusButton";
 import customSelects from "./customSelects";
 import copyKey from "./copyKey";
+import header from "%src%/js/header";
+import resetButtons from "%src%/js/resetButtons";
+import initModal from "%src%/js/initModal";
+import validation2 from "%src%/js/validation-2";
+import inputPlaceholder from "%src%/js/inputPlaceholder";
+import simpleBar from "%src%/js/simpleBar";
 
 document.addEventListener('DOMContentLoaded', function () {
   window.rdv = {
     info: 'Функции для вызова на беке',
     isAdmin: document.body.classList.contains('is-admin'),
   }
+
 
   // В проекте сохранился легаси код, связанный со старым калькулятором на Vue.js
   // src/scss/old
@@ -59,7 +66,13 @@ document.addEventListener('DOMContentLoaded', function () {
   numberedListLine()
   initFaqAccordions()
   initServicesAccordions();
-  bonusButton()
+  bonusButton();
+  header();
+  resetButtons();
+  initModal();
+  validation2();
+  inputPlaceholder();
+  simpleBar();
 
   initCalculator()
   newCalculator()

@@ -2,6 +2,7 @@
 @import '../../node_modules/intl-tel-input/build/css/intlTelInput';
 @import '../libs/hystmodal.scss';
 @import '../../node_modules/@fancyapps/ui/dist/fancybox';
+@import '../../node_modules/simplebar/dist/simplebar';
 
 // https://swiperjs.com/swiper-api
 
@@ -68,4 +69,81 @@
 
 .carousel__button:focus {
   box-shadow: none;
+}
+
+.simplebar-track.simplebar-vertical {
+  width: 0.4rem;
+  right: 0.3rem;
+}
+
+.simplebar-scrollbar::before {
+  left: 0;
+  right: 0;
+
+  border-radius: 1.7rem;
+  background-color: #D9D9D9;
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+  opacity: 1;
+}
+
+.simplebar-content-wrapper {
+  & {
+    scrollbar-width: 0;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+    display: none;
+  }
+
+  &::-moz-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+.simplebar-track.simplebar-vertical {
+  width: 0.2rem;
+  right: 1.2rem;
+}
+
+.simplebar-scrollbar::before {
+  left: 0;
+  right: 0;
+
+  border-radius: 1rem;
+  background-color: var(--main-base-0);
+}
+
+.simplebar-content-wrapper {
+  & {
+    scrollbar-width: 0;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+    display: none;
+  }
+
+  &::-moz-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
 }

@@ -128,8 +128,8 @@ a {
     background-color: transparent;
     text-decoration: none;
     transition: color 0.2s;
-    &:link,
-    &:visited {
+    &:link:not(.link),
+    &:visited:not(.link) {
         color: inherit;
     }
 }

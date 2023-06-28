@@ -40,6 +40,7 @@
     "lodash": "^4.17.21",
     "parsleyjs": "^2.9.2",
     "plyr": "^3.6.8",
+    "simplebar": "^6.2.5",
     "sticky-js": "^1.3.0",
     "sticky-sidebar-v2": "^1.1.1",
     "swiper": "^8.1.4",

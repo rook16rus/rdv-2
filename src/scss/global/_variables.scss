@@ -37,3 +37,138 @@ $grayscale-100: #FFFFFF;
 $system-red: #FF3645;
 $system-red-2: #FF9E57;
 $system-green: #4CAF50;
+
+
+:root {
+  /* Colors */
+  --grey-base-0: #F5F7FD;
+  --grey-D-10: #E5EAF6;
+  --grey-D-20: #D8DDEA;
+  --grey-D-30: #D1D6E3;
+  --grey-D-40: #C9CEDC;
+  --grey-D-50: #C1C7D5;
+  --grey-D-60: #B9BFCE;
+  --grey-L-10: rgba(23, 79, 119, 0.1);
+
+  --main-L-10: #3074A5;
+  --main-L-20: #3C87BC;
+  --main-L-30: #4899D3;
+  --main-base-0: #174F77;
+  --main-D-10: #0D3653;
+  --main-D-20: #082A41;
+  --main-D-30: #031D2F;
+
+  --gradient-01: linear-gradient(33.56deg, #3899F3 -31.56%, #00F7D7 120.28%);
+  --gradient-02: linear-gradient(33.56deg, #63CD23 -31.56%, #1DF1D8 120.28%);
+  --gradient-03: linear-gradient(33.56deg, #FA3B21 -31.56%, #DBFF00 120.28%);
+  --gradient-04: linear-gradient(33.56deg, #4098FF -31.56%, #AE6EFF 120.28%);
+  --gradient-05: linear-gradient(33.56deg, #704CFD -31.56%, #E751FF 120.28%);
+  --gradient-06: linear-gradient(33.56deg, #3655F4 -31.56%, #50CBFF 120.28%);
+  --gradient-07: linear-gradient(33.56deg, #E536F4 -31.56%, #FF5050 120.28%);
+  --gradient-08: linear-gradient(45deg, #FF3797 0%, #33CEFF 100%);
+  --gradient-09: linear-gradient(48.81deg, #B551FF 0%, #3733FF 94.17%);
+  --gradient-10: linear-gradient(42.3deg, #EB00FF 0%, #FFFE26 100%);
+
+  --other-yellow-01: #FADB1E;
+  --other-yellow-02: #F3CC0E;
+  --other-yellow-03: #F6B51A;
+  --other-red-01: #FA461E;
+  --other-red-02: #E82E06;
+  --other-red-03: #CB3615;
+  --other-green-01: #1C985D;
+  --other-green-02: #13824D;
+  --other-green-03: #09713F;
+  --other-black: #000000;
+
+  --white-100: #FFFFFF;
+  --white-90: rgba(255, 255, 255, 0.9);
+  --white-80: rgba(255, 255, 255, 0.8);
+  --white-70: rgba(255, 255, 255, 0.7);
+  --white-60: rgba(255, 255, 255, 0.6);
+  --white-50: rgba(255, 255, 255, 0.5);
+  --white-40: rgba(255, 255, 255, 0.4);
+  --white-30: rgba(255, 255, 255, 0.3);
+  --white-20: rgba(255, 255, 255, 0.2);
+  --white-10: rgba(255, 255, 255, 0.1);
+
+  /* Layout containers */
+  --max-narrow-container-width: 140.8rem;
+  --content-narrow-padding: 5rem;
+
+  /* Font Family */
+  --main-ff: 'Geometria', sans-serif;
+  --secondary-ff: 'Manrope', sans-serif;
+
+  /* Font Weight */
+  --bold: 600;
+  --medium: 500;
+  --regular: 400;
+
+  /* Text */
+  --content-huge: var(--regular) 2rem/130% var(--main-ff);
+  --content-big: var(--regular) 1.8rem/130% var(--main-ff);
+  --content-medium: var(--regular) 1.6rem/130% var(--main-ff);
+  --content-regular: var(--regular) 1.4rem/120% var(--main-ff);
+  --content-small: var(--regular) 1.2rem/120% var(--main-ff);
+  --content-smalles: var(--regular) 1rem/110% var(--main-ff);
+
+  /* Titles */
+  --title-h1: var(--medium) 5.6rem/100% var(--main-ff);
+  --title-h2: var(--medium) 4.8rem/110% var(--main-ff);
+  --title-h3: var(--medium) 4rem/120% var(--main-ff);
+  --title-h4: var(--medium) 3.2rem/120% var(--main-ff);
+  --title-h5: var(--medium) 2.4rem/120% var(--main-ff);
+  --title-h6: var(--medium) 2rem/120% var(--main-ff);
+  --title-h7: var(--medium) 1.6rem/120% var(--main-ff);
+  --title-h8: var(--bold) 1.1rem/120% var(--main-ff);
+
+  /* Other Typography */
+  --button-big: var(--medium) 1.6rem/100% var(--main-ff);
+  --button-meduim: var(--medium) 1.2rem/100% var(--main-ff);
+  --button-small: var(--medium) 1rem/100% var(--main-ff);
+}
+
+@include mq('custom', 'max', 1024) {
+  :root {
+    /* Layout containers */
+    --content-narrow-padding: 3rem;
+
+    /* Titles */
+    --title-h1: var(--medium) 4.5rem/100% var(--main-ff);
+    --title-h2: var(--medium) 3.9rem/110% var(--main-ff);
+    --title-h3: var(--medium) 3.3rem/120% var(--main-ff);
+    --title-h4: var(--medium) 2.7rem/120% var(--main-ff);
+    --title-h5: var(--medium) 2.1rem/120% var(--main-ff);
+    --title-h6: var(--medium) 1.8rem/120% var(--main-ff);
+  }
+}
+
+@include mq('custom', 'max', 640) {
+  :root {
+    /* Layout containers */
+    --content-narrow-padding: 2rem;
+
+    /* Text */
+    --content-huge: var(--regular) 1.8rem/130% var(--main-ff);
+    --content-big: var(--regular) 1.6rem/130% var(--main-ff);
+    --content-medium: var(--regular) 1.4rem/130% var(--main-ff);
+    --content-regular: var(--regular) 1.2rem/120% var(--main-ff);
+    --content-small: var(--regular) 1.1rem/120% var(--main-ff);
+    --content-smalles: var(--regular) 1rem/110% var(--main-ff);
+
+    /* Titles */
+    --title-h1: var(--medium) 3.4rem/100% var(--main-ff);
+    --title-h2: var(--medium) 3rem/110% var(--main-ff);
+    --title-h3: var(--medium) 2.6rem/120% var(--main-ff);
+    --title-h4: var(--medium) 2.2rem/120% var(--main-ff);
+    --title-h5: var(--medium) 1.8rem/120% var(--main-ff);
+    --title-h6: var(--medium) 1.6rem/120% var(--main-ff);
+    --title-h7: var(--medium) 1.4rem/120% var(--main-ff);
+    --title-h8: var(--bold) 0.9rem/120% var(--main-ff);
+
+    /* Other Typography */
+    --button-big: var(--medium) 1.6rem/100% var(--main-ff);
+    --button-meduim: var(--medium) 1.2rem/100% var(--main-ff);
+    --button-small: var(--medium) 1rem/100% var(--main-ff);
+  }
+}
