@@ -1,5 +1,8 @@
 export default function header() {
     const header = document.querySelector('.header');
+    const pageWrapper = document.querySelector('.page-content');
+
+    pageWrapper.style.setProperty('--header-height', header.clientHeight + 'px')
 
     window.addEventListener('scroll', () => {
         if (header.getBoundingClientRect().top > document.documentElement.getBoundingClientRect().top) {

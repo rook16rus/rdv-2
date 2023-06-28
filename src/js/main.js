@@ -37,6 +37,7 @@ import initModal from "%src%/js/initModal";
 import validation2 from "%src%/js/validation-2";
 import inputPlaceholder from "%src%/js/inputPlaceholder";
 import simpleBar from "%src%/js/simpleBar";
+import tabs2 from "%src%/js/tabs-2";
 
 document.addEventListener('DOMContentLoaded', function () {
   window.rdv = {
@@ -73,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
   validation2();
   inputPlaceholder();
   simpleBar();
+  tabs2();
 
   initCalculator()
   newCalculator()
