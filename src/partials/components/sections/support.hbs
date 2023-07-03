@@ -1,0 +1,35 @@
+<section class="support">
+  <div class="container">
+    <h2 class="support__title">
+      Блок с этапами на страницу Бизнес-сопровождение
+    </h2>
+    <ul class="support__top">
+      {{#each supportTop}}
+        <li class="support__item">
+          <h3 class="support__item-title">{{this.title}}</h3>
+          <p class="support__item-text">{{this.text}}</p>
+          <div class="support__item-links">
+            {{#each this.links}}
+              <a class="support__item-link" href="#">{{this}}</a>
+            {{/each}}
+          </div>
+        </li>
+      {{/each}}
+    </ul>
+    <div class="support__top-line"></div>
+    <div class="support__bottom-line"></div>
+    <ul class="support__bottom">
+      {{#each supportBottom}}
+        <li class="support__item">
+          <h3 class="support__item-title">{{this.title}}</h3>
+          <p class="support__item-text">{{this.text}}</p>
+          <div class="support__item-links">
+            {{#each this.links}}
+              <a class="support__item-link" href="#">{{this}}</a>
+            {{/each}}
+          </div>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>
