@@ -12,6 +12,18 @@
     @extend %fs-h2;
     color: $primary-900;
 
+    @include breakpoint(tablet) {
+      margin-bottom: 5.6rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 4.8rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 3.2rem;
+    }
+
     &::after {
       content: '';
 
@@ -27,11 +39,33 @@
     }
   }
 
+  &__list {
+    @include breakpoint(tablet) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+    }
+
+    @include breakpoint(mobile) {
+      grid-template-columns: 1fr;
+      gap: 0.4rem;
+    }
+  }
+
   &__top {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 3rem;
     margin-bottom: 4.8rem;
+
+    @include breakpoint(tablet) {
+      display: contents;
+    }
 
     .support__item {
       &::before {
@@ -49,6 +83,10 @@
         height: 5.6rem;
 
         background-color: #fff;
+
+        @include breakpoint(tablet) {
+          display: none;
+        }
       }
     }
   }
@@ -59,8 +97,31 @@
     gap: 3rem;
     margin-top: 4.8rem;
 
+    @include breakpoint(tablet) {
+      display: contents;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+      margin-top: 1.2rem;
+    }
+
+    @include breakpoint(mobile) {
+      grid-template-columns: 1fr;
+      gap: 0.4rem;
+      margin-top: 0.4rem;
+    }
+
     .support__item {
       width: calc((100% - 3rem) / 4);
+
+      @include breakpoint(tablet) {
+        width: auto;
+      }
 
       &::before {
         bottom: calc(100% + 2rem);
@@ -77,6 +138,10 @@
         height: 5.6rem;
 
         background-color: #fff;
+
+        @include breakpoint(tablet) {
+          display: none;
+        }
       }
     }
   }
@@ -92,6 +157,23 @@
 
     border-radius: 3.2rem;
     background-color: $primary-100;
+
+    @include breakpoint(tablet) {
+      min-height: 30rem;
+      padding: 2.8rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      min-height: 26rem;
+      padding: 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      min-height: auto;
+      padding: 2rem;
+
+      border-radius: 1.6rem;
+    }
 
     &::before {
       counter-increment: order;
@@ -114,12 +196,60 @@
 
       @extend %fs-h4;
       color: #fff;
+
+      @include breakpoint(tablet) {
+        counter-increment: none;
+        content: '';
+        display: none;
+      }
+    }
+  }
+
+  &__item-header {
+    margin-bottom: 2.4rem;
+
+    @include breakpoint(tablet) {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      gap: 1.6rem;
+
+      &::before {
+        counter-increment: order;
+        content: counter(order);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5rem;
+        height: 5rem;
+
+        border-radius: 50%;
+        background-color: $primary-300;
+
+        font: 700 1.6rem/1.9rem "Geometria";
+        color: #fff;
+      }
+    }
+
+    @include breakpoint(small-tablet) {
+      &::before {
+        width: 4.5rem;
+        height: 4.5rem;
+      }
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+
+      &::before {
+        width: 4rem;
+        height: 4rem;
+      }
     }
   }
 
   &__item-title {
-    margin-bottom: 2.4rem;
-
     @extend %fs-h4;
     color: $grayscale-900;
   }
@@ -129,6 +259,11 @@
 
     @extend %fs-t2;
     color: $grayscale-900;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+      font-size: 1.2rem;
+    }
   }
 
   &__item-links {
@@ -148,6 +283,10 @@
     height: 3.8rem;
 
     border: 2px solid $primary-300;
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
 
     &::before {
       content: '';
