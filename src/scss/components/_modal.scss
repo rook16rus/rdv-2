@@ -806,9 +806,17 @@
     }
   }
 
+  .simplebar-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
   .modal-burger__order-button {
     margin-top: auto;
     flex-shrink: 0;
+
+    border-radius: 10rem;
   }
 
   .modal-burger__title {

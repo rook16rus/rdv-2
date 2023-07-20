@@ -68,8 +68,8 @@ export default function tabs2() {
             const htmlFontSize = parseInt(window.getComputedStyle(document.documentElement).fontSize);
 
             if (scroll) {
-                scroll.style.setProperty('--active-tab-offset', tab.offsetLeft / htmlFontSize + 'rem');
-                scroll.style.setProperty('--active-tab-width', tab.clientWidth / htmlFontSize + 'rem');
+                scroll.style.setProperty('--active-tab-offset', tab.offsetLeft + 'px');
+                scroll.style.setProperty('--active-tab-width', tab.clientWidth + 'px');
             }
         }
     })
