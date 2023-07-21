@@ -140,17 +140,6 @@
 
       transition: 0.3s;
     }
-    
-    &.active {
-      .header__bottom-menu-link {
-        color: rgba(23, 79, 119, 0.5);
-      }
-
-
-      .header__bottom-menu-link.tab-active {
-        color: var(--main-base-0);
-      }
-    }
 
 
 
@@ -172,6 +161,14 @@
     color: var(--main-base-0);
 
     transition: color 0.3s;
+    
+    &:hover {
+      color: #19B9DE;
+    }
+
+    &:focus {
+      opacity: 1;
+    }
   }
 
   &__search {
