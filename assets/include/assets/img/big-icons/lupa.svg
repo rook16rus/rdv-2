@@ -1,0 +1,20 @@
+<svg width="99" height="87" viewBox="0 0 99 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M35.5483 14.7097H77.8064C81.1201 14.7097 83.8064 17.396 83.8064 20.7097V86H35.5483V14.7097Z" fill="#FADB1E"/>
+<path d="M7.58065 16.3548H1V6C1 3.23858 3.23858 1 6 1H54.6774C57.4388 1 59.6774 3.23858 59.6774 6V10.871" stroke="#4D4D4D" stroke-width="2"/>
+<path d="M18 71.7419H19.5806C22.3421 71.7419 24.5806 69.5034 24.5806 66.7419V19.7097C24.5806 16.9483 26.8192 14.7097 29.5806 14.7097H78.2581C81.0195 14.7097 83.2581 16.9482 83.2581 19.7097V85.4516H36.0968V20.1935" stroke="#4D4D4D" stroke-width="2"/>
+<path d="M28.9678 14.7097H31.0968C33.8582 14.7097 36.0968 16.9482 36.0968 19.7097V85.4516" stroke="#4D4D4D" stroke-width="2"/>
+<path d="M6.48389 1H7.51614C10.2776 1 12.5161 3.23858 12.5161 6V66.7419C12.5161 69.5034 14.7547 71.7419 17.5161 71.7419H31.7097" stroke="#4D4D4D" stroke-width="2"/>
+<rect x="42.0322" y="26.6774" width="12.2581" height="13.3548" stroke="#4D4D4D" stroke-width="2"/>
+<path d="M47 79.3226V60.6774H42V79.3226" stroke="#4D4D4D" stroke-width="2"/>
+<path d="M56 79.3226V53H51V79.3226" stroke="#4D4D4D" stroke-width="2"/>
+<path d="M65 79.3226V67.2581H60V79.3226" stroke="#4D4D4D" stroke-width="2"/>
+<path d="M74 79.3226V67.2581H69V79.3226" stroke="#4D4D4D" stroke-width="2"/>
+<rect x="60.2256" y="26.2258" width="17.5484" height="1.09677" stroke="#4D4D4D" stroke-width="1.09677"/>
+<rect x="60.2256" y="32.8064" width="17.5484" height="1.09677" stroke="#4D4D4D" stroke-width="1.09677"/>
+<rect x="60.2256" y="39.3871" width="6.58065" height="1.09677" stroke="#4D4D4D" stroke-width="1.09677"/>
+<circle cx="79" cy="38" r="16" fill="white" stroke="#4D4D4D" stroke-width="2"/>
+<rect x="70.5484" y="31.5484" width="17.5484" height="1.09677" stroke="#4D4D4D" stroke-width="1.09677"/>
+<rect x="70.5484" y="38.129" width="17.5484" height="1.09677" stroke="#4D4D4D" stroke-width="1.09677"/>
+<rect x="70.5484" y="44.7097" width="6.58065" height="1.09677" stroke="#4D4D4D" stroke-width="1.09677"/>
+<path d="M89 51L97.5 59.5" stroke="#4D4D4D" stroke-width="2"/>
+</svg>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>/*Critical CSS*/</style>
+    <link rel="preload" href="styles/main.css" as="style">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body class="body">
+    <div class="body__wrapper">
+      <div class="header"></div>
+      <main>
+        <section class="section pt-5 mt-5 pb-5 mb-5">
+          <div class="section__container">
+            <section class="section">
+              <div class="section__container mb-5 pb-54">
+                <div class="main-form-grid main-form-grid--bright">
+                  <div class="row main-form-grid__row">
+                    <div class="col-12 main-form-grid__col main-form-grid__col--1">
+                      <div class="main-form-grid__col-inner">
+                        <div class="v-indent v-indent--blue">
+                          <div class="t-base t-base--size--h2 t-base--color--blue-dark">Заявка на консультацию</div>
+                        </div>
+                        <div class="v-indent v-indent--green">
+                          <div class="t-base t-base--size--medium t-base--weight--bold">Свяжитесь с нашими специалистами, заполнив форму.</div>
+                        </div>
+                        <div class="v-indent v-indent--green">
+                          <div class="t-base t-base--size--medium t-base--weight--bold">В ней укажите ваши контактные данные и перечислите задачи, которые стоят перед вашим бизнесом.</div>
+                        </div>
+                        <div class="t-base t-base--size--medium t-base--weight--bold">Мы подберем для вас оптимальное решение.</div>
+                        <div class="main-form-grid__img d-none d-md-block"><img class="img-responsive" src="img/letter.svg"></div>
+                      </div>
+                    </div>
+                    <div class="col-12 main-form-grid__col main-form-grid__col--2">
+                      <div class="main-form-grid__col-inner main-form-grid__col-inner--form">
+                        <form class="form" action="/static/fakedata/modal/successModal.json" method="post" data-form-modern>
+                          <div class="form__wrapper">
+                            <div class="form__control">
+                              <div class="input">
+                                <input class="input__control" type="text" data-input="" placeholder="Имя" autocomplete="off" required name="name">
+                                <label class="input__placeholder">Имя</label>
+                              </div>
+                            </div>
+                            <div class="form__control">
+                              <div class="input">
+                                <input class="input__control" type="text" data-input="" placeholder="Название компании" autocomplete="off" required name="company">
+                                <label class="input__placeholder">Название компании</label>
+                              </div>
+                            </div>
+                            <div class="form__control">
+                              <div class="input">
+                                <input class="input__control" type="tel" data-input="" placeholder="Телефон" autocomplete="off" required name="phone">
+                                <label class="input__placeholder">Телефон</label>
+                              </div>
+                            </div>
+                            <div class="form__control">
+                              <div class="input">
+                                <input class="input__control" type="email" data-input="" placeholder="Корпоративный Email" autocomplete="off" required name="email">
+                                <label class="input__placeholder">Корпоративный Email</label>
+                              </div>
+                            </div>
+                            <div class="form__control">
+                              <div class="input">
+                                <input class="input__control" type="text" data-input="" placeholder="Сайт" autocomplete="off" required name="cite">
+                                <label class="input__placeholder">Сайт</label>
+                              </div>
+                            </div>
+                            <div class="form__control">
+                              <div class="input">
+                                <textarea class="input__control input__control--textarea" data-input="" placeholder="Ваши задачи" required name="comment"></textarea>
+                                <label class="input__placeholder">Ваши задачи</label>
+                              </div>
+                            </div>
+                            <div class="form__control">
+                              <button class="button-modern" type="submit"><span class="button-modern__wrapper"><span class="button-modern__text">Отправить заявку</span></span></button>
+                            </div>
+                            <div class="form__control">
+                              <label class="checkbox checkbox--color--dark-light">
+                                <input type="checkbox" name="agree" required checked>
+                                <div class="checkbox__icon">
+                                  <svg class="icon-modern icon-modern--check icon-modern--color--white">
+                                    <use xlink:href="/img/sprite.svg#check-usage"></use>
+                                  </svg>
+                                </div>
+                                <div class="checkbox__text">Отправляя заявку, вы даете свое согласие на обработку персональных данных и соглашаетесь с <a href="#" class="link link--underline link--underline--dark-light"> <span class="link__text">условиями оферты</span></a></div>
+                              </label>
+                            </div>
+                          </div><a class="modal-success is-hidden">
+                            <div class="modal-modern">
+                              <div class="modal-modern__wrapper">
+                                <div class="modal-modern__close" data-modal-close><span class="link link--color--dark-55">
+                                    <svg class="icon-modern icon-modern--cross link__icon icon-modern--size--xl">
+                                      <use xlink:href="/img/sprite.svg#cross-usage"></use>
+                                    </svg></span>
+                                </div>
+                                <div class="modal-modern__header">
+                                  <div class="modal-modern__title t-base t-base--size--h4 v-indent v-indent--yellow">Ваша заявка успешно отправлена!</div>
+                                </div>
+                                <div class="modal-modern__body">
+                                  <div class="t-base t-base--size--medium">Наш менеджер свяжется с вами для уточнения информации</div>
+                                </div>
+                              </div>
+                            </div></a>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="section__container">
+                <div class="main-form-grid">
+                  <div class="row main-form-grid__row">
+                    <div class="col-12 main-form-grid__col main-form-grid__col--1">
+                      <div class="main-form-grid__col-inner">
+                        <div class="v-indent v-indent--blue">
+                          <div class="t-base t-base--size--h2 t-base--color--white-main">Сколько стоит переход с 1С:УПП на 1С:ERP</div>
+                        </div>
+                        <div class="v-indent v-indent--green">
+                          <div class="t-base t-base--size--h4 t-base--color--white-main"><span class="t-base--color--yellow-main">Стоимость перехода рассчитывается индивидуально </span> и зависит от ряда факторов</div>
+                        </div>
+                        <div class="v-indent v-indent--blue">
+                          <ul class="ul-line">
+                            <li class="ul-line__item v-indent v-indent--yellow">
+                              <div class="t-base t-base--color--white-main t-base--size--medium v-indent v-indent--yellow">Наличие методологии и концепции учета</div>
+                            </li>
+                            <li class="ul-line__item v-indent v-indent--yellow">
+                              <div class="t-base t-base--color--white-main t-base--size--medium v-indent v-indent--yellow">Проведение адаптации НСИ (данный процесс занимает большое количество времени)</div>
+                            </li>
+                            <li class="ul-line__item v-indent v-indent--yellow">
+                              <div class="t-base t-base--color--white-main t-base--size--medium v-indent v-indent--yellow">Вовлеченность команды, оперативность принимаемых решений на стороне заказчика и его готовность к запуску проекта по переходу</div>
+                            </li>
+                            <li class="ul-line__item v-indent v-indent--yellow">
+                              <div class="t-base t-base--color--white-main t-base--size--medium v-indent v-indent--yellow">Сроки опытно-промышленной эксплуатации</div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="jumbotron jumbotron--bg-blue-light jumbotron--icon jumbotron--icon-left jumbotron--pd-y-sm">
+                          <div class="jumbotron__icon"><img src="img/big-icons/exclamation.svg"></div>
+                          <div class="t-base t-base--color--white-main t-base t-base--size--small t-base--weight--bold">Мы часто сталкиваемся с ситуациями, когда несколько юридических лиц одного холдинга используют разные учетные политики и подходы. В данном случае при наличии нескольких баз УПП мы рекомендуем сблизить учетную политику и привести к единому формату, после чего внедрить систему 1С:ERP.</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 main-form-grid__col main-form-grid__col--2">
+                      <div class="main-form-grid__col-inner main-form-grid__col-inner--form">
+                        <div class="v-indent v-indent--blue">
+                          <div class="t-base t-base--size--h2 t-base--color--white-main">Узнайте стоимость</div>
+                        </div>
+                        <form class="form" action="/static/fakedata/modal/successModal.json" method="post" data-form-modern>
+                          <div class="form__wrapper">
+                            <div class="form__control">
+                              <div class="input input--contrast-bg">
+                                <input class="input__control" type="text" data-input="" placeholder="Имя" autocomplete="off" required name="name">
+                                <label class="input__placeholder">Имя</label>
+                              </div>
+                            </div>
+                            <div class="form__control">
+                              <div class="input input--contrast-bg">
+                                <input class="input__control" type="text" data-input="" placeholder="Название компании" autocomplete="off" required name="company">
+                                <label class="input__placeholder">Название компании</label>
+                              </div>
+                            </div>
+                            <div class="form__control">
+                              <div class="input input--contrast-bg">
+                                <input class="input__control" type="tel" data-input="" placeholder="Телефон" autocomplete="off" required name="phone">
+                                <label class="input__placeholder">Телефон</label>
+                              </div>
+                            </div>
+                            <div class="form__control">
+                              <div class="input input--contrast-bg">
+                                <input class="input__control" type="email" data-input="" placeholder="Корпоративный Email" autocomplete="off" required name="email">
+                                <label class="input__placeholder">Корпоративный Email</label>
+                              </div>
+                            </div>
+                            <div class="form__control">
+                              <div class="input input--contrast-bg">
+                                <input class="input__control" type="text" data-input="" placeholder="Сайт" autocomplete="off" required name="cite">
+                                <label class="input__placeholder">Сайт</label>
+                              </div>
+                            </div>
+                            <div class="form__control">
+                              <div class="input input--contrast-bg">
+                                <textarea class="input__control input__control--textarea" data-input="" placeholder="Комментарий" required name="comment"></textarea>
+                                <label class="input__placeholder">Комментарий</label>
+                              </div>
+                            </div>
+                            <div class="form__control">
+                              <button class="button-modern button-modern--theme--yellow" type="submit"><span class="button-modern__wrapper"><span class="button-modern__text">Рассчитать стоимость</span></span></button>
+                            </div>
+                            <div class="form__control">
+                              <label class="checkbox checkbox--color--white">
+                                <input type="checkbox" name="agree" required checked>
+                                <div class="checkbox__icon">
+                                  <svg class="icon-modern icon-modern--check icon-modern--color--white">
+                                    <use xlink:href="/img/sprite.svg#check-usage"></use>
+                                  </svg>
+                                </div>
+                                <div class="checkbox__text">Отправляя заявку, вы даете свое согласие на обработку персональных данных и соглашаетесь с <a href="#" class="link link--color--white link--underline"> <span class="link__text">условиями оферты</span></a></div>
+                              </label>
+                            </div>
+                          </div><a class="modal-success is-hidden">
+                            <div class="modal-modern">
+                              <div class="modal-modern__wrapper">
+                                <div class="modal-modern__close" data-modal-close><span class="link link--color--dark-55">
+                                    <svg class="icon-modern icon-modern--cross link__icon icon-modern--size--xl">
+                                      <use xlink:href="/img/sprite.svg#cross-usage"></use>
+                                    </svg></span>
+                                </div>
+                                <div class="modal-modern__header">
+                                  <div class="modal-modern__title t-base t-base--size--h4 v-indent v-indent--yellow">Ваша заявка успешно отправлена!</div>
+                                </div>
+                                <div class="modal-modern__body">
+                                  <div class="t-base t-base--size--medium">Наш менеджер свяжется с вами для уточнения информации</div>
+                                </div>
+                              </div>
+                            </div></a>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
