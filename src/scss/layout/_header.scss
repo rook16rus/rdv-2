@@ -140,6 +140,19 @@
 
       transition: 0.3s;
     }
+    
+    &.active {
+      .header__bottom-menu-link {
+        color: rgba(23, 79, 119, 0.5);
+      }
+
+
+      .header__bottom-menu-link.tab-active {
+        color: var(--main-base-0);
+      }
+    }
+
+
 
     &.active::after {
       display: block;
@@ -157,6 +170,8 @@
     font: var(--button-meduim);
     text-transform: uppercase;
     color: var(--main-base-0);
+
+    transition: color 0.3s;
   }
 
   &__search {
@@ -289,6 +304,7 @@
   &__tab-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    align-items: flex-start;
     gap: 3.2rem;
   }
 

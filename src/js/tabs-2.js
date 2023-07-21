@@ -24,10 +24,28 @@ export default function tabs2() {
 
         if (scroll) scroll.style.setProperty('--active-tab-width', tabs[0].clientWidth / 10 + 'rem');
 
+        if (tabsContainer.dataset.headerTab) {
+            document.addEventListener('click', e => {
+                if (contents.find(item => item.classList.contains('active')) !== undefined) {
+                    const isHeaderTabTarget = contents.find(item => {
+                        return  e.target.closest('.js-tab-content') ?
+                                e.target.closest('.js-tab-content').className === item.className :
+                                false
+                    })
+
+                    if (isHeaderTabTarget === undefined) {
+                        contents.forEach(item => item.classList.remove('active'));
+                        tabs.forEach(item => item.classList.remove('tab-active'));
+                        scroll.classList.remove('active')
+                    }
+                }
+            }, true)
+        }
+
         tabs.forEach(tab => {
             tab.addEventListener('click', () => {
                 tabActivate(tab.dataset.href, tab);
-            })
+            }, true)
         })
 
         function tabActivate(id, tab) {
