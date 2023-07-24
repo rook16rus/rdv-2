@@ -42,6 +42,8 @@
     font: var(--button-meduim);
     color: var(--main-base-0);
 
+    transition: color 0.3s;
+
     &:hover {
       color: #19B9DE;
     }

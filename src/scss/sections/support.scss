@@ -279,7 +279,7 @@
   &__top-line, &__bottom-line {
     position: relative;
 
-    width: 100%;
+    width: 98%;
     height: 3.8rem;
 
     border: 2px solid $primary-300;
@@ -297,18 +297,21 @@
 
       width: 1.3rem;
 
-      background-color: #fff;
+      background-color: transparent;
     }
   }
 
   &__top-line {
     margin-bottom: -1.5px;
+    margin-left: auto;
 
     border-left: 0;
     border-radius: 0 10rem 10rem 0;
   }
 
   &__bottom-line {
+    margin-right: auto;
+
     border-right: 0;
     border-radius: 10rem 0 0 10rem;
 
