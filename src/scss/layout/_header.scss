@@ -37,8 +37,22 @@
   }
 
   &__top-menu-link {
+    position: relative;
+
     font: var(--button-meduim);
     color: var(--main-base-0);
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 120%;
+      height: 240%;
+    }
   }
 
   &__phone, &__mail {
@@ -153,6 +167,8 @@
   }
 
   &__bottom-menu-link {
+    position: relative;
+
     display: flex;
     flex-direction: column;
 
@@ -161,6 +177,18 @@
     color: var(--main-base-0);
 
     transition: color 0.3s;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 120%;
+      height: 240%;
+    }
     
     &:hover {
       color: #19B9DE;
