@@ -53,7 +53,7 @@ export default function tabs2() {
                 tab.classList.remove('tab-active');
                 if (scroll) scroll.classList.remove('active');
                 if (tabsContainer.dataset.headerTab) {
-                    enableScroll();
+
                     tabsContainer.querySelector('.header__tabs-contents').style.display = 'none';
                 }
             } else {
@@ -66,7 +66,7 @@ export default function tabs2() {
                 });
                 if (scroll) scroll.classList.add('active');
                 if (tabsContainer.dataset.headerTab) {
-                    disableScroll();
+
                     tabsContainer.querySelector('.header__tabs-contents').style.display = 'block';
                 }
             }

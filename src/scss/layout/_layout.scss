@@ -8,6 +8,16 @@
         padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
     }
 
+    &--mobile-padding-large {
+        max-width: calc(var(--max-container-width) + 2 * var(--content-narrow-padding));
+        padding: 0 var(--content-narrow-padding);
+
+        @supports (width: max(20vw, 100px)) {
+            padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-narrow-padding));
+            padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-narrow-padding));
+        }
+    }
+
     &_wide {
         --max-container-width: 179rem;
         --content-padding: 6.5rem;
