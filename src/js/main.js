@@ -38,6 +38,7 @@ import validation2 from "%src%/js/validation-2";
 import inputPlaceholder from "%src%/js/inputPlaceholder";
 import simpleBar from "%src%/js/simpleBar";
 import tabs2 from "%src%/js/tabs-2";
+import noDigits from "%src%/js/noDigits";
 
 document.addEventListener('DOMContentLoaded', function () {
   window.rdv = {
@@ -75,6 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
   inputPlaceholder();
   simpleBar();
   tabs2();
+  noDigits();
 
   initCalculator()
   newCalculator()
