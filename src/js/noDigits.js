@@ -1,5 +1,5 @@
 export default function noDigits() {
-    const inputs = document.querySelectorAll('input');
+    const inputs = document.querySelectorAll('input[data-parsley-pattern]:not([data-parsley-pattern=""])');
 
     inputs.forEach(input => {
         input.addEventListener('keypress', (event) => {

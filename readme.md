@@ -1,4 +1,4 @@
-# Handlebars Boilerplate
+# RDV Market
 
 Бойлерплейт на основе связки Gulp + Webpack с поддержкой SVG спрайтов и SCSS
 
