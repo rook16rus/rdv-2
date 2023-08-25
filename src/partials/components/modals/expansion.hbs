@@ -7,8 +7,9 @@
         </svg>
       </button>
       <h2 class="modal-expansion__title">
-        Запрос на расширение
+        Бесплатный доступ к расширению
       </h2>
+      <p class="modal__subtitle">Ссылка на скачивание и все инструкции придут на указанный e-mail после отправки формы</p>
       <form class="modal-expansion__form js-handle-form" data-need-validation action="#">
         <div class="input">
           <input class="input__control js-old-input" name="name" type="text" data-input="" placeholder="Имя"
@@ -38,9 +39,14 @@
             <option value="test8">test</option>
           </select>
         </div>
-        <button class="button js-submit-form" type="submit">
-          <span>Отправить</span>
-        </button>
+        <div class="modal-expansion__submit-block">
+          <button class="button js-submit-form" type="submit">
+            <span>Отправить</span>
+          </button>
+          <div class="modal-expansion__submit-label">
+            <span>14 дней бесплатно</span>
+          </div>
+        </div>
         <p class="modal-expansion__confidence">
           Отправляя заявку, вы даете свое согласие на обработку <a href="#">персональных данных</a> и соглашаетесь с
           <a href="#">политикой конфеденциальности</a> и

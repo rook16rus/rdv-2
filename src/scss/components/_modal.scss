@@ -47,6 +47,12 @@
     @extend %fs-h2;
   }
 
+  &__subtitle {
+    margin-bottom: 2rem;
+
+    @extend %fs-t2;
+  }
+
   .old-form__input,
   .old-form__textarea {
     border-color: #DADCDF;

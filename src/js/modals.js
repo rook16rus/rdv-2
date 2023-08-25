@@ -9,7 +9,7 @@ export default function modals() {
         window.rdv.calcModals.close()
       }
 
-      if (modal.starter.classList.contains('js-calculator-data')) {
+      if (modal.starter && modal.starter.classList.contains('js-calculator-data')) {
         const resultInput = modal.openedWindow.querySelector('.js-result-input')
         if (resultInput) {
           resultInput.value = modal.starter.dataset.calculatorData
@@ -29,7 +29,7 @@ export default function modals() {
         })
       }
 
-      if (modal.starter.classList.contains('js-calculator-data')) {
+      if (modal.starter && modal.starter.classList.contains('js-calculator-data')) {
         const resultInput = modal.openedWindow.querySelector('.js-result-input')
         if (resultInput) {
           resultInput.value = ''
