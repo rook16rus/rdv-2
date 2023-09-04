@@ -1336,6 +1336,30 @@
         </div>
       </div>
     </section>
+    <article class="mailing page-section--large-margin">
+      <div class="container-block">
+        <div class="mailing__inner" style="background-image: url('./img/mailing-bg.svg')">
+          <div class="mailing__content">
+            <h2 class="mailing__title">Подпишитесь на рассылку</h2>
+            <div class="mailing__text">
+              <p>Получайте актуальную информацию об акциях и полезные статьи</p>
+            </div>
+          </div>
+          <form class="mailing__form" action="#" data-need-validation>
+            <div class="mailing__input-wrapper input-wrapper">
+              <input class="mailing__input input input--big input--white" type="email" name="mailingEmail" id="mailingEmail" required>
+              <label class="mailing__label" for="mailingEmail">E-mail</label>
+            </div>
+            <button class="mailing__button button button--big button--yellow">Подписаться</button>
+            <div class="confidence-block">
+              <input class="confidence-block__checkbox visually-hidden" type="checkbox" name="mailingConfidence" id="mailingConfidence" checked="checked" required="required">
+              <label class="confidence-block__checkbox-label" for="mailingConfidence"><span>Даю согласие на обработку<a href="#">персональных данных</a></span>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </article>
 
   {{/content}}
 {{/extend}}

@@ -155,6 +155,42 @@
     width: 100%;
 }
 
+.page-section {
+    padding-bottom: 2.4rem;
+
+    @include mq('custom', 'max', 768) {
+        padding-bottom: 3.2rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+        padding-bottom: 4rem;
+    }
+
+    &--large-margin {
+        padding-bottom: 14rem;
+
+        @include mq('custom', 'max', 1024) {
+            padding-bottom: 10rem;
+        }
+
+        @include mq('custom', 'max', 768) {
+            padding-bottom: 7rem;
+        }
+
+        @include mq('custom', 'max', 640) {
+            padding-bottom: 4rem;
+        }
+    }
+
+    &--first {
+        padding-top: 4rem;
+
+        @include mq('custom', 'max', 640) {
+            padding-top: 4.8rem;
+        }
+    }
+}
+
 .page-content {
     flex-grow: 1;
     display: flex;
