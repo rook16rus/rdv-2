@@ -3,8 +3,10 @@ export default function noDigits() {
 
     inputs.forEach(input => {
         input.addEventListener('keypress', (event) => {
-            if ("1234567890".indexOf(event.key) !== -1) {
-                event.preventDefault();
+            if (input.dataset.parsleyPattern) {
+                if ("1234567890".indexOf(event.key) !== -1) {
+                    event.preventDefault();
+                }
             }
         })
     })

@@ -39,11 +39,18 @@ import inputPlaceholder from "%src%/js/inputPlaceholder";
 import simpleBar from "%src%/js/simpleBar";
 import tabs2 from "%src%/js/tabs-2";
 import noDigits from "%src%/js/noDigits";
+import catalog from "%src%/js/catalog";
+import catalogAdaptive from "%src%/js/catalogAdaptive";
+import catalogModal from "%src%/js/catalogModal";
+import moreButtonRow from "%src%/js/moreButtonRow";
+import moreButton from "%src%/js/moreButton";
+import customSelects2 from "%src%/js/customSelects2";
 
 document.addEventListener('DOMContentLoaded', function () {
   window.rdv = {
     info: 'Функции для вызова на беке',
     isAdmin: document.body.classList.contains('is-admin'),
+    tabs: {}
   }
 
 
@@ -77,13 +84,19 @@ document.addEventListener('DOMContentLoaded', function () {
   simpleBar();
   tabs2();
   noDigits();
+  customSelects();
+  customSelects2();
+  catalog();
+  catalogAdaptive();
+  catalogModal();
+  moreButtonRow();
+  moreButton();
 
   initCalculator()
   newCalculator()
 
   setHeaderHeight()
   fixedHeader()
-  customSelects();
   copyKey();
 
   slider()

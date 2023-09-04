@@ -9,7 +9,7 @@ export default function resetButtons() {
 
         input.addEventListener('input', () => {
             if (input.value !== '') {
-                button.style.display = "block";
+                button.style.display = "flex";
             } else {
                 button.style.display = "none";
             }
