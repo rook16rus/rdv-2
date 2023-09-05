@@ -7,6 +7,10 @@ import newCalculator from './calculator'
 import './old/cookie1.js'
 import './old/cookie2.js'
 
+import lazyIMages from "./lazyIMages";
+import './lazyload';
+
+
 import forms from './forms'
 import lockForm from './lockForm'
 import masks from './masks'
@@ -45,12 +49,16 @@ import catalogModal from "%src%/js/catalogModal";
 import moreButtonRow from "%src%/js/moreButtonRow";
 import moreButton from "%src%/js/moreButton";
 import customSelects2 from "%src%/js/customSelects2";
+import contentSlider from "%src%/js/contentSlider";
+import speakersSlider from "%src%/js/speakersSlider";
+import copyLink from "%src%/js/copyLink";
 
 document.addEventListener('DOMContentLoaded', function () {
   window.rdv = {
     info: 'Функции для вызова на беке',
     isAdmin: document.body.classList.contains('is-admin'),
-    tabs: {}
+    tabs: {},
+    swipers: []
   }
 
 
@@ -60,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // src/vue
   legacy()
 
+  lazyIMages();
   masks()
   validation()
 
@@ -91,6 +100,9 @@ document.addEventListener('DOMContentLoaded', function () {
   catalogModal();
   moreButtonRow();
   moreButton();
+  contentSlider();
+  speakersSlider();
+  copyLink();
 
   initCalculator()
   newCalculator()

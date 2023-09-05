@@ -1,0 +1,159 @@
+.content-videos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.2rem;
+
+  @include mq('custom', 'max', 1024) {
+    gap: 2.5rem;
+  }
+
+  @include mq('custom', 'max', 768) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  @include mq('custom', 'max', 640) {
+    gap: 1.6rem;
+  }
+
+  &__item-block {
+    position: relative;
+    z-index: 1;
+
+    display: block;
+    width: 100%;
+    padding-top: 69.76%;
+    margin-bottom: 2.4rem;
+
+    border-radius: 1.2rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: none;
+
+    color: #fff !important;
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 2rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 1.6rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      padding-top: 64.57%;
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  &__item-img {
+    @extend .fully-filled-el;
+    z-index: -1;
+    object-fit: cover;
+  }
+
+  &__item-time {
+    position: absolute;
+    left: 2.4rem;
+    top: 2.4rem;
+
+    @include mq('custom', 'max', 1024) {
+      left: 2rem;
+      top: 2rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      left: 1.6rem;
+      top: 1.6rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      left: 1.2rem;
+      top: 1.2rem;
+    }
+  }
+
+  &__item-title {
+    position: absolute;
+    left: 2.4rem;
+    bottom: 2.4rem;
+
+    max-width: 46.4rem;
+
+    @extend .title-h6;
+
+    @include mq('custom', 'max', 1024) {
+      left: 2rem;
+      bottom: 2rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      left: 1.6rem;
+      bottom: 1.6rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      left: 1.2rem;
+      bottom: 1.2rem;
+    }
+  }
+
+  &__item-button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10.4rem;
+    height: 10.4rem;
+
+    background-color: var(--white-10);
+    border-radius: 50%;
+
+    @include mq('custom', 'max', 1024) {
+      width: 8.4rem;
+      height: 8.4rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      width: 7.2rem;
+      height: 7.2rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      width: 6rem;
+      height: 6rem;
+    }
+
+    svg {
+      width: 3.4rem;
+      height: 3.4rem;
+
+      @include mq('custom', 'max', 1024) {
+        width: 2.8rem;
+        height: 2.8rem;
+      }
+
+      @include mq('custom', 'max', 768) {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+
+      @include mq('custom', 'max', 640) {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+
+  &__item-desc {
+    @extend .content-small-text;
+    color: rgba(13, 54, 83, 0.5);
+  }
+}

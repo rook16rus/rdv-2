@@ -1,0 +1,41 @@
+.content-footer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 3rem;
+  padding: 4.8rem 3.2rem;
+
+  border-radius: 1.2rem;
+  background-color: var(--grey-base-0);
+
+  @include mq('custom', 'max', 1024) {
+    gap: 2.6rem;
+    padding: 3.2rem;
+  }
+
+  @include mq('custom', 'max', 768) {
+    grid-template-columns: 1fr;
+    gap: 2.3rem;
+    padding: 2.6rem;
+  }
+
+  @include mq('custom', 'max', 640) {
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  &__text {
+    max-width: 85rem;
+
+    @extend .title-h6;
+    color: var(--main-base-0);
+  }
+
+  &__link {
+    width: 20rem;
+
+    @include mq('custom', 'max', 768) {
+      width: 100%;
+    }
+  }
+}

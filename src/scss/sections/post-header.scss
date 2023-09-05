@@ -1,0 +1,254 @@
+.post-header {
+  padding: 4rem 0 5.6rem;
+
+  @include mq('custom', 'max', 1024) {
+    padding-bottom: 5rem;
+  }
+
+  @include mq('custom', 'max', 768) {
+    padding-bottom: 4.5rem;
+  }
+
+  @include mq('custom', 'max', 640) {
+    padding: 4.8rem 0 4rem;
+  }
+
+  .breadcrumbs {
+    margin-bottom: 3rem;
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__inner {
+    @extend .section-inner;
+
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 56rem;
+    margin-bottom: 5.6rem ;
+
+    background: url("../images/post-header-bg.png") no-repeat center;
+    background-size: cover;
+
+    @include mq('custom', 'max', 1024) {
+      min-height: 58rem;
+      margin-bottom: 5rem;
+      padding: 3.6rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      min-height: 60rem;
+      margin-bottom: 4.5rem;
+      padding: 2.4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      min-height: 61.6rem;
+      margin-bottom: 4rem;
+      padding: 1.2rem;
+    }
+
+    &--without-margin {
+      &#{&} {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__img {
+    @extend .fully-filled-el;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-self: stretch;
+    margin-right: -1.6rem;
+    margin-bottom: 2.4rem;
+
+    @include mq('custom', 'max', 640) {
+      margin-right: -0.8rem;
+    }
+
+    &--project {
+      flex-wrap: nowrap;
+
+      .post-header__meta-list {
+        @include mq('custom', 'max', 1024) {
+          order: 0;
+        }
+      }
+    }
+  }
+
+  &__time {
+    margin-right: 1.6rem;
+    margin-bottom: 1.6rem;
+    white-space: nowrap;
+
+    @include mq('custom', 'max', 640) {
+      margin-right: 0.8rem;
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  &__meta-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -1.6rem;
+    margin-bottom: -1.6rem;
+
+    @include mq('custom', 'max', 1024) {
+      width: 100%;
+      order: 1;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-right: -0.8rem;
+      margin-bottom: -1.2rem;
+    }
+  }
+
+  &__meta-item {
+    display: flex;
+    align-items: center;
+    margin-right: 1.6rem;
+    margin-bottom: 1.6rem;
+
+    @extend .button-small-text;
+    color: #fff;
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 1.2rem;
+      margin-right: 0.8rem;
+    }
+  }
+
+  &__meta-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.2rem;
+    height: 3.2rem;
+    margin-right: 0.6rem;
+
+    border-radius: 50%;
+    background-color: var(--white-10);
+
+    @include mq('custom', 'max', 640) {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+
+    svg {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  &__share {
+    margin-left: auto;
+    margin-right: 1.6rem;
+
+    svg:last-child {
+      display: none;
+    }
+
+    @include mq('custom', 'max', 768) {
+      padding: 0 1.2rem;
+
+      span, svg {
+        display: none;
+      }
+
+      svg:last-child {
+        display: block;
+        width: 1.2rem;
+        height: 1.2rem;
+        margin: 0;
+      }
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-right: 1.2rem;
+    }
+  }
+
+  &__title {
+    max-width: 104rem;
+    margin-bottom: 3rem;
+
+    @extend .title-h1;
+    color: #fff;
+
+    @include mq('custom', 'max', 1024) {
+      margin-top: auto;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__text {
+    max-width: 82rem;
+    margin-bottom: 3rem;
+
+    @extend .title-h5;
+    color: #fff;
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2rem;
+    }
+
+    &--small {
+      max-width: 78rem;
+
+      @extend .content-medium-text;
+      font-size: 1.4rem;
+    }
+  }
+
+  &__button {
+    margin-top: auto;
+
+    @include mq('custom', 'max', 1024) {
+      margin-top: 0;
+    }
+
+    @include mq('custom', 'max', 768) {
+      width: 100%;
+    }
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.4rem;
+    margin-bottom: -0.4rem;
+  }
+
+  .post-header__tag.button.button--small, .post-header__tag-more.button.button--small {
+    height: 3.2rem;
+    padding: 0 1.6rem;
+    margin-right: 0.4rem;
+    margin-bottom: 0.4rem;
+
+    @include mq('custom', 'max', 640) {
+      padding: 0 1.2rem;
+    }
+
+    &:hover {
+      border-color: var(--grey-L-10);
+    }
+  }
+}

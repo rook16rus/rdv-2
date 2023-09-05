@@ -1,0 +1,60 @@
+.swiper-pagination {
+  position: absolute;
+
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0 1rem;
+  height: 3.2rem;
+  width: auto;
+
+  border-radius: 99.9rem;
+  background-color: var(--white-10);
+
+  font: var(--button-meduim);
+  color: var(--white-40);
+
+  @include mq('custom', 'max', 640) {
+    height: 2.4rem;
+    font: var(--button-small);
+  }
+
+  &::before {
+    content: '';
+
+    width: 0.4rem;
+    height: 0.4rem;
+    margin-bottom: 0.2rem;
+
+    border-radius: 50%;
+    background-color: var(--white-40);
+  }
+
+  .swiper-pagination-current {
+    color: var(--white-100);
+    order: -1;
+  }
+}
+
+.swiper-pagination-bullets-container {
+  display: flex;
+}
+
+.swiper-pagination-bullets {
+  display: inline-flex;
+  width: auto !important;
+  margin: 0 auto;
+  transform: none !important;
+}
+
+.swiper-pagination-bullet {
+  flex-shrink: 0;
+  background-color: var(--grey-D-20);
+  transform: scale(1) !important;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--main-base-0);
+}

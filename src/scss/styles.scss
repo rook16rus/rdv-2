@@ -22,6 +22,9 @@
 
 @import 'ui/button';
 @import 'ui/catalog-card';
+@import 'ui/tag';
+@import 'ui/slider-navigation';
+@import 'ui/swiper-pagination';
 
 @import 'components/old-form';
 @import 'components/modal';
@@ -45,6 +48,8 @@
 @import "components/review";
 @import "components/new-pagination";
 @import "components/confidence-block";
+@import "components/blockquote";
+@import "components/lead";
 
 @import 'sections/form';
 @import 'sections/two-columns';
@@ -88,3 +93,14 @@
 @import "sections/support";
 @import "sections/catalog";
 @import "sections/mailing";
+@import "sections/other-events";
+@import "sections/post-header";
+@import "sections/speakers";
+@import "sections/news-single";
+@import "sections/content-videos";
+@import "sections/content-transition";
+@import "sections/content-slider";
+@import "sections/content-photos";
+@import "sections/content-inner-block";
+@import "sections/content-footer";
+@import "sections/content-block";

@@ -1,0 +1,88 @@
+.content-slider {
+  &__slide-img {
+    position: relative;
+    z-index: 1;
+
+    display: block;
+    width: 100%;
+    padding-top: 69.76%;
+
+    border-radius: 1.2rem;
+    overflow: hidden;
+    cursor: pointer;
+
+    @include mq('custom', 'max', 640) {
+      padding-top: 64.57%;
+    }
+
+    img {
+      @extend .fully-filled-el;
+      object-fit: cover;
+    }
+  }
+
+  &__slide-desc {
+    display: block;
+    margin-top: 2.4rem;
+
+    @extend .content-small-text;
+    color: rgba(13, 54, 83, 0.5);
+
+    @include mq('custom', 'max', 1024) {
+      margin-top: 2rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-top: 1.6rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-top: 1.2rem;
+    }
+  }
+
+  .slider-navigation {
+    position: static;
+
+    display: inline-grid;
+    margin-top: 4rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-top: 3rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      display: none;
+    }
+  }
+
+  .swiper-pagination-bullets {
+    display: none;
+    margin-top: 2rem;
+
+    @include mq('custom', 'max', 768) {
+      display: inline-flex;
+    }
+
+    &--main {
+      display: inline-flex;
+      margin-top: 4rem;
+
+      @include mq('custom', 'max', 1024) {
+        margin-top: 3rem;
+      }
+
+      @include mq('custom', 'max', 768) {
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+.team-gallery .content-slider__slide-img {
+  border-radius: 2.4rem;
+
+  @include mq('custom', 'max', 640) {
+    border-radius: 1.2rem;
+  }
+}
