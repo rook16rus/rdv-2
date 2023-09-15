@@ -1361,5 +1361,74 @@
       </div>
     </article>
 
+    <div class="intro page-section page-section--first">
+      <div class="narrow-container">
+        <div class="breadcrumbs__container site-content-container">
+          <div class="breadcrumbs">
+            <div class="breadcrumbs__item">
+              <a class="breadcrumbs__item-link page-hover-effect" href="./index.html">Главная</a>
+            </div><span class="breadcrumbs__arrow"></span>
+            <div class="breadcrumbs__item">
+              <a class="breadcrumbs__item-link page-hover-effect" href="#">Карьера</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="intro__inner">
+          <div class="intro__content">
+            <ul class="intro__tags">
+              <li class="intro__tag tag tag--medium tag--border-grey">Рады знакомству</li>
+            </ul>
+            <h1 class="intro__title">Карьера</h1>
+            <div class="intro__text">
+              <p>Присоединяйтесь к динамично развивающейся команде профессионалов</p>
+            </div>
+            <div class="intro__buttons">
+              <button class="intro__button button button--big button--yellow" data-path="resume">Отправить резюме</button>
+            </div>
+          </div>
+          <div class="intro__graphic" data-src="assets/images/career-intro-1.jpg" data-fancybox="data-fancybox">
+            <picture>
+              <source type="image/webp" data-srcset="assets/images/career-intro-1.webp" alt="Фото блока">
+              <img class="lazyload" data-src="assets/images/career-intro-1.jpg" alt="Фото блока">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="contacts-section page-section--large-margin">
+      <div class="container">
+        <div class="contacts-section__inner lazyload" data-bg="./img/contacts-section-bg.png">
+          <h2 class="contacts-section__title">Расскажите о вашем проекте</h2>
+          <p class="contacts-section__desc">Заполните форму обратной связи и мы свяжемся с вами в&nbsp;ближайшее время!</p>
+          <form class="contacts-section__form" data-need-validation>
+            <div class="contacts-section__input-wrapper input-wrapper">
+              <input class="contacts-section__input input input--big input--white" type="text" name="contactsName" id="contactsName" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^s]+$" required>
+              <label class="contacts-section__label" for="contactsName">Ваше Имя</label>
+            </div>
+            <div class="contacts-section__input-wrapper input-wrapper">
+              <input class="contacts-section__input input input--big input--white js-phone-input" type="tel" name="contactsPhone" id="contactsPhone" data-parsley-phone required>
+              <label class="contacts-section__label" for="contactsPhone">Ваш телефон</label>
+            </div>
+            <div class="contacts-section__input-wrapper contacts-section__input-wrapper--large input-wrapper">
+              <input class="contacts-section__input input input--big input--white" type="email" name="contactsEmail" id="contactsEmail" required>
+              <label class="contacts-section__label" for="contactsEmail">Email</label>
+            </div>
+            <div class="contacts-section__input-wrapper contacts-section__input-wrapper--large input-wrapper input-wrapper--textarea">
+              <textarea class="contacts-section__textarea input input--big input--white" name="contactsComment" id="contactsComment" placeholder="Ваш комментарий"></textarea>
+            </div>
+            <button class="contacts-section__button button button--big button--yellow">Отправить</button>
+            <div class="confidence-block">
+              <input class="confidence-block__checkbox visually-hidden" type="checkbox" name="contactsConfidence" id="contactsConfidence" checked="checked" required="required">
+              <label class="confidence-block__checkbox-label" for="contactsConfidence"><span>Даю согласие на обработку<a href="#">персональных данных</a></span>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
   {{/content}}
 {{/extend}}
