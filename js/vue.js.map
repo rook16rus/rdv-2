@@ -1,1 +1,0 @@
-{"version":3,"file":"vue.js","mappings":"iFACEA,EAAOC,QAAU,EAAjB,I","sources":["webpack://rdv/./node_modules/vue/dist/vue.common.js"],"sourcesContent":["if (process.env.NODE_ENV === 'production') {\n  module.exports = require('./vue.common.prod.js')\n} else {\n  module.exports = require('./vue.common.dev.js')\n}\n"],"names":["module","exports"],"sourceRoot":""}
