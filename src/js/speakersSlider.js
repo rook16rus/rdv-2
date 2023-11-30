@@ -1,12 +1,11 @@
 import Swiper, {Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode} from "swiper";
 
-Swiper.use([Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode]);
-
 export default function speakersSlider() {
   const speakers = document.querySelector('.speakers');
   if (!speakers) return
 
   const swiper = new Swiper('.speakers', {
+    modules: [Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode],
     slidesPerView: "auto",
     spaceBetween: 0,
     navigation: {

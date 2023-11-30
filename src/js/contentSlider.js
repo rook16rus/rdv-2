@@ -1,12 +1,11 @@
 import Swiper, {Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode} from "swiper";
 
-Swiper.use([Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode]);
-
 export default function contentSlider() {
   const contentSlider = document.querySelector('.content-slider');
   if (!contentSlider) return
 
   const swiper = new Swiper(contentSlider, {
+    modules: [Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode],
     slidesPerView: 1,
     spaceBetween: 16,
     navigation: {
